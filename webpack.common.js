@@ -80,6 +80,38 @@ module.exports = {
       filename: './index.html'
     }),
 
+    // Страницы разделов
+    new HtmlWebpackPlugin({
+      template: './src/manifests.html',
+      filename: './manifests.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/aboutUs.html',
+      filename: './aboutUs.html'
+    }),
+
+    //Страницы раздела "манифесты" (manifests.html)
+    new HtmlWebpackPlugin({
+      template: './src/manifests/design.html',
+      filename: './manifests/design.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/architecture.html',
+      filename: './manifests/architecture.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/moda.html',
+      filename: './manifests/moda.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/culture.html',
+      filename: './manifests/culture.html'
+    }),
+
     // Internal pages
     // new HtmlWebpackPlugin({
     //   hash: true,
