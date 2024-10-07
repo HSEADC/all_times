@@ -1,11 +1,4 @@
-body.index {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  & > div,
-  & > a {
-    margin: 10px 0;
-  }
+h1, h2, p, a {
+  font-weight: 400;
 }
+

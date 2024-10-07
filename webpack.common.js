@@ -112,6 +112,11 @@ module.exports = {
       filename: './manifests/culture.html'
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/reflection.html',
+      filename: './reflection.html'
+    }),
+
     // Internal pages
     // new HtmlWebpackPlugin({
     //   hash: true,
