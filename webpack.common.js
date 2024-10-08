@@ -117,6 +117,13 @@ module.exports = {
       filename: './reflection.html'
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/design_manifests/fluxus.html',
+      filename: './design_manifests/fluxus.html'
+    }),
+
+
+
     // Internal pages
     // new HtmlWebpackPlugin({
     //   hash: true,
