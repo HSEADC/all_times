@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 120px;
+}
+
 html,
 body {
   height: 100%;
@@ -11,4 +20,62 @@ body {
 body {
   font-family: 'PT Root UI', Helvetica, Arial, sans-serif;
   font-weight: 400;
+}
+
+#boxForLogo{
+  margin-top: 12%;
+  margin-bottom: -11%;
+  margin-left: 2%;
+}
+
+#formaBlock {
+  margin-left: 150px;
+}   
+
+#infoBlock{
+  display: flex; 
+  flex-direction: row; 
+  margin-left: 170px;
+  margin-right: 2%;
+  margin-top: 8%;
+  justify-content: space-between;
+}
+
+.form-inner {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.form-inner input {
+  display: block;
+  width: 29.8vw;
+  height: 4.1vw;
+  padding: 0 15px;
+  margin: 10px 0 15px;
+  border-width: 2px;
+  line-height: 40px;
+  border-radius: 0;
+  color: rgb(0, 0, 0);
+  background: rgba(255, 255, 255, 0);
+  /* background-image: url(./img/backPicForEmail.svg);  */
+  margin-right: 3vw;
+}
+
+.buttonForm {
+  background-color: black;
+}
+
+#formaBlock {
+  margin-top: 22%;
+  margin-bottom: -20%;
+  margin-left: 10%;
+}
+
+#downBlock {
+  margin-top: -10%;
+}
+
+#bigBlockForZaglushka {
+  margin-left: 2%;
 }
