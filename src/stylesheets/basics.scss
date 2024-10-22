@@ -79,3 +79,21 @@ body {
 #bigBlockForZaglushka {
   margin-left: 2%;
 }
+
+.menuBlock {
+  margin-left: 2%; 
+  margin-top: 5%;
+}
+
+#menuTxt {
+  font-family: Helvetica, sans-serif;
+  margin-right: 40px; 
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+}
+
+#menuTxt:hover {
+  background-color: yellow;
+}
