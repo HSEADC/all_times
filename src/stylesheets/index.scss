@@ -99,7 +99,7 @@ h1, h2, p, a {
 }
 
 
-@media screen and (max-width: 1024px) and (min-width: 400px){
+@media screen and (max-width: 1024px) {
 
   #bigBlockForZaglushka{
     display: flex;
@@ -198,7 +198,7 @@ h1, h2, p, a {
   
 }
 
-@media screen and (min-width: 414px) and (max-width: 500px) {
+@media screen and (max-width: 414px) and(min-width: 200px) {
 
   #bigBlockForZaglushka{
     display: flex;
