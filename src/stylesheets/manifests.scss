@@ -58,6 +58,7 @@
 #zigzagManifests{
     text-align: center; 
     margin-top: 3%;
+    font-size: 9vw;
 }
 
 #txtArticle{
@@ -116,7 +117,7 @@
     #zigzagManifests{
         text-align: center; 
         margin-top: 3%;
-        font-size: 100px;
+        font-size: 9vw;
     }
 }
 
@@ -191,7 +192,7 @@
     #zigzagManifests{
         text-align: center; 
         margin-top: 3%;
-        font-size: 70px;
+        font-size: 9vw;
     }
     
     #txtArticle{
@@ -213,7 +214,7 @@
         display: flex;
         flex-direction: column;
         background-color: rgba(255, 246, 25, 1); 
-        height: 30%;
+        height: 50vw;
     }
     
     #blockImportantInfoTxt{
@@ -263,6 +264,5 @@
         margin-top: 5%;
     }
 
-    #blockImportantInfoTxt{
-    }
+
 }
