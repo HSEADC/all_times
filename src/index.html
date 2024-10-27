@@ -6,7 +6,7 @@
     <analytics></analytics>
   </head>
 
-  <body class="index" style="background-color: rgba(255, 246, 25, 1);">
+  <body class="index">
     
     <!-- <h1>консерва</h1>
     <p><a href="aboutUs.html">о нас</a></p>
@@ -15,94 +15,78 @@
 
     
     <div id="bigBlockForZaglushka">
+      <div id="zigzag">
+        <p>\/\/\/\/\/\/\/\/\/\</p>
+      </div>
+
+      <div id="blockZaglushkaFirst">
+        <div id="txtblockZaglushkaFirst">
+          <p>консерва — <br> медиа о манифестах</p><br><br>
+          <p>Сейчас мы выбираем для вас творческие тексты,<br>
+            распределяем их на категории, чтобы вы могли<br>  
+            качественно писать собственные тексты <br>
+            дополнять свою картину мира
+          </p>
+        </div>
         
-      <div>
-          <p style="font-size: 100px;">Консерва<br> — медиа о манифестах</p><br><br>
-          <p style="text-align: right; margin-right: 2%;">Сейчас мы выбираем для вас творческие тексты,<br>
-              распределяем их на категории, чтобы вы могли<br>  
-              качественно писать собственные тексты <br>
-              дополнять свою картину мира</p>
-      </div>
+        <div id="formaBlock">
+          <p>Оставьте почту,<br>
+          чтобы не пропустить запуск сайта</p><br>
+          <form action="https://formspree.io/f/mgvwgdaz" method="POST">
+            <div id="form-inner">
+                <input type="email" name="email" placeholder="conserva@gmail.com" >
+                <button id="buttonForm">Подписаться</button>      
+                <p id="my-form-status"></p>          
+            </div>
+          </form>
+        </div>
+    </div>
 
+    <div id="blockZaglushkaSecond">
+        <nav>
+          <p><a href="aboutUs.html">О нас</a></p>
+        </nav>
 
-  
-  </div>
-  
-  <div id="downBlock">
-  <div id="formaBlock">
-      <p>Оставьте почту,<br>
-      чтобы не пропустить запуск сайта</p><br>
-
-      <form action="https://formspree.io/f/mgvwgdaz" method="POST">
-          <div class="form-inner">
-              <input type="email" name="email" placeholder="Почта:" style="font-size: 24px; font-weight: 400;">
-              <button id="buttonForm" style="display: block; width: 1vw; height: 4vw; color: rgb(0, 0, 0); background-color: rgba(240, 248, 255, 0); border-color: rgba(240, 248, 255, 0); text-decoration: underline; 
-              margin-top: 0.8vw; margin-left: -2vw; font-size: 24px; font-weight: 400;">Подписаться</button>      
-              <p id="my-form-status"></p>          
-          </div>
-      </form>
-  </div>
-
-      <div id="boxForLogo">
-          <img src="./images/logo.svg">
-      </div>
-
-      <div id="infoBlock">
-          <nav>
-            <p><a href="aboutUs.html" style="color: black;">О нас</a></p>
-          </nav>
-          
-          <nav>
-              <p><a href="https://t.me/conserva_archive" target="_blank" style="color: black;">Телеграм</a> / <a href="https://vk.com/conserva_archive" target="_blank" style="color: black;">Вконтакте</a></p>
-          </nav>
+        <nav>
+          <p><a href="https://t.me/conserva_archive" target="_blank" style="color: black;">Телеграм</a> / <a href="https://vk.com/conserva_archive" target="_blank" style="color: black;">Вконтакте</a></p>
+        </nav>
       </div>
     </div>
 
-
-
-<!-- modify this form HTML and place wherever you want your form 
-<form id="my-form" action="https://formspree.io/f/xpwzayjk" method="POST">
-  <label>почта:</label>
-  <input type="email" name="email" />
-  <label>сообщение:</label>
-  <input type="text" name="message" />
-  <button id="my-form-button">подписаться</button>
-  <p id="my-form-status"></p>
-</form> -->
-
-<!-- Place this script at the end of the body tag -->
 <script>
-  var form = document.getElementById("my-form");
-  
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-          'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        status.innerHTML = "Спасибо за подписку!";
-        form.reset()
-      } else {
-        response.json().then(data => {
-          if (Object.hasOwn(data, 'errors')) {
-            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-          } else {
-            status.innerHTML = "Ой! Что-то пошло не так"
-          }
-        })
-      }
-    }).catch(error => {
-      status.innerHTML = "Ой! Что-то пошло не так"
-    });
-  }
-  form.addEventListener("submit", handleSubmit)
-</script>
 
+  
+var form = document.getElementById("my-form");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "Спасибо за подписку!";
+      form.reset()
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "Ой! Что-то пошло не так"
+        }
+      })
+    }
+  }).catch(error => {
+    status.innerHTML = "Ой! Что-то пошло не так"
+  });
+}
+form.addEventListener("submit", handleSubmit)
+</script>
+  
 </body>
 </html>

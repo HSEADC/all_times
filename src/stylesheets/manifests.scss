@@ -1,0 +1,115 @@
+#headForArticle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+#menuBar{
+    display: flex; 
+    flex-direction: row;
+    margin-top: 2%; 
+    margin-left: 2%;
+    width: 90%;
+    z-index: 9;
+}
+
+#logoBlock{
+    width: 20%;
+    height: 30%;
+    margin-left: 0%;
+    z-index: 7;
+}
+
+#menuBlock{
+    display: flex;
+    flex-direction: column; 
+    margin-left: -11.5%;
+    z-index: 9;
+}
+
+#menuTxt {
+    color: black; 
+    text-decoration: none;
+}
+
+#menuTxtOn {
+    color: black; 
+    text-decoration: underline;
+}
+
+#hrefBack{
+    margin-top: 2%;
+}
+
+#picBlockFluxus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+}
+
+#imgForArticle{
+    margin-top: 2%;
+    width: 90%;
+    border: solid gray;
+    margin-left: 5%;
+}
+
+#zigzagManifests{
+    text-align: center; 
+    margin-top: 3%;
+}
+
+#txtArticle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+#leftTxtBlock{
+    width: 100%;
+    margin-left: 4%;
+}
+
+#rightTxtBlock{
+    margin-right: 2%;
+}
+
+#blockImportantInfo{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 246, 25, 1); 
+    height: 75%;
+}
+
+#blockImportantInfoTxt{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    p:nth-of-type(2){
+        margin-left: 13%;
+    }
+}
+
+#blockDopInfoTxt{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    p:nth-of-type(2){
+        margin-left: 3%;
+    }
+}
+
+#blockTags{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    padding-top: 3%;
+    padding-bottom: 10%;
+}
+

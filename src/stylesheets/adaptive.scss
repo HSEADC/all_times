@@ -1,0 +1,296 @@
+/* 768px */
+@media screen and (max-width: 768px) and (min-width: 415px) {
+    /* Заглушка */
+    p{
+        font-size: 26px;
+    }
+
+    h1{
+        font-size: 110px;
+    }
+
+
+    #txtblockZaglushkaFirst {
+        width: 120%;
+        p:nth-of-type(1) {
+            font-size: 110px;
+            line-height: 85%;
+        }
+    }
+
+    #formaBlock {
+        & form {
+            input {
+                font-size: 26px;
+                font-weight: 400;
+                border: 2px solid black;
+                width: 45%;
+                background-color: rgba(255, 246, 25, 1);
+            }
+        }
+    }
+
+    #formaBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin-top: 8%;
+        height: 15%;
+    }
+
+    #zigzag{
+        margin-left: 1%;
+        margin-top: 3%;
+        p:nth-of-type(1){
+            font-size: 200px;
+        }
+    }
+
+
+    #bigBlockForZaglushka{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #zigzag{
+        width: 9%;
+    }
+
+    #blockZaglushkaFirst{
+        width: 130%;
+        margin-left: 10%;
+    }
+
+    #blockZaglushkaSecond{
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 31%;
+        padding-top: 2%;
+        width: 50%;
+        margin-top: -6%;
+    }
+}
+  
+/* 1024px */
+ @media screen and (max-width: 1024px) and (min-width: 768px){
+    /* Заглушка */
+    p{
+        font-size: 23px;
+    }
+
+    h1{
+        font-size: 78px;
+    }
+
+    #bigBlockForZaglushka{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+
+    #txtblockZaglushkaFirst {
+        width: 120%;
+        p:nth-of-type(1) {
+            font-size: 78px;
+            line-height: 85%;
+        }
+    }
+
+    #formaBlock {
+        & form {
+            input {
+                font-size: 23px;
+                font-weight: 400;
+                border: 2px solid black;
+                width: 45%;
+                background-color: rgba(255, 246, 25, 1);
+            }
+        }
+    }
+
+    #zigzag{
+        margin-left: 1%;
+        margin-top: 2%;
+        p:nth-of-type(1){
+            font-size: 120px;
+        }
+    }
+
+    #blockZaglushkaFirst{
+        margin-left: 2%;
+        width: 100%;
+    }
+
+    #blockZaglushkaSecond {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        margin-left: 0%;
+        margin-right: 2%;
+        padding-left: 0%;
+        margin-top: 0%;
+    }
+
+}
+
+/* 1366px */
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+
+    /* Заглушка */
+    p{
+        font-size: 27px;
+    }
+
+    h1{
+        font-size: 100px;
+    }
+
+
+    #txtblockZaglushkaFirst {
+        width: 120%;
+        p:nth-of-type(1) {
+            font-size: 110px;
+            line-height: 85%;
+        }
+    }
+
+    #formaBlock {
+        & form {
+            input {
+                font-size: 27px;
+                font-weight: 400;
+                border: 2px solid black;
+                width: 45%;
+                background-color: rgba(255, 246, 25, 1);
+            }
+        }
+    }
+
+    #zigzag{
+        margin-left: 0%;
+        margin-top: 2%;
+        p:nth-of-type(1){
+            font-size: 120px;
+        }
+    }
+
+    #blockZaglushkaFirst{
+        margin-left: -1%;
+        width: 79%;
+    }
+
+    #blockZaglushkaSecond{
+        width: 29%;
+    }
+
+}
+
+/* 1440px */
+@media screen and (max-width: 1440px) and (min-width: 1367px) {
+
+    /* Заглушка */
+    p{
+        font-size: 29px;
+    }
+
+    h1{
+        font-size: 120px;
+    }
+
+
+    #txtblockZaglushkaFirst {
+        width: 120%;
+        p:nth-of-type(1) {
+            font-size: 124px;
+            line-height: 85%;
+        }
+    }
+
+    #formaBlock {
+        & form {
+            input {
+                font-size: 29px;
+                font-weight: 400;
+                border: 2px solid black;
+                width: 45%;
+                background-color: rgba(255, 246, 25, 1);
+            }
+        }
+    }
+
+    #zigzag{
+        margin-left: 1%;
+        margin-top: 2%;
+        p:nth-of-type(1){
+            font-size: 148px;
+        }
+    }
+
+    #blockZaglushkaFirst{
+        margin-left: 0%;
+    }
+
+
+}
+  
+  /* Стили для экранов больше 1440 пикселей */
+  @media screen and (min-width: 1441px) {
+    /* Заглушка */
+    h1{
+        font-size: 165px;
+    }
+
+    p{
+        font-size: 38px;
+    }
+
+    #txtblockZaglushkaFirst {
+        width: 120%;
+        p:nth-of-type(1) {
+            font-size: 165px;
+            line-height: 85%;
+        }
+    }
+
+    #formaBlock {
+        & form {
+            input {
+                font-size: 38px;
+                font-weight: 400;
+                border: 2px solid black;
+                width: 45%;
+                background-color: rgba(255, 246, 25, 1);
+            }
+        }
+    }
+
+    #zigzag{
+        margin-left: 1%;
+        margin-top: 3%;
+        p:nth-of-type(1){
+            font-size: 130px;
+        }
+    }
+
+    #blockZaglushkaFirst{
+        margin-left: 0%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+} 
+  
