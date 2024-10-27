@@ -5,4 +5,5 @@
 @import 'stylesheets/index.scss';
 @import 'stylesheets/aboutUs.scss';
 @import 'stylesheets/manifests.scss';
-@import 'stylesheets/adaptive.scss';
+/* @import 'stylesheets/adaptive.scss'; */
+@import 'stylesheets/adaptiveNew.scss';

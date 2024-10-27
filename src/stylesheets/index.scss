@@ -13,11 +13,11 @@ h1, h2, p, a {
 
 #zigzag{
   margin-top: 3%;
-  margin-left: 3%;
+  margin-left: 1%;
   margin-right: 1%;
   p:nth-of-type(1){
     writing-mode: vertical-rl;
-    font-size: 100px;
+    font-size: 120px;
   }
 }
 
@@ -25,9 +25,9 @@ h1, h2, p, a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 2%;
+  margin-left: 0%;
   margin-top: 0.5%;
-  width: 100%;
+  width: 90%;
 }
 
 #txtblockZaglushkaFirst{
@@ -81,7 +81,7 @@ h1, h2, p, a {
   justify-content: space-between;
   width: 29%;
   margin-left: -10%;
-  margin-right: 1%;
+  margin-right: 2%;
   a:nth-of-type(1){
     color: black;
   }
