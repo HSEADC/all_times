@@ -74,7 +74,7 @@ module.exports = {
       chunkFilename: '[id].css'
     }),
 
-    // Landing page
+    // Главная страница
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html'
@@ -89,6 +89,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/aboutUs.html',
       filename: './aboutUs.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/reflection.html',
+      filename: './reflection.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/styleGuide.html',
+      filename: './styleGuide.html'
     }),
 
     //Страницы раздела "манифесты" (manifests.html)
@@ -113,14 +123,10 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/reflection.html',
-      filename: './reflection.html'
-    }),
-
-    new HtmlWebpackPlugin({
       template: './src/design_manifests/fluxus.html',
       filename: './design_manifests/fluxus.html'
     }),
+
 
 
 

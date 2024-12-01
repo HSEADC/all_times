@@ -22,42 +22,19 @@ body {
   font-weight: 400;
 }
 
-#boxForLogo{
-  margin-top: 12%;
-  margin-bottom: -11%;
-  margin-left: 2%;
+.headBlock{
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  margin-left: 1%;
+  margin-top: 1%;
 }
 
-
-#menuTxt {
-  font-family: Helvetica, sans-serif;
-  margin-right: 40px; 
-  display: inline-block;
-  box-sizing: border-box;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.8s;
-
+.logoInHead{
+  width: 6%;
 }
 
-#menuTxt:hover {
-  background-color: yellow;
-  transition: 0.3s;
-}
-
-
-#menuTxtOn {
-  font-family: Helvetica, sans-serif;
-  margin-right: 40px; 
-  display: inline-block;
-  box-sizing: border-box;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.8s;
-
-}
-
-#menuTxtOn:hover {
-  background-color: yellow;
-  transition: 0.3s;
+.menuBlock{
+  font-size: 2vw;
+  margin-left: 1%;
 }
