@@ -1,85 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ru" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="icon" type="image/png" href="./images/faviconBold.png"  sizes="32x47" >
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <title>консерва</title>
     <analytics></analytics>
 </head>
+  <header class="headBlock">
+    <h1>Главная страница</h1>
+  </header>
 
-  <body class="index">
+  <nav class="menuBlock">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="aboutUs.html">О нас</a></li>
+      <li><a href="manifests.html">Манифесты</a></li>
+      <li><a href="reflection.html">Рефлексия</a></li>
+      <li><a href="styleGuide.html">Стайлгайд</a></li>
+    </ul>
+  </nav>
 
-    <div id="bigBlockForZaglushka">
-      <div id="zigzag">
-        <p>\/\/\/\/\/\/\/\/\/\</p>
-      </div>
-
-      <div id="blockZaglushkaFirst">
-        <div id="txtblockZaglushkaFirst">
-          <p>консерва — <br> медиа о манифестах</p><br><br>
-          <p>Сейчас мы выбираем для вас творческие тексты,<br>
-            распределяем их на категории, чтобы вы могли<br>  
-            качественно писать собственные тексты <br>
-            дополнять свою картину мира
-          </p>
-        </div>
-        
-        <div id="formaBlock">
-          <p>Оставьте почту,<br>
-          чтобы не пропустить запуск сайта</p><br>
-          <form id="my-form" action="https://formspree.io/f/mzzpnoee" method="POST">            <div id="form-inner">
-                <input type="email" name="email" placeholder="conserva@gmail.com" >
-                <button id="buttonForm">Подписаться</button>      
-                <p id="my-form-status"></p>          
-            </div>
-          </form>
-        </div>
-    </div>
-
-    <div id="blockZaglushkaSecond">
-        <nav>
-          <p><a href="aboutUs.html">О нас</a></p>
-        </nav>
-
-        <nav>
-          <p><a href="https://t.me/conserva_archive" target="_blank" style="color: black;">Телеграм</a> / <a href="https://vk.com/conserva_archive" target="_blank" style="color: black;">Вконтакте</a></p>
-        </nav>
-      </div>
-    </div>
-
-<script>
-var form = document.getElementById("my-form");
-
-async function handleSubmit(event) {
-  event.preventDefault();
-  var status = document.getElementById("my-form-status");
-  var data = new FormData(event.target);
-  fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-        'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok) {
-      status.innerHTML = "Спасибо за подписку!";
-      form.reset()
-    } else {
-      response.json().then(data => {
-        if (Object.hasOwn(data, 'errors')) {
-          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-        } else {
-          status.innerHTML = "Ой! Что-то пошло не так"
-        }
-      })
-    }
-  }).catch(error => {
-    status.innerHTML = "Ой! Что-то пошло не так"
-  });
-}
-form.addEventListener("submit", handleSubmit)
-</script>
-  
 </body>
 </html>
