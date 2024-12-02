@@ -101,33 +101,29 @@ module.exports = {
       filename: './styleGuide.html'
     }),
 
-    //Страницы раздела "манифесты" (manifests.html)
-    new HtmlWebpackPlugin({
-      template: './src/manifests/design.html',
-      filename: './manifests/design.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/manifests/architecture.html',
-      filename: './manifests/architecture.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/manifests/moda.html',
-      filename: './manifests/moda.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/manifests/culture.html',
-      filename: './manifests/culture.html'
-    }),
-
+    // Страницы манифестов по дизайну
     new HtmlWebpackPlugin({
       template: './src/design_manifests/fluxus.html',
       filename: './design_manifests/fluxus.html'
     }),
 
+    // Страницы манифестов по культуре
+    new HtmlWebpackPlugin({
+      template: './src/culture_manifests/ManifesKebudayaan.html',
+      filename: './culture_manifests/ManifesKebudayaan.html'
+    }),
 
+    // Страницы манифестов по архитектуре
+    new HtmlWebpackPlugin({
+      template: './src/architecture_manifests/futureArchitectMilan.html',
+      filename: './architecture_manifests/futureArchitectMilan.html'
+    }),
+
+    // Страницы манифестов по живописи
+    new HtmlWebpackPlugin({
+      template: './src/arts_manifests/obosnovanieIManifestFuturizma.html',
+      filename: './arts_manifests/obosnovanieIManifestFuturizma.html'
+    }),
 
 
     // Internal pages

@@ -42,10 +42,66 @@
       </nav>    
 
       <div class="manifestsTypesBlock">
-        <div class="typeOfManifest"><a href="manifests/design.html">Дизайн</a></div>
-        <div class="typeOfManifest">Культура</div>
-        <div class="typeOfManifest">Архитектура</div>
-        <div class="typeOfManifest">Мода</div>
+        <div id="typeOfManifestDesign">Дизайн</div>
+        <div id="typeOfManifestCulture">Культура</div>
+        <div id="typeOfManifestArcitecture">Архитектура</div>
+        <div id="typeOfManifestArts">Живопись</div>
       </div>
+
+      <div class="articlesBlcok">
+        <div id="articleCardDesign">
+          <p><a href="./design_manifests/fluxus.html">Флюксус</a></p>
+          <h2>Описание текста про флюксус много букв</h2>
+          <h2>#Дизайн</h2>
+        </div>
+        <div id="articleCardArts">
+          <p><a href="./arts_manifests/obosnovanieIManifestFuturizma.html">Манифест футуризма</a></p>
+          <h2>Описание текста про живопись много букв</h2>
+          <h2>#Живопись</h2>
+        </div>
+        <div id="articleCardArchitecture">
+          <p><a href="./architecture_manifests/futureArchitectMilan.html">Манифест футуристической архитектуры. 1914 г.</a></p>
+          <h2>Описание текста про архитектуру много букв</h2>
+          <h2>#Архитектура</h2>
+        </div>
+        <div id="articleCardCulture">
+          <p><a href="./culture_manifests/ManifesKebudayaan.html">Manifes Kebudayaan</a></p>
+          <h2>Описание текста про культуру много букв</h2>
+          <h2>#Культура</h2>
+        </div>
+      </div>
+
+<script>
+
+function hideBlocksDesign() {
+  const typeOfManifestDesign = document.getElementById('typeOfManifestDesign');
+  // const typeOfManifestCulture = document.getElementById('typeOfManifestCulture');
+  // const typeOfManifestArcitecture = document.getElementById('typeOfManifestArcitecture')
+  // const typeOfManifestArts = document.getElementById('typeOfManifestArts')
+
+  const articleCardCulture = document.getElementById('articleCardCulture');
+  const articleCardArchitecture = document.getElementById('articleCardArchitecture');
+  const articleCardArts = document.getElementById('articleCardArts');
+  const articleCardDesign = document.getElementById('articleCardDesign')
+
+  if (typeOfManifestDesign.innerHTML === 'Дизайн') {
+    articleCardCulture.style.display = 'none';
+    articleCardArchitecture.style.display = 'none';
+    articleCardArts.style.display = 'none';
+    typeOfManifestDesign.style.backgroundColor = 'yellow';
+  } else {
+    articleCardCulture.style.display = 'flex';
+    articleCardArchitecture.style.display = 'flex';
+    articleCardArts.style.display = 'flex';
+  }
+}
+typeOfManifestDesign.addEventListener('click', hideBlocksDesign);
+
+document.getElementById("typeOfManifestDesign").addEventListener("mouseover", function() {
+  this.style.cursor = "pointer";
+});
+
+
+</script>
 </body>
 </html>
