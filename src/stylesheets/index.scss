@@ -26,6 +26,7 @@
 
 #header{
     height: 100%; 
+    width: 5rem;
     background-color: rgba(170, 151, 74, 1); 
     display: flex; 
     justify-content: space-between; 
@@ -445,7 +446,6 @@
 
 #div_bar_phone{
     width: 0%;
-    margin-left: 1.5rem;
     display: flex;
     justify-content: center;
 }
