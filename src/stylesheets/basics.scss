@@ -2,39 +2,15 @@
   box-sizing: border-box;
 }
 
-p {
-  font-size: 24px;
-  font-weight: 400;
-}
-
-h1 {
-  font-size: 120px;
-}
-
 html,
 body {
-  height: 100%;
-  font-family: 'Helvetica';
+  height: 100vh;
+  margin: 0;
+  font-family: 'EB Garamond';
+  font-weight: 500;
 }
 
 body {
   font-family: 'PT Root UI', Helvetica, Arial, sans-serif;
   font-weight: 400;
-}
-
-.headBlock{
-  display: flex;
-  flex-direction: row;
-  gap: 2vw;
-  margin-left: 1%;
-  margin-top: 1%;
-}
-
-.logoInHead{
-  width: 6%;
-}
-
-.menuBlock{
-  font-size: 2vw;
-  margin-left: 1%;
 }
