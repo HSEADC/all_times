@@ -27,7 +27,340 @@
     <meta property="twitter:image" content="https://raw.githubusercontent.com/HSEADC/conserva/refs/heads/main/src/images/meta-manifests.png" />
 </head>
 <body>
-    <header class="headBlock">
+
+  <div id="hugeBlockForManifests">
+
+    <!-- ХЭДЕР ОБЫЧНЫЙ -->
+    <div id="headerFixed">
+
+        <div id="div_menu" style="display: none;" class="hidden">
+           <a href="./index.html"><img id="logoStyle" src="./images/Консерва.webp"></a>
+            <ul>
+                <li><a href="aboutUs.html">О нас</a></li>
+                <li><a href="manifests.html">Манифесты</a>
+                <ol>
+                    <li>i. Дизайн</li>
+                    <li>ii. Культура</li>
+                    <li>iii. Архитектура</li>
+                    <li>iv. Живопись</li>
+                </ol>
+                </li>
+                <li><a href="styleGuide.html">Стайлгайд</a></li>
+                <li><a href="reflection.html">Рефлексия</a></li><br>
+                <li>вк / телеграм</li>
+            </ul>
+        </div>
+
+
+        <div id="div_bar">
+                <img id="arrow" src="./images/arrow.webp">
+        </div>
+    </div>
+
+    <!-- ХЭДЕР МОБИЛЬНЫЙ -->
+    <div id="headerMobileFixed">
+        <div id="logoBox"><a href="./index.html"><img id="logoStyle_phone" src="./images/Консерва.webp"></a></div>
+        <div id="list"> <ul>
+                <li><a href="aboutUs.html">О нас</a></li>
+                <li><a href="manifests.html">Манифесты</a>
+                <ol id="ol_list" style="display: none;">
+                    <li>i. Дизайн</li>
+                    <li>ii. Культура</li>
+                    <li>iii. Архитектура</li>
+                    <li>iv. Искусство</li>
+                </ol>
+                </li>
+                <li><a href="styleGuide.html">Стайлгайд</a></li>
+                <li><a href="reflection.html">Рефлексия</a></li><br>
+                <li>вк / телеграм</li>
+                </ul>
+        </div>
+        <div id="div_bar_phone"><img id="arrow_mobile" src="./images/arrow.webp"></div>
+    </div>
+
+            
+        <!-- тут мианифесты -->
+    <div id="manifestsBlock">
+
+            <div id="filterBlock">
+
+                <div id="designFilter">
+                    <img src="./images/imgDesignMainPageGrey.webp">
+                </div>
+        
+                <div id="cultureFilter">
+                    <img src="./images/imgCultureMainPageGrey.webp">
+                </div>
+        
+                <div id="architectureFilter">
+                    <img src="./images/imgArchitectureMainPageGrey.webp">
+                </div>
+        
+                <div id="artsFilter">
+                    <img src="./images/imgArtsMainPageGrey.webp">
+                </div>
+
+            </div>
+
+    
+        
+            <!-- манифесты -->
+            <div id="blocksOfManifests">
+                <div class='manifestCard'>
+                    <div id='name'><p>Первый манифест Флюксуса</p></div>
+                    <div id='year'><p>1963</p></div>
+                    <div id='author'><p>Джордж Мачюнас</p></div>
+                    <div id='filter'><p>ii</p></div>
+                    <div class="img-txt-container">
+                        <div id='img'><img src="./images/lilPicManifestFluxus.webp" alt="Image"></div>
+                        <div id='txt'><p>2. Воздействовать, Менять текущее положение посредством взаимодействия с потоком. Fluxed into another world.<br> 
+
+                            Очистим мир от умершего искусства, имитации, искусственного искусства, абстрактного искусства, иллюзионистского искусства, математического искусства!</p></div>
+                    </div>
+                </div>
+
+                <div class='manifestCard'>
+                    <div id='name'><p>Лучисты и Будущники</p></div>
+                    <div id='year'><p>1913</p></div>
+                    <div id='author'><p>Лучисты</p></div>
+                    <div id='filter'><p>iv</p></div>
+                    <div class="img-txt-container">
+                        <div id='img'><img src="./images/lilManifestLuchisti.webp" alt="Image"></div>
+                        <div id='txt'><p>Будущее за нами. 
+                            Нам не нужна популяризация — все равно наше искусство займет в жизни полностью свое место — 
+                            это дело времени. 
+                            Выдвигаемый нами стиль лучистой живописи имеет 
+                            в виду пространственные формы, возникающие 
+                            от пересечения отраженных лучей различных предметов, формы, выделенные волею художника.</p></div>
+                    </div>
+                </div>
+
+                <div class='manifestCard'>
+                    <div id='name'><p>Манифест дадаизма</p></div>
+                    <div id='year'><p>1918</p></div>
+                    <div id='author'><p>Р. Хельзенбеком</p></div>
+                    <div id='filter'><p>iv</p></div>
+                    <div class="img-txt-container">
+                        <div id='img'></div>
+                        <div id='txt'><p>Слово “Дада” символизирует примитивнейшее отношение к окружающей действительности, вместе 
+                            с дадаизмом в свои права вступает новая реальность. Жизнь предстает как одновременная путаница шорохов, красок и ритмов духовной жизни, которая без колебаний берется на вооружение дадаистским искусством со всем сенсационным гвалтом 
+                            и лихорадкой ее лихого повседневного языка, во всей 
+                            ее жестокой реальности. </p></div>
+                    </div>
+                </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>  
+
+document.getElementById('div_bar').addEventListener('click', toggleMenuManifest);
+function toggleMenuManifest() {
+    const headerFixed = document.getElementById('headerFixed');
+    const div_bar = document.getElementById('div_bar');
+    const arrow = document.getElementById('arrow');
+    const div_menu = document.getElementById('div_menu');
+    const manifestsBlock = document.getElementById('manifestsBlock');
+
+  if (document.documentElement.clientWidth > 414){
+    if (div_menu.style.display === 'none') {
+        div_menu.style.display = 'flex';
+        div_bar.classList.add('active');
+        div_menu.style.width = '13rem';
+        arrow.style.transform = 'rotate(180deg)';
+        headerFixed.style.width = '20rem';
+        manifestsBlock.style.marginLeft = '20rem';
+    } 
+    
+    else {
+        div_menu.style.display = 'none';
+        div_bar.classList.remove('active');
+        div_menu.style.width = '0rem';
+        arrow.style.transform = 'rotate(0deg)';
+        headerFixed.style.width = '3.5rem';
+        manifestsBlock.style.marginLeft = '3.5rem';
+    }
+  }
+  
+}
+
+document.getElementById('div_bar_phone').addEventListener('click', toggleListManifest)
+function toggleListManifest(){
+    const ol_list = document.getElementById('ol_list');
+    const arrow_mobile = document.getElementById('arrow_mobile');
+    const headerFixed = document.getElementById('headerFixed');
+    const headerMobileFixed = document.getElementById('headerMobileFixed');
+    const manifestsBlock = document.getElementById('manifestsBlock');
+    const logoStyle_phone = document.getElementById('logoStyle_phone');
+
+    if (document.documentElement.clientWidth <= 414){
+        if(ol_list.style.display === 'none' || ol_list.style.display === ''){
+            headerFixed.style.display = 'none';
+            headerMobileFixed.style.height = '15rem';
+            headerMobileFixed.style.display = 'flex';
+            ol_list.style.display = 'block';
+            arrow_mobile.style.transform = 'rotate(90deg)';
+            manifestsBlock.style.marginTop = '15rem';
+            logoStyle_phone.style.height = '14.5rem';
+            
+        } else {
+            headerFixed.style.display = 'none';
+            headerMobileFixed.style.height = '10rem';
+            headerMobileFixed.style.display = 'flex';
+            ol_list.style.display = 'none';
+            arrow_mobile.style.transform = 'rotate(-90deg)';
+            manifestsBlock.style.marginTop = '10rem';
+            logoStyle_phone.style.height = '10rem';
+        }
+    }
+
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <header class="headBlock">
         <h1>Манифесты</h1>
       </header>
     
@@ -100,8 +433,8 @@ typeOfManifestDesign.addEventListener('click', hideBlocksDesign);
 document.getElementById("typeOfManifestDesign").addEventListener("mouseover", function() {
 this.style.cursor = "pointer";
 });
+ 
+</script>-->
 
-
-</script>
 </body>
 </html>
