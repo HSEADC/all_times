@@ -106,7 +106,7 @@
         
             <!-- манифесты -->
             <div id="blocksOfManifests">
-                <div class='manifestCard'>
+                <div class='manifestCard' id="fluxusCard">
                     <div id='name'><p>Первый манифест Флюксуса</p></div>
                     <div id='year'><p>1963</p></div>
                     <div id='author'><p>Джордж Мачюнас</p></div>
@@ -117,9 +117,9 @@
 
                             Очистим мир от умершего искусства, имитации, искусственного искусства, абстрактного искусства, иллюзионистского искусства, математического искусства!</p></div>
                     </div>
-                </div>
+                  </div>
 
-                <div class='manifestCard'>
+                <div class='manifestCard' id="luchistiCard">
                     <div id='name'><p>Лучисты и Будущники</p></div>
                     <div id='year'><p>1913</p></div>
                     <div id='author'><p>Лучисты</p></div>
@@ -163,6 +163,13 @@
 
 
 <script>  
+    document.getElementById('fluxusCard').addEventListener('click', function() {
+        window.location.href = './src/culture_manifests/fluxusManifest.html'; // Переход на страницу fluxus.html
+    });
+
+
+
+
 
 document.getElementById('div_bar').addEventListener('click', toggleMenuManifest);
 function toggleMenuManifest() {
@@ -241,10 +248,10 @@ let isCulture = false;
                 const filterTextIV = card.querySelector('#filter p'); 
                 
                 if (filterTextIV) {
-                    if (filterTextIV.textContent !== 'iv') {
+                    if (filterTextIV.textContent === 'iv') {
                         card.style.display = 'none';
                         // cultureFilter.style.backgroundColor = 'rgba(245, 245, 245, 1)'
-                    } else if (filterTextIV.textContent === 'iv') {
+                    } else if (filterTextIV.textContent !== 'iv') {
                         card.style.display = 'flex';
                         // cultureFilter.style.backgroundColor = 'rgba(246, 255, 0, 1)'
                     }
@@ -270,9 +277,9 @@ document.getElementById('artsFilter').addEventListener('click', function() {
             const filterTextII = card.querySelector('#filter p'); 
             
             if (filterTextII) {
-                if (filterTextII.textContent !== 'ii') {
+                if (filterTextII.textContent === 'ii') {
                     card.style.display = 'none';
-                } else if (filterTextII.textContent === 'ii') {
+                } else if (filterTextII.textContent !== 'ii') {
                     card.style.display = 'flex';
                 }
             }

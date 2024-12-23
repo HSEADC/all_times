@@ -103,16 +103,16 @@ module.exports = {
 
     // Страницы манифестов по дизайну
     new HtmlWebpackPlugin({
-      template: './src/design_manifests/fluxus.html',
-      filename: './design_manifests/fluxus.html'
+      template: './src/design_manifests/ManifesKebudayaan.html',
+      filename: './design_manifests/ManifesKebudayaan.html'
     }),
 
     // Страницы манифестов по культуре
     new HtmlWebpackPlugin({
-      template: './src/culture_manifests/ManifesKebudayaan.html',
-      filename: './culture_manifests/ManifesKebudayaan.html'
+      template: './src/culture_manifests/fluxusManifest.html',
+      filename: './culture_manifests/fluxusManifest.html'
     }),
-
+    
     // Страницы манифестов по архитектуре
     new HtmlWebpackPlugin({
       template: './src/architecture_manifests/futureArchitectMilan.html',
