@@ -227,214 +227,95 @@ function toggleListManifest(){
 }
 
 
+
+
+
+
+// document.getElementById('cultureFilter').addEventListener('click', function() {
+//         // Получаем все карточки манифестов
+//         const cards = document.querySelectorAll('.manifestCard');
+//         const cultureFilter = document.getElementById('cultureFilter');
+
+//         cards.forEach(card => {
+//             const filterText = card.querySelector('#filter p'); // Находим элемент <p> внутри <div id='filter'>
+            
+//             if (filterText) {
+//               cultureFilter.style.backgroundColor = 'rgba(246, 255, 0, 1)'
+//                 if (filterText.textContent === 'ii') {
+//                     // Если текст 'ii', скрываем карточку
+//                     card.style.display = 'none';
+//                 } else if (filterText.textContent === 'iv') {
+//                     // Если текст 'iv', показываем карточку
+//                     card.style.display = 'flex';
+//                 }
+//             }
+//         });
+//     });
+
+
+let isCulture = false; 
+
+    document.getElementById('cultureFilter').addEventListener('click', function() {
+        const cards = document.querySelectorAll('.manifestCard');
+        const cultureFilter = document.getElementById('cultureFilter');
+
+        if (isCulture) {
+            cards.forEach(card => {
+                card.style.display = 'flex';
+              });
+        } else {
+            cards.forEach(card => {
+                const filterTextIV = card.querySelector('#filter p'); 
+                
+                if (filterTextIV) {
+                    if (filterTextIV.textContent !== 'iv') {
+                        card.style.display = 'none';
+                        // cultureFilter.style.backgroundColor = 'rgba(245, 245, 245, 1)'
+                    } else if (filterTextIV.textContent === 'iv') {
+                        card.style.display = 'flex';
+                        // cultureFilter.style.backgroundColor = 'rgba(246, 255, 0, 1)'
+                    }
+                }
+            });        
+          }
+          isCulture = !isCulture;
+    });
+
+
+
+let isArts = false; 
+
+document.getElementById('artsFilter').addEventListener('click', function() {
+    const cards = document.querySelectorAll('.manifestCard');
+
+    if (isArts) {
+        cards.forEach(card => {
+            card.style.display = 'flex';
+          });
+    } else {
+        cards.forEach(card => {
+            const filterTextII = card.querySelector('#filter p'); 
+            
+            if (filterTextII) {
+                if (filterTextII.textContent !== 'ii') {
+                    card.style.display = 'none';
+                } else if (filterTextII.textContent === 'ii') {
+                    card.style.display = 'flex';
+                }
+            }
+        });        
+      }
+      isArts = !isArts;
+});
+
+
+
+
 </script>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <header class="headBlock">
-        <h1>Манифесты</h1>
-      </header>
-    
-      <nav class="menuBlock">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="aboutUs.html">О нас</a></li>
-          <li><a href="manifests.html">Манифесты</a></li>
-          <li><a href="reflection.html">Рефлексия</a></li>
-          <li><a href="styleGuide.html">Стайлгайд</a></li>
-        </ul>
-      </nav>    
-
-      <div class="manifestsTypesBlock">
-        <div id="typeOfManifestDesign">Дизайн</div>
-        <div id="typeOfManifestCulture">Культура</div>
-        <div id="typeOfManifestArcitecture">Архитектура</div>
-        <div id="typeOfManifestArts">Живопись</div>
-      </div>
-
-      <div class="articlesBlcok">
-        <div id="articleCardDesign">
-          <p><a href="./design_manifests/fluxus.html">Флюксус</a></p>
-          <h2>Описание текста про флюксус много букв</h2>
-          <h2>#Дизайн</h2>
-        </div>
-        <div id="articleCardArts">
-          <p><a href="./arts_manifests/obosnovanieIManifestFuturizma.html">Манифест футуризма</a></p>
-          <h2>Описание текста про живопись много букв</h2>
-          <h2>#Живопись</h2>
-        </div>
-        <div id="articleCardArchitecture">
-          <p><a href="./architecture_manifests/futureArchitectMilan.html">Манифест футуристической архитектуры. 1914 г.</a></p>
-          <h2>Описание текста про архитектуру много букв</h2>
-          <h2>#Архитектура</h2>
-        </div>
-        <div id="articleCardCulture">
-          <p><a href="./culture_manifests/ManifesKebudayaan.html">Manifes Kebudayaan</a></p>
-          <h2>Описание текста про культуру много букв</h2>
-          <h2>#Культура</h2>
-        </div>
-      </div>
-
-<script>
-
-function hideBlocksDesign() {
-  const typeOfManifestDesign = document.getElementById('typeOfManifestDesign');
-  // const typeOfManifestCulture = document.getElementById('typeOfManifestCulture');
-  // const typeOfManifestArcitecture = document.getElementById('typeOfManifestArcitecture')
-  // const typeOfManifestArts = document.getElementById('typeOfManifestArts')
-
-  const articleCardCulture = document.getElementById('articleCardCulture');
-  const articleCardArchitecture = document.getElementById('articleCardArchitecture');
-  const articleCardArts = document.getElementById('articleCardArts');
-  const articleCardDesign = document.getElementById('articleCardDesign')
-
-  if (typeOfManifestDesign.innerHTML === 'Дизайн') {
-    articleCardCulture.style.display = 'none';
-    articleCardArchitecture.style.display = 'none';
-    articleCardArts.style.display = 'none';
-    typeOfManifestDesign.style.backgroundColor = 'yellow';
-  } else {
-    articleCardCulture.style.display = 'flex';
-    articleCardArchitecture.style.display = 'flex';
-    articleCardArts.style.display = 'flex';
-  }
-}
-typeOfManifestDesign.addEventListener('click', hideBlocksDesign);
-
-document.getElementById("typeOfManifestDesign").addEventListener("mouseover", function() {
-this.style.cursor = "pointer";
-});
- 
-</script>-->
 
 </body>
 </html>
