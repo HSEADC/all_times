@@ -26,18 +26,213 @@
     <meta property="twitter:image" content="https://raw.githubusercontent.com/HSEADC/conserva/refs/heads/main/src/images/meta-aboutUs.png" />
 </head>
 <body>
-  <header class="headBlock">
-    <h1>О нас</h1>
-  </header>
 
-  <nav class="menuBlock">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="aboutUs.html">О нас</a></li>
-      <li><a href="manifests.html">Манифесты</a></li>
-      <li><a href="reflection.html">Рефлексия</a></li>
-      <li><a href="styleGuide.html">Стайлгайд</a></li>
-    </ul>
-  </nav>
+
+  <div id="hugeBlockForAboutUs">
+
+    <!-- ХЭДЕР ОБЫЧНЫЙ -->
+    <div id="headerFixed">
+
+        <div id="div_menu" style="display: none;" class="hidden">
+           <a href="./index.html"><img id="logoStyle" src="./images/Консерва.webp"></a>
+            <ul>
+                <li><a href="aboutUs.html">О нас</a></li>
+                <li><a href="manifests.html">Манифесты</a>
+                <ol>
+                    <li>i. Дизайн</li>
+                    <li>ii. Культура</li>
+                    <li>iii. Архитектура</li>
+                    <li>iv. Живопись</li>
+                </ol>
+                </li>
+                <li><a href="styleGuide.html">Стайлгайд</a></li>
+                <li><a href="reflection.html">Рефлексия</a></li><br>
+                <li>вк / телеграм</li>
+            </ul>
+        </div>
+
+
+        <div id="div_bar">
+                <img id="arrow" src="./images/arrow.webp">
+        </div>
+    </div>
+
+    <!-- ХЭДЕР МОБИЛЬНЫЙ -->
+    <div id="headerMobileFixed">
+        <div id="logoBox"><a href="./index.html"><img id="logoStyle_phone" src="./images/Консерва.webp"></a></div>
+        <div id="list"> <ul>
+                <li><a href="aboutUs.html">О нас</a></li>
+                <li><a href="manifests.html">Манифесты</a>
+                <ol id="ol_list" style="display: none;">
+                    <li>i. Дизайн</li>
+                    <li>ii. Культура</li>
+                    <li>iii. Архитектура</li>
+                    <li>iv. Искусство</li>
+                </ol>
+                </li>
+                <li><a href="styleGuide.html">Стайлгайд</a></li>
+                <li><a href="reflection.html">Рефлексия</a></li><br>
+                <li>вк / телеграм</li>
+                </ul>
+        </div>
+        <div id="div_bar_phone"><img id="arrow_mobile" src="./images/arrow.webp"></div>
+    </div>
+
+            
+  <!-- тут о нас -->
+  <div id="aboutUsBlock">
+    <div id="firstBlockaboutUs">
+      <p>О нас</p>
+      <img src="./images/aboutUsLilPictureFirstBlock.webp">
+      <img src="./images/arrowAboutUs.webp">
+    </div>
+
+    <div id="txtAboutUsBlock">
+      <h1>
+        Культурный контекст
+      </h1>
+      <p>«Жизнь коротка, искусство вечно».<br>
+        Вечен и&nbsp;интерес к&nbsp;искусству, его идеям и&nbsp;принципам.<br><br>
+        
+        Манифест — письменное изложение литературных 
+        или&nbsp;художественных принципов, выражение мнения, 
+        содержащее программу. <br><br>
+        
+        Манифест, как&nbsp;источник информации и&nbsp;форма выражения творческих идей и&nbsp;принципов, закрыт для&nbsp;людей. Тексты трудны для&nbsp;понимания, их&nbsp;сложно найти без&nbsp;знания их&nbsp;существования.
+      </p>
+      <h1>
+        Принципы
+      </h1>
+      <p>
+        Мы стремимся, чтобы тексты стали доступны людям.<br><br>
+
+        Мы хотим видеть больше концептуально 
+        проработанных проектов.<br><br>
+        
+        Мы считаем, что тексты, не&nbsp;должны ставить своей главной 
+        и&nbsp;единственной целью продать продукт или&nbsp;услугу. <br><br>
+        
+        Мы считаем, что&nbsp;чтение манифестов помогает качественно писать собственные тексты, проводить глубокие исследования интересующего культурного поля.
+      </p>
+      <h1>
+        Идея
+      </h1>
+      <p>
+        Наше текущее понимание культуры чтения и&nbsp;написания творческих текстов привело нас к&nbsp;созданию архива манифестов.
+      </p>
+      <h1>
+        Консерва
+      </h1>
+      <p>
+        Веб-сервис собирает тексты и&nbsp;делает доступными для&nbsp;людей.<br><br>
+
+        Кроме того, проект стремится развить культуру осознанного подхода 
+        к&nbsp;аписанию поясняющих текстов, которые в&nbsp;перспективе помогут 
+        создавать более концептуально проработанные творческие проекты.
+      </p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>  
+
+document.getElementById('div_bar').addEventListener('click', toggleMenuManifest);
+function toggleMenuManifest() {
+    const headerFixed = document.getElementById('headerFixed');
+    const div_bar = document.getElementById('div_bar');
+    const arrow = document.getElementById('arrow');
+    const div_menu = document.getElementById('div_menu');
+    const txtAboutUsBlock = document.getElementById('txtAboutUsBlock');
+    const firstBlockaboutUs = document.getElementById('firstBlockaboutUs');
+
+  if (document.documentElement.clientWidth > 414){
+    if (div_menu.style.display === 'none') {
+        div_menu.style.display = 'flex';
+        div_bar.classList.add('active');
+        div_menu.style.width = '13rem';
+        arrow.style.transform = 'rotate(180deg)';
+        headerFixed.style.width = '20rem';
+        txtAboutUsBlock.style.marginLeft = '16rem';
+        firstBlockaboutUs.style.marginLeft = '16rem';
+
+        firstBlockaboutUs.style.width = '82.8%';
+        txtAboutUsBlock.style.width = '82.8%';
+    } 
+    
+    else {
+        div_menu.style.display = 'none';
+        div_bar.classList.remove('active');
+        div_menu.style.width = '0rem';
+        arrow.style.transform = 'rotate(0deg)';
+        headerFixed.style.width = '3.5rem';
+        txtAboutUsBlock.style.marginLeft = '0rem';
+        firstBlockaboutUs.style.marginLeft = '0rem';
+
+        
+        firstBlockaboutUs.style.width = '100%';
+        txtAboutUsBlock.style.width = '100%';
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+document.getElementById('div_bar_phone').addEventListener('click', toggleListManifest)
+function toggleListManifest(){
+    const ol_list = document.getElementById('ol_list');
+    const arrow_mobile = document.getElementById('arrow_mobile');
+    const headerFixed = document.getElementById('headerFixed');
+    const headerMobileFixed = document.getElementById('headerMobileFixed');
+    const logoStyle_phone = document.getElementById('logoStyle_phone');
+    const firstBlockaboutUs = document.getElementById('firstBlockaboutUs');
+
+    if (document.documentElement.clientWidth <= 414){
+        if(ol_list.style.display === 'none' || ol_list.style.display === ''){
+            headerFixed.style.display = 'none';
+            headerMobileFixed.style.height = '15rem';
+            headerMobileFixed.style.display = 'flex';
+            ol_list.style.display = 'block';
+            arrow_mobile.style.transform = 'rotate(90deg)';
+            firstBlockaboutUs.style.marginTop = '10rem';
+            logoStyle_phone.style.height = '14.5rem';
+            
+        } else {
+            headerFixed.style.display = 'none';
+            headerMobileFixed.style.height = '10rem';
+            headerMobileFixed.style.display = 'flex';
+            ol_list.style.display = 'none';
+            arrow_mobile.style.transform = 'rotate(-90deg)';
+            firstBlockaboutUs.style.marginTop = '0rem';
+            logoStyle_phone.style.height = '10rem';
+        }
+    }
+
+}
+</script>
+
+
+
+
+
+
 </body>
 </html>
