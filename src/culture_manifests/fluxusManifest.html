@@ -36,10 +36,10 @@
     <div id="headerFixed">
 
         <div id="div_menu" style="display: none;" class="hidden">
-           <a href="./index.html"><img id="logoStyle" src="/src/images/Консерва.webp"></a>
+           <a href="../index.html"><img id="logoStyle" src="/src/images/Консерва.webp"></a>
             <ul>
-                <li><a href="aboutUs.html">О нас</a></li>
-                <li><a href="manifests.html">Манифесты</a>
+                <li><a href="../aboutUs.html">О нас</a></li>
+                <li><a href="../manifests.html">Манифесты</a>
                 <ol>
                     <li>i. Дизайн</li>
                     <li>ii. Культура</li>
@@ -47,8 +47,8 @@
                     <li>iv. Живопись</li>
                 </ol>
                 </li>
-                <li><a href="styleGuide.html">Стайлгайд</a></li>
-                <li><a href="reflection.html">Рефлексия</a></li><br>
+                <li><a href="../styleGuide.html">Стайлгайд</a></li>
+                <li><a href="../reflection.html">Рефлексия</a></li><br>
                 <li>вк / телеграм</li>
             </ul>
         </div>
@@ -61,10 +61,10 @@
 
     <!-- ХЭДЕР МОБИЛЬНЫЙ -->
     <div id="headerMobileFixed">
-        <div id="logoBox"><a href="./index.html"><img id="logoStyle_phone" src="/src/images/Консерва.webp"></a></div>
+        <div id="logoBox"><a href="../index.html"><img id="logoStyle_phone" src="/src/images/Консерва.webp"></a></div>
         <div id="list"> <ul>
-                <li><a href="aboutUs.html">О нас</a></li>
-                <li><a href="manifests.html">Манифесты</a>
+                <li><a href="../aboutUs.html">О нас</a></li>
+                <li><a href="../manifests.html">Манифесты</a>
                 <ol id="ol_list" style="display: none;">
                     <li>i. Дизайн</li>
                     <li>ii. Культура</li>
@@ -72,8 +72,8 @@
                     <li>iv. Искусство</li>
                 </ol>
                 </li>
-                <li><a href="styleGuide.html">Стайлгайд</a></li>
-                <li><a href="reflection.html">Рефлексия</a></li><br>
+                <li><a href="../styleGuide.html">Стайлгайд</a></li>
+                <li><a href="../reflection.html">Рефлексия</a></li><br>
                 <li>вк / телеграм</li>
                 </ul>
         </div>
@@ -152,23 +152,23 @@
 
             <div id="infoPodvalBlcok">
                 <div id="linksForPages">
-                    <p><a href="/src/index.html">
+                    <p><a href="../index.html">
                         Консерва
                     </a></p>
 
-                    <p><a href="/src/aboutUs.html">
+                    <p><a href="../aboutUs.html">
                         О нас
                     </a></p>
 
-                    <p><a href="/src/reflection.html">
+                    <p><a href="../reflection.html">
                         Рефлекися
                     </a></p>
 
-                    <p><a href="/src/manifests.html">
+                    <p><a href="../manifests.html">
                         Манифесты
                     </a></p>
 
-                    <p><a href="/src/styleGuide.html">
+                    <p><a href="../styleGuide.html">
                         → Стайлгайд
                     </a></p>
                 </div>
@@ -238,12 +238,12 @@ var form = document.getElementById("my-form");
           if (Object.hasOwn(data, 'errors')) {
             status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
           } else {
-            status.innerHTML = "Что-то пошло не так"
+            status.innerHTML = "Вы подписаны на рассылку";
           }
         })
       } 
     }).catch(error => {
-      status.innerHTML = "Что-то пошло не так"
+      status.innerHTML = "Вы подписаны на рассылку"
     });  
   } 
   form.addEventListener("submit", handleSubmit)
