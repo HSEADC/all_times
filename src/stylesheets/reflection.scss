@@ -176,17 +176,19 @@
     
         width: 100%; 
         padding: 1rem;
-        box-sizing: border-box; /* Учитываем отступы в ширине */
     }
 
     .textReflection:nth-child(odd) {
         background-color: rgba(246, 255, 0, 1); 
-        text-align: left;         
+        text-align: left;       
+        margin-left: 0%;
+        margin-right: 0%;  
     }
     
     .textReflection:nth-child(even) {
         background-color: rgba(246, 255, 0, 1);
         text-align: left; 
         margin-left: 0%;
+        margin-right: 0%;
     }
 }
