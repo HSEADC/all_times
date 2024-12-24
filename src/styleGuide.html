@@ -28,19 +28,198 @@
     <meta property="twitter:image" content="https://raw.githubusercontent.com/HSEADC/conserva/refs/heads/main/src/images/meta-styleGuide.png" />
 </head>
 <body>
-    <header class="headBlock">
-        <h1>Стайлгайд</h1>
-    </header>
+
+    <div id="hugeBlockForStyleGuide">
+
+        <!-- ХЭДЕР ОБЫЧНЫЙ -->
+        <div id="headerFixed">
+
+            <div id="div_menu" style="display: none;" class="hidden">
+            <a href="../index.html"><img id="logoStyle" src="/src/images/Консерва.webp"></a>
+                <ul>
+                    <li><a href="../aboutUs.html">О нас</a></li>
+                    <li><a href="../manifests.html">Манифесты</a>
+                    <ol>
+                        <li>i. Дизайн</li>
+                        <li>ii. Культура</li>
+                        <li>iii. Архитектура</li>
+                        <li>iv. Живопись</li>
+                    </ol>
+                    </li>
+                    <li><a href="../styleGuide.html">Стайлгайд</a></li>
+                    <li><a href="../reflection.html">Рефлексия</a></li><br>
+                    <li><a href="https://vk.com/conserva_archive" target="_blank">вк</a> / <a href="https://t.me/conserva_archive" target="_blank">телеграм</a></li>
+                </ul>
+            </div>
+
+
+            <div id="div_bar">
+                    <img id="arrow" src="/src/images/arrow.webp">
+            </div>
+        </div>
+
+        <!-- ХЭДЕР МОБИЛЬНЫЙ -->
+        <div id="headerMobileFixed">
+            <div id="logoBox"><a href="../index.html"><img id="logoStyle_phone" src="/src/images/Консерва.webp"></a></div>
+            <div id="list"> <ul>
+                    <li><a href="../aboutUs.html">О нас</a></li>
+                    <li><a href="../manifests.html">Манифесты</a>
+                    <ol id="ol_list" style="display: none;">
+                        <li>i. Дизайн</li>
+                        <li>ii. Культура</li>
+                        <li>iii. Архитектура</li>
+                        <li>iv. Искусство</li>
+                    </ol>
+                    </li>
+                    <li><a href="../styleGuide.html">Стайлгайд</a></li>
+                    <li><a href="../reflection.html">Рефлексия</a></li><br>
+                    <li><a href="https://vk.com/conserva_archive" target="_blank">вк</a> / <a href="https://t.me/conserva_archive" target="_blank">телеграм</a></li>
+                    </ul>
+            </div>
+            <div id="div_bar_phone"><img id="arrow_mobile" src="/src/images/arrow.webp"></div>
+        </div>
+
+
+        <!-- весь твой код должен быть внутри этого дива -->
+        <div id="styleGuideBlock">
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+document.getElementById('div_bar').addEventListener('click', toggleMenuManifest);
+function toggleMenuManifest() {
+    const headerFixed = document.getElementById('headerFixed');
+    const div_bar = document.getElementById('div_bar');
+    const arrow = document.getElementById('arrow');
+    const div_menu = document.getElementById('div_menu');
+    const styleGuideBlock = document.getElementById('styleGuideBlock');
+
+  if (document.documentElement.clientWidth > 414){
+    if (div_menu.style.display === 'none') {
+        div_menu.style.display = 'flex';
+        div_bar.classList.add('active');
+        div_menu.style.width = '13rem';
+        arrow.style.transform = 'rotate(180deg)';
+        headerFixed.style.width = '20rem';
+        styleGuideBlock.style.marginLeft = '20rem';
+    } 
     
-    <nav class="menuBlock">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="aboutUs.html">О нас</a></li>
-          <li><a href="manifests.html">Манифесты</a></li>
-          <li><a href="reflection.html">Рефлексия</a></li>
-          <li><a href="styleGuide.html">Стайлгайд</a></li>
-        </ul>
-    </nav>
+    else {
+        div_menu.style.display = 'none';
+        div_bar.classList.remove('active');
+        div_menu.style.width = '0rem';
+        arrow.style.transform = 'rotate(0deg)';
+        headerFixed.style.width = '3.5rem';
+        styleGuideBlock.style.marginLeft = '3.5rem';
+    }
+  }
+  
+}
+
+document.getElementById('div_bar_phone').addEventListener('click', toggleListManifest)
+function toggleListManifest(){
+    const ol_list = document.getElementById('ol_list');
+    const arrow_mobile = document.getElementById('arrow_mobile');
+    const headerFixed = document.getElementById('headerFixed');
+    const headerMobileFixed = document.getElementById('headerMobileFixed');
+    const styleGuideBlock = document.getElementById('styleGuideBlock');
+    const logoStyle_phone = document.getElementById('logoStyle_phone');
+
+    if (document.documentElement.clientWidth <= 414){
+        if(ol_list.style.display === 'none' || ol_list.style.display === ''){
+            headerFixed.style.display = 'none';
+            headerMobileFixed.style.height = '15rem';
+            headerMobileFixed.style.display = 'flex';
+            ol_list.style.display = 'block';
+            arrow_mobile.style.transform = 'rotate(90deg)';
+            styleGuideBlock.style.marginTop = '15rem';
+            logoStyle_phone.style.height = '14.5rem';
+            
+        } else {
+            headerFixed.style.display = 'none';
+            headerMobileFixed.style.height = '10rem';
+            headerMobileFixed.style.display = 'flex';
+            ol_list.style.display = 'none';
+            arrow_mobile.style.transform = 'rotate(-90deg)';
+            styleGuideBlock.style.marginTop = '10rem';
+            logoStyle_phone.style.height = '10rem';
+        }
+    }
+
+}
+
+
+
+    </script>
 
 </body>
 </html>

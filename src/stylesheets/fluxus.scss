@@ -389,3 +389,44 @@
 
 
 }
+
+
+
+
+
+
+@media(max-width: 950px){
+    #div_menu{
+        width: 50rem;
+      ul, li, ol {
+        font-size: 3vw;
+      }
+    }
+    .txtForManifestBackColor{
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+    .txtForManifestBackColor span{
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+    #quoteManifets{
+        font-size: 2vw;
+        line-height: 3vw;
+    }
+    #txtBlockManifest {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 2rem;
+        width: 60%;
+    }
+    #pictureAndQuoteBlockManifest {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 40%;
+        padding-right: 1rem;
+        padding-top: 2rem;
+    }
+
+}

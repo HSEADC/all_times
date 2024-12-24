@@ -475,3 +475,40 @@
 #backButton{
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+@media(max-width: 950px){
+    #div_menu{
+        width: 50rem;
+      ul, li, ol {
+        font-size: 3vw;
+      }
+    }
+    #designBlockMainPage{
+      p{
+        font-size: 3vw;
+      }
+    }
+    #cultureBlockMainPage{
+      p{
+        font-size: 3vw;
+      }  }
+    #architectureBlockMainPage{
+      p{
+        font-size: 3vw;
+      }
+    }
+  
+    #artsBlockMainPage {
+      p {
+        font-size: 3vw;
+      }
+    }
+  }

@@ -192,3 +192,29 @@
         margin-right: 0%;
     }
 }
+
+
+
+@media(max-width: 950px){
+    #div_menu{
+        width: 50rem;
+      ul, li, ol {
+        font-size: 3vw;
+      }
+    }
+
+    #txtReflectionBlock {
+        p {
+            width: 50%;
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+    }
+
+    .textReflection{
+        p{
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+    }
+}

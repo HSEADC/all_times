@@ -430,3 +430,28 @@
     
     
 }
+
+
+
+@media(max-width: 950px){
+    #div_menu{
+        width: 50rem;
+      ul, li, ol {
+        font-size: 3vw;
+      }
+    }
+
+    #txt{
+        width: 50rem;
+        padding-right: 20rem;
+        p{
+            font-size: 2.5vw;
+        }
+    }
+
+    #name, #year, #author, #filter{
+        p{
+            font-size: 2.5vw;
+        }
+    }
+}
