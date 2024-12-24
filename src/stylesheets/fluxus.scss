@@ -1,0 +1,170 @@
+#hugeBlockForManifetsPage{
+    margin-left: 3.5rem; 
+}
+
+#firstBlockManifest{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+    img:nth-of-type(1){
+        width: 3rem;
+    }
+
+    img:nth-of-type(2){
+        align-self: right;
+        margin-left: 40%;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
+    h1{
+        font-size: 4vw;
+        text-align: left;
+        margin-left: 1rem;
+    }
+}
+
+#secondBlcokManifest{
+    display: flex;
+    flex-direction: row;
+}
+#pictureAndQuoteBlockManifest{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    img{
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+#txtBlockManifest{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    width: 50%;
+}
+.txtForManifestBackColor{
+    font-size: 1.5vw;
+    line-height: 1.9vw;
+}
+.txtForManifestBackColor span{
+    font-size: 1.5vw;
+    background: rgba(217, 217, 217, 1);
+    line-height: 1.9vw;
+}
+#quoteManifets{
+    font-size: 1.5vw;
+    line-height: 1.9vw;
+    background-color: rgba(246, 255, 0, 1);
+    padding: 1rem;
+}
+
+#podval{
+    padding-top: 2rem;
+    padding-left: 1rem;
+    margin-top: 2%;
+    background-color: black;
+}
+#my-form-button{
+    background-color: rgba(246, 255, 0, 1);
+    border-style:none;
+    height: 4vw;
+    width: 20%;
+    font-family: 'EB Garamond';
+    font-weight: 700;
+    font-size: 2vw;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.email{
+    font-family: 'EB Garamond';
+    font-weight: 700;
+    font-size: 2vw;
+    border-style:none;
+    background-color: rgba(217, 217, 217, 1);
+    height: 4vw;
+    width: 25%;
+    padding: 1rem;
+}
+
+#infoPodvalBlcok{
+    display: flex;
+    flex-direction: row;
+    padding-right: 15vw;
+    padding-bottom: 2vw;
+    div{
+        flex: 1; /*Каждый элемент занимает равное пространство */ 
+        margin-top: 2rem;
+    }
+}
+
+
+#linksForPages{
+    display: flex;
+    flex-direction: column;
+    p:nth-of-type(1){
+        margin-bottom: 2rem;
+    }
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 650;
+        font-size: 2vw;
+        line-height: 2.5vw;
+    }
+    a{
+        text-decoration: none;
+        color: rgba(246, 255, 0, 1);
+    }
+    a:hover{
+        text-decoration: underline;
+        color: rgba(246, 255, 0, 1);
+    }
+}
+#linksForMassangers{
+    display: flex;
+    flex-direction: column;
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 650;
+        font-size: 2vw;
+        line-height: 2.5vw;
+    }
+    a{
+        text-decoration: none;
+        color: rgba(246, 255, 0, 1);
+    }
+    a:hover{
+        text-decoration: underline;
+        color: rgba(246, 255, 0, 1);
+    }
+}
+#infoAboutAutors{
+    display: flex;
+    flex-direction: column;
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 650;
+        font-size: 2vw;
+        line-height: 2.5vw;
+        color: rgb(255, 255, 255);
+    }  
+}
+
+#arrowToTop {
+    position: fixed;
+    bottom: 10vw;
+    right: 5vw;
+    cursor: pointer;
+    display: none; /* Скрыть по умолчанию */
+    transform: rotate(-90deg);
+}
+#arrowToTopImg {
+    width: 50px; /* Размер изображения стрелки */
+}
