@@ -168,3 +168,211 @@
 #arrowToTopImg {
     width: 50px; /* Размер изображения стрелки */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 414px){
+    #hugeBlockForManifetsPage{
+        margin-left: 0rem;
+        margin-top: 10rem; 
+    }
+
+    
+#firstBlockManifest{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+    img:nth-of-type(1){
+        width: 2rem;
+    }
+
+    img:nth-of-type(2){
+        align-self: right;
+        margin-left: 20%;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        width: 2rem;
+        height: 2rem;
+    }
+    h1{
+        font-size: 5vw;
+        text-align: left;
+        margin-left: 1rem;
+    }
+}
+
+#secondBlcokManifest{
+    display: flex;
+    flex-direction: column;
+}
+#pictureAndQuoteBlockManifest{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    img{
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+#txtBlockManifest{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    width: 100%;
+}
+.txtForManifestBackColor{
+    font-size: 5vw;
+    line-height: 6vw;
+}
+.txtForManifestBackColor span{
+    font-size: 5vw;
+    line-height: 6vw;
+    background: rgba(217, 217, 217, 1);
+}
+#quoteManifets{
+    font-size: 5vw;
+    line-height: 6vw;
+    background-color: rgba(246, 255, 0, 1);
+    padding: 1rem;
+}
+
+#podval{
+    padding-top: 2rem;
+    padding-left: 1rem;
+    margin-top: 2%;
+    background-color: black;
+}
+#my-form-button{
+    background-color: rgba(246, 255, 0, 1);
+    border-style:none;
+    height: 10vw;
+    width: 40%;
+    font-family: 'EB Garamond';
+    font-size: 5vw;
+    line-height: 6vw;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.email{
+    font-family: 'EB Garamond';
+    font-size: 5vw;
+    line-height: 6vw;
+    border-style:none;
+    background-color: rgba(217, 217, 217, 1);
+    height: 10vw;
+    width: 54%;
+    padding: 1rem;
+}
+
+#infoPodvalBlcok{
+    display: flex;
+    flex-direction: column;
+    padding-right: 15vw;
+    padding-bottom: 2vw;
+    div{
+        flex: 1; /*Каждый элемент занимает равное пространство */ 
+        margin-top: 2rem;
+    }
+}
+
+
+#linksForPages{
+    display: flex;
+    flex-direction: column;
+    p:nth-of-type(1){
+        margin-bottom: 2rem;
+    }
+    p{
+        font-family: 'EB Garamond';
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+    a{
+        text-decoration: none;
+        color: rgba(246, 255, 0, 1);
+    }
+    a:hover{
+        text-decoration: underline;
+        color: rgba(246, 255, 0, 1);
+    }
+}
+#linksForMassangers{
+    display: flex;
+    flex-direction: column;
+    p{
+        font-family: 'EB Garamond';
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+    a{
+        text-decoration: none;
+        color: rgba(246, 255, 0, 1);
+    }
+    a:hover{
+        text-decoration: underline;
+        color: rgba(246, 255, 0, 1);
+    }
+}
+#infoAboutAutors{
+    display: flex;
+    flex-direction: column;
+    p{
+        font-family: 'EB Garamond';
+        font-size: 5vw;
+        line-height: 6vw;
+        color: rgb(255, 255, 255);
+    }  
+}
+
+#arrowToTop {
+    position: fixed;
+    bottom: 10vw;
+    right: 5vw;
+    cursor: pointer;
+    display: none; /* Скрыть по умолчанию */
+    transform: rotate(-90deg);
+}
+#arrowToTopImg {
+    width: 50px; /* Размер изображения стрелки */
+}
+
+
+
+}
