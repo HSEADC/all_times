@@ -280,6 +280,69 @@ window.onscroll = function() {
 
 
 
+    document.getElementById('div_bar').addEventListener('click', toggleMenuManifest);
+    function toggleMenuManifest() {
+    const headerFixed = document.getElementById('headerFixed');
+    const div_bar = document.getElementById('div_bar');
+    const arrow = document.getElementById('arrow');
+    const div_menu = document.getElementById('div_menu');
+    const hugeBlockForManifetsPage = document.getElementById('hugeBlockForManifetsPage');
+
+  if (document.documentElement.clientWidth > 414){
+    if (div_menu.style.display === 'none') {
+        div_menu.style.display = 'flex';
+        div_bar.classList.add('active');
+        div_menu.style.width = '13rem';
+        arrow.style.transform = 'rotate(180deg)';
+        headerFixed.style.width = '20rem';
+        hugeBlockForManifetsPage.style.marginLeft = '20rem';
+    } 
+    
+    else {
+        div_menu.style.display = 'none';
+        div_bar.classList.remove('active');
+        div_menu.style.width = '0rem';
+        arrow.style.transform = 'rotate(0deg)';
+        headerFixed.style.width = '3.5rem';
+        hugeBlockForManifetsPage.style.marginLeft = '3.5rem';
+    }
+  }
+  
+}
+
+
+
+document.getElementById('div_bar_phone').addEventListener('click', toggleListManifest)
+function toggleListManifest(){
+    const ol_list = document.getElementById('ol_list');
+    const arrow_mobile = document.getElementById('arrow_mobile');
+    const headerFixed = document.getElementById('headerFixed');
+    const headerMobileFixed = document.getElementById('headerMobileFixed');
+    const hugeBlockForManifetsPage = document.getElementById('hugeBlockForManifetsPage');
+    const logoStyle_phone = document.getElementById('logoStyle_phone');
+
+    if (document.documentElement.clientWidth <= 414){
+        if(ol_list.style.display === 'none' || ol_list.style.display === ''){
+            headerFixed.style.display = 'none';
+            headerMobileFixed.style.height = '15rem';
+            headerMobileFixed.style.display = 'flex';
+            ol_list.style.display = 'block';
+            arrow_mobile.style.transform = 'rotate(90deg)';
+            hugeBlockForManifetsPage.style.marginTop = '15rem';
+            logoStyle_phone.style.height = '14.5rem';
+            
+        } else {
+            headerFixed.style.display = 'none';
+            headerMobileFixed.style.height = '10rem';
+            headerMobileFixed.style.display = 'flex';
+            ol_list.style.display = 'none';
+            arrow_mobile.style.transform = 'rotate(-90deg)';
+            hugeBlockForManifetsPage.style.marginTop = '10rem';
+            logoStyle_phone.style.height = '10rem';
+        }
+    }
+
+}
 
 
 
