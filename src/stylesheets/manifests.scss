@@ -56,11 +56,11 @@
 
 #manifestsBlock{
     margin-left: 3.5rem; 
-    padding: 0px; /* Отступы внутри блока с манифестами */
-    flex-grow: 1; /* Позволяет блоку занимать оставшееся пространство */
-    height: 100vh; /* Высота на весь экран */
-    overflow-y: auto; /* Прокрутка по вертикали */
-    background-color: #ffffff; /* Цвет фона для контента */
+    padding: 0px; 
+    flex-grow: 1;
+    height: 100vh; 
+    overflow-y: auto; 
+    background-color: #ffffff; 
 }
 
 #filterBlock{
