@@ -47,7 +47,7 @@
                 </li>
                 <li><a href="styleGuide.html">Стайлгайд</a></li>
                 <li><a href="reflection.html">Рефлексия</a></li><br>
-                <li>вк / телеграм</li>
+                <li>вк / <a href="https://t.me/conserva_archive" target="_blank">телеграм</a></li>
             </ul>
         </div>
 
@@ -153,8 +153,7 @@ function toggleMenuManifest() {
     const div_bar = document.getElementById('div_bar');
     const arrow = document.getElementById('arrow');
     const div_menu = document.getElementById('div_menu');
-    const txtAboutUsBlock = document.getElementById('txtAboutUsBlock');
-    const firstBlockaboutUs = document.getElementById('firstBlockaboutUs');
+    const aboutUsBlock = document.getElementById('aboutUsBlock');
 
   if (document.documentElement.clientWidth > 414){
     if (div_menu.style.display === 'none') {
@@ -163,11 +162,7 @@ function toggleMenuManifest() {
         div_menu.style.width = '13rem';
         arrow.style.transform = 'rotate(180deg)';
         headerFixed.style.width = '20rem';
-        txtAboutUsBlock.style.marginLeft = '16rem';
-        firstBlockaboutUs.style.marginLeft = '16rem';
-
-        firstBlockaboutUs.style.width = '82.8%';
-        txtAboutUsBlock.style.width = '82.8%';
+        aboutUsBlock.style.marginLeft = '20rem';
     } 
     
     else {
@@ -176,12 +171,7 @@ function toggleMenuManifest() {
         div_menu.style.width = '0rem';
         arrow.style.transform = 'rotate(0deg)';
         headerFixed.style.width = '3.5rem';
-        txtAboutUsBlock.style.marginLeft = '0rem';
-        firstBlockaboutUs.style.marginLeft = '0rem';
-
-        
-        firstBlockaboutUs.style.width = '100%';
-        txtAboutUsBlock.style.width = '100%';
+        aboutUsBlock.style.marginLeft = '3.5rem';
     }
   }
   
@@ -203,7 +193,7 @@ function toggleListManifest(){
     const headerFixed = document.getElementById('headerFixed');
     const headerMobileFixed = document.getElementById('headerMobileFixed');
     const logoStyle_phone = document.getElementById('logoStyle_phone');
-    const firstBlockaboutUs = document.getElementById('firstBlockaboutUs');
+    const aboutUsBlock = document.getElementById('aboutUsBlock');
 
     if (document.documentElement.clientWidth <= 414){
         if(ol_list.style.display === 'none' || ol_list.style.display === ''){
@@ -212,7 +202,7 @@ function toggleListManifest(){
             headerMobileFixed.style.display = 'flex';
             ol_list.style.display = 'block';
             arrow_mobile.style.transform = 'rotate(90deg)';
-            firstBlockaboutUs.style.marginTop = '10rem';
+            aboutUsBlock.style.marginTop = '10rem';
             logoStyle_phone.style.height = '14.5rem';
             
         } else {
@@ -221,7 +211,7 @@ function toggleListManifest(){
             headerMobileFixed.style.display = 'flex';
             ol_list.style.display = 'none';
             arrow_mobile.style.transform = 'rotate(-90deg)';
-            firstBlockaboutUs.style.marginTop = '0rem';
+            aboutUsBlock.style.marginTop = '0rem';
             logoStyle_phone.style.height = '10rem';
         }
     }
