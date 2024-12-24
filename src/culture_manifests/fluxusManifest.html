@@ -87,7 +87,7 @@
             <h1>Первый манифест флюксуса, <br> 
                 Джордж Мачюнас, 1963
             </h1>
-            <img src="/src/images/closeIcon.webp">
+            <img src="/src/images/closeIcon.webp" id="backButton">
         </div>
 
         <div id="secondBlcokManifest">
@@ -141,11 +141,63 @@
                 <img src="/src/images/manifests/culture/fluxusManifestPicture.webp">
 
             </div>
-
-            <footer>
-                
-            </footer>
         </div>
+
+        <footer id="podval">
+            <form id="my-form" action="https://formspree.io/f/mzzpnoee" method="POST">
+                <input class="email" type="email" name="email" placeholder="conserva@gmail.com"/>
+                <button id="my-form-button">Подписаться</button>
+                <p id="my-form-status"></p>
+            </form>
+
+            <div id="infoPodvalBlcok">
+                <div id="linksForPages">
+                    <p><a href="/src/index.html">
+                        Консерва
+                    </a></p>
+
+                    <p><a href="/src/aboutUs.html">
+                        О нас
+                    </a></p>
+
+                    <p><a href="/src/reflection.html">
+                        Рефлекися
+                    </a></p>
+
+                    <p><a href="/src/manifests.html">
+                        Манифесты
+                    </a></p>
+
+                    <p><a href="/src/styleGuide.html">
+                        → Стайлгайд
+                    </a></p>
+                </div>
+                <div id="linksForMassangers">
+                    <p><a href="https://vk.com/conserva_archive" target="_blank">
+                        вк
+                    </a></p>
+
+                    <p><a href="https://t.me/conserva_archive" target="_blank">
+                        телеграм
+                    </a></p>
+                </div>
+                <div id="infoAboutAutors">
+                    <p>
+                        Дизайн и разработка <br>
+                        София Ширенкова 
+                        и&nbsp;Анастасия Бедина<br><br>
+
+                        Курирование <br>
+                        Анна Комкова 
+                        и&nbsp;Ксения Швецова
+                    </p>
+                </div>
+
+            </div>
+            <div id="arrowToTop">
+                <img src="/src/images/arrow.webp" id="arrowToTopImg"></a>
+            </div>
+        </footer>
 
 
 
@@ -153,5 +205,96 @@
 
 
     </div>
+
+
+
+
+
+    <script>
+    document.getElementById('backButton').addEventListener('click', function() {
+        location.href = '../'; 
+    });
+
+
+//  форма
+var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, { 
+      method: form.method,  
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Вы подписаны на рассылку";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Что-то пошло не так"
+          }
+        })
+      } 
+    }).catch(error => {
+      status.innerHTML = "Что-то пошло не так"
+    });  
+  } 
+  form.addEventListener("submit", handleSubmit)
+
+
+
+
+
+
+
+
+
+// стрелка наверх
+window.onscroll = function() {
+            const arrow = document.getElementById("arrowToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                arrow.style.display = "block";
+            } else {
+                arrow.style.display = "none";
+            }
+        };
+        
+
+        document.getElementById("arrowToTop").onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 </body>
 </html>
