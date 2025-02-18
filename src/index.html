@@ -1,170 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-      
-    <title>консерва</title>
-    <meta name="title" content="консерва" />
-    <meta name="description" content="https://raw.githubusercontent.com/HSEADC/conserva/refs/heads/main/src/images/meta-main-new.png" />
-
-      
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hseadc.github.io/conserva/" />
-    <meta property="og:title" content="консерва" />
-    <meta property="og:description" content="Медиа-архив творческих манифестов консерва предлагает глубокий взгляд на исследование и создание искусства." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/HSEADC/conserva/refs/heads/main/src/images/meta-main-new.png" />
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:site_name" content="консерва" />
-
-  
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://hseadc.github.io/conserva/" />
-    <meta property="twitter:title" content="консерва" />
-    <meta property="twitter:description" content="Медиа-архив творческих манифестов консерва предлагает глубокий взгляд на исследование и создание искусства." />
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/HSEADC/conserva/refs/heads/main/src/images/meta-main.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
 </head>
-  <div class="mainPageBlock">
-
-    <div id="header">
-
-        <div id="div_menu" style="display: none;" class="hidden">
-            <a href="./index.html"><img id="logoStyle" src="./images/Консерва.webp"></a>
-            <ul>
-                <li><a href="aboutUs.html">О нас</a></li>
-                <li><a href="manifests.html">Манифесты</a>
-                <ol>
-                    <li>i. Дизайн</li>
-                    <li>ii. Культура</li>
-                    <li>iii. Архитектура</li>
-                    <li>iv. Искусство</li>
-                </ol>
-                </li>
-                <li><a href="styleGuide.html">Стайлгайд</a></li>
-                <li><a href="reflection.html">Рефлексия</a></li><br>
-                <li><a href="https://vk.com/conserva_archive" target="_blank">вк</a> / <a href="https://t.me/conserva_archive" target="_blank">телеграм</a></li>
-            </ul>
-        </div>
-
-        <div id="div_bar">
-            <div>
-                <img id="arrow" src="./images/arrow.webp">
-            </div>
-        </div>
-    </div>
-
-    <div id="headerMobile">
-        <div id="logoBox"><a href="./index.html"><img id="logoStyle_phone" src="./images/Консерва.webp"></a></div>
-        <div id="list"> <ul>
-                <li><a href="aboutUs.html">О нас</a></li>
-                <li><a href="manifests.html">Манифесты</a>
-                  <ol id="ol_list">
-                    <li>i. Дизайн</li>
-                    <li>ii. Культура</li>
-                    <li>iii. Архитектура</li>
-                    <li>iv. Искусство</li>
-                  </ol>
-                </li>
-                <li><a href="styleGuide.html">Стайлгайд</a></li>
-                <li><a href="reflection.html">Рефлексия</a></li><br>
-                <li><a href="https://vk.com/conserva_archive" target="_blank">вк</a> / <a href="https://t.me/conserva_archive" target="_blank">телеграм</a></li>
-                </ul>
-        </div>
-        <div id="div_bar_phone"><img id="arrow_mobile" src="./images/arrow.webp"></div>
-    </div>
-
-
-
-    <div id="designBlockMainPage">
-        <p>i</p>
-        <img src="./images/imgDesignMainPage.webp">
-    </div>
-
-    <div id="cultureBlockMainPage">
-        <p>ii</p>
-        <img src="./images/imgCultureMainPage.webp">
-    </div>
-
-    <div id="architectureBlockMainPage">
-        <p>iii</p>
-        <img src="./images/imgArchitectureMainPage.webp">
-    </div>
-
-    <div id="artsBlockMainPage">
-        <p>iv</p>
-        <img src="./images/imgArtsMainPage.webp">
-    </div>
-    
-</div>
-
-
-
+<body>
+    <container class="clock">
+        <h1 class="right_side">2000е</h1>
+        <h1 class="right_side">1910е</h1>
+        <h1 class="right_side">1920е</h1>
+        <h1 class="right_side">1930е</h1>
+        <h1 class="right_side">1940е</h1>
+        <h1 class="right_side">1950е</h1>
+        <h1 class="right_side">1960е</h1>
+        <h1 class="left_side">1970е</h1>
+        <h1 class="left_side">1980е</h1>
+        <h1 class="left_side">1990е</h1>
+        <h1 class="left_side">2010е</h1>
+        <div class="hand_hour"></div>
+        <div class="hand_minute"></div>
+    </container>
 </body>
 </html>
-
-
-<script>  
-  document.getElementById('div_bar').addEventListener('click', toggleMenu);
-  function toggleMenu() {
-      const header = document.getElementById('header');
-      const div_bar = document.getElementById('div_bar');
-      const arrow = document.getElementById('arrow');
-      const div_menu = document.getElementById('div_menu');
-      const otherDivs = document.querySelectorAll('#designBlockMainPage, #cultureBlockMainPage, #architectureBlockMainPage, #artsBlockMainPage');
-  
-    if (document.documentElement.clientWidth > 414){
-      if (div_menu.style.display === 'none') {
-          // Открываем меню
-          div_menu.style.display = 'flex';
-          div_bar.classList.add('active');
-          otherDivs.forEach(div => div.style.width = '30%');
-          div_menu.style.width = '15rem';
-          arrow.style.transform = 'rotate(180deg)';
-          header.style.width = '20rem';
-      } 
-      
-      else {
-          // Закрываем меню
-          div_menu.style.display = 'none';
-          div_bar.classList.remove('active');
-          otherDivs.forEach(div => div.style.width = '100%');
-          div_menu.style.width = '0%';
-          arrow.style.transform = 'rotate(0deg)';
-          header.style.width = '5rem';
-      }
-    }
-    
-  }
-
-  document.getElementById('div_bar_phone').addEventListener('click', toggleList);
-
-  function toggleList() {
-  const ol_list = document.getElementById('ol_list');
-  const arrow_mobile = document.getElementById('arrow_mobile');
-  const otherDivs = document.querySelectorAll('#designBlockMainPage, #cultureBlockMainPage, #architectureBlockMainPage, #artsBlockMainPage');
-  const logoStyle_phone = document.getElementById('logoStyle_phone');
-
-  if (document.documentElement.clientWidth <= 414){
-      if (ol_list.style.display === 'none' || ol_list.style.display === '') {
-          ol_list.style.display = 'block'; // Показываем упорядоченный список
-          arrow_mobile.style.transform = 'rotate(90deg)'
-          otherDivs.forEach(div => div.style.height = '18%');
-          logoStyle_phone.style.height = '14.5rem';
-      } else {
-          ol_list.style.display = 'none'; // Скрываем упорядоченный список
-          arrow_mobile.style.transform = 'rotate(-90deg)'
-          otherDivs.forEach(div => div.style.height = '20%');
-          logoStyle_phone.style.height = '10rem';
-      }
-  }
-
-}
-
-
-
-
-</script>
-
-
