@@ -80,7 +80,37 @@ module.exports = {
       filename: './index.html'
     }),
 
-  
+    // Страницы разделов
+    new HtmlWebpackPlugin({
+      template: './src/manifests.html',
+      filename: './manifests.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/aboutUs.html',
+      filename: './aboutUs.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/select.html',
+      filename: './select.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/reflection.html',
+      filename: './reflection.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/styleGuide.html',
+      filename: './styleGuide.html'
+    }),
+
+    // Страницы манифестов по дизайну
+    // new HtmlWebpackPlugin({
+    //   template: './src/design_manifests/ManifesKebudayaan.html',
+    //   filename: './design_manifests/ManifesKebudayaan.html'
+    // }),
 
 
     // Internal pages
