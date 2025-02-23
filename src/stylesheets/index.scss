@@ -5,6 +5,7 @@
 body {
   box-sizing: border-box;
 }
+
 .A_Hand {
   &.hour {
     width: 8vw;
@@ -95,10 +96,6 @@ body {
   position: relative;
 }
 
-.Active{
-  color: black;
-}
-
 .C_menu_bar {
   width: 100%;
   height: 5%;
@@ -106,7 +103,7 @@ body {
   background-color: rgb(255, 255, 255);
   font-family: Helvetica;
   font-size: 1.5vw;
-  color: rgba(150, 150, 150, 1);
+  color: black;
   display: flex;
   gap: 5vw;
   padding: 1vw 3vw;
@@ -201,7 +198,7 @@ input::placeholder {
   padding: 1vw 0;
 }
 
-.W_Manifest_Text {
+.M_Manifest_Text {
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -210,3 +207,83 @@ input::placeholder {
 }
 
 
+
+
+
+.W_Manifest_Pic_and_Text{
+  padding: 1.5vw 3vw;
+}
+
+.C_Name_and_Arrow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding-bottom: 2vw;
+}
+
+.M_Img_and_Text{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  gap: 2vw;
+}
+
+.A_Arrow_Back{
+  cursor: pointer;
+  width: 10vw;
+}
+
+.O_Footer{
+  display: flex;
+  padding: 1.5vw 3vw;
+}
+
+.M_Info_in_Footer{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 10vw;
+  flex-direction: row;
+}
+
+#email {
+  font-family: Helvetica;
+  font-size: 1.5vw;
+  border: none;
+  border-bottom: 0.15vw solid rgba(150, 150, 150, 1);
+  color: rgba(150, 150, 150, 1);
+}
+
+.A_Mail form input[type='email'] {
+  font-family: Helvetica;
+  font-size: 1.5vw;
+  border: none;
+  outline: none;
+  cursor: text;
+}
+
+.M_Rights_and_Logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5vw 3vw;
+}
+
+.A_Rights{
+  width: 50%;
+  align-self: left;
+}
+
+.A_Logo_in_Footer{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#logo_in_footer{
+  width: 10vw;
+}
