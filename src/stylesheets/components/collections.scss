@@ -1,0 +1,26 @@
+.C_menu_bar {
+    width: 100%;
+    height: 5%;
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+    font-family: Helvetica;
+    font-size: 1.5vw;
+    color: black;
+    display: flex;
+    gap: 5vw;
+    padding: 1vw 3vw;
+    justify-self: center;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.C_Name_and_Arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding-bottom: 2vw;
+}
