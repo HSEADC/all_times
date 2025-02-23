@@ -7,8 +7,8 @@ body {
 }
 .A_Hand {
   &.hour {
-    width: 10vw;
-    height: 0.5vw;
+    width: 8vw;
+    height: 0.31vw;
     background-color: black;
 
     position: absolute;
@@ -18,8 +18,8 @@ body {
     transform: rotate(270deg);
   }
   &.minute {
-    width: 12vw;
-    height: 0.5vw;
+    width: 10vw;
+    height: 0.31vw;
     background-color: rgb(255, 0, 0);
 
     position: absolute;
@@ -30,14 +30,14 @@ body {
   }
 }
 .A_Time {
-  width: 22vw;
+  width: 23vw;
   position: absolute;
   top: 43%;
   left: 50%;
   display: block;
   text-decoration: none;
   font-family: Helvetica;
-  font-size: 3vw;
+  font-size: 3.6vw;
   cursor: pointer;
 
   &.right_side {
@@ -69,7 +69,7 @@ body {
   &.left_side {
     text-align: left;
     transform-origin: center right;
-    left: calc(50% - 22vw);
+    left: calc(50% - 23vw);
 
     &:nth-of-type(8) {
       transform: rotate(-60deg);
@@ -95,8 +95,12 @@ body {
   position: relative;
 }
 
+.Active{
+  color: black;
+}
+
 .C_menu_bar {
-  width: 97%;
+  width: 100%;
   height: 5%;
   position: sticky;
   background-color: rgb(255, 255, 255);
@@ -105,16 +109,17 @@ body {
   color: rgba(150, 150, 150, 1);
   display: flex;
   gap: 5vw;
-  padding: 1vw 0vw 1vw 2.99vw;
+  padding: 1vw 3vw;
   justify-self: center;
   align-items: center;
   justify-content: left;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .A_Messager_bar {
-  width: 97%;
-  height: 2vw;
+  width: 100%;
+  height: 4vw;
   position: relative;
   display: flex;
   justify-content: end;
@@ -122,12 +127,25 @@ body {
   font-size: 1.5vw;
   color: rgba(150, 150, 150, 1);
   cursor: pointer;
-  padding: 1vw 1vw 1vw 0;
+  padding: 1vw 3vw;
+  box-sizing: border-box;
   justify-self: center;
 }
 
-.A_Messagers {
+.A_Link {
   text-decoration: none;
+  color: rgba(150, 150, 150, 1);
+  position: relative;
+}
+
+.A_Link::after{
+  content: ""; 
+  position: absolute;
+  left: 0;
+  bottom: -0.2vh; 
+  width: 100%;
+  height: 0.13vw; 
+  background-color: rgba(150, 150, 150, 1);;
 }
 
 .A_Search {
@@ -142,11 +160,13 @@ body {
 .A_Search form input[type='search'] {
   font-family: Helvetica;
   font-size: 1.5vw;
-  color: rgba(150, 150, 150, 1);
   border: 0;
   outline: none;
   cursor: text;
-  background-color: rgba(0, 255, 255, 0);
+}
+
+input::placeholder {
+  color: rgba(150, 150, 150, 1);
 }
 
 .W_Manifests_Container {
@@ -162,16 +182,23 @@ body {
   justify-self: center;
   gap: 2vw;
   height: 22vw;
-  border-top: 0.15vw solid rgba(150, 150, 150, 1);
-  border-bottom: 0.15vw solid rgba(150, 150, 150, 1);
-  padding: 1vw 0vw 1vw 3vw;
+  border-bottom: 0.16vw solid rgba(150, 150, 150, 1);
+  padding: 1.5vw 3vw;
 
   background-color: rgba(79, 40, 96, 0);
 }
 
 .A_Picture {
-  width: 36%;
+  width: 30.8vw;
   height: 100%;
+}
+
+.A_Quote{
+  font-family: Helvetica;
+  font-size: 1.5vw;
+  color: black;
+  width: 30.8vw;
+  padding: 1vw 0;
 }
 
 .W_Manifest_Text {
@@ -179,4 +206,7 @@ body {
   align-items: start;
   justify-content: space-between;
   flex-direction: column;
+  padding: 1vw 0;
 }
+
+

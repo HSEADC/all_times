@@ -7,7 +7,9 @@
   </head>
   <body>
     <div class="A_Messager_bar">
-      <p class="A_Messagers">Вк / Телеграм</p>
+      <p>
+        <a class="A_Link" href="https://vk.com/all_times_archive">ВКонтакте</a> / <a class="A_Link" href="">Телеграм</a>
+      </p>
     </div>
 
     <div class="O_Clock">
@@ -28,7 +30,7 @@
     </div>
 
     <div class="C_menu_bar">
-      <a class="A_Nav">All times</a>
+      <a class="A_Nav Active">All times</a>
       <a class="A_Nav">Манифесты</a>
       <a class="A_Nav">Статьи</a>
       <a class="A_Nav">Рефлексия</a>
@@ -62,7 +64,7 @@
       </div>
 
       <div class="O_Manifest_Card Dadaism">
-        <img class="A_Picture" src="./images/A_Picture_Dadaism.webp">
+        <img class="A_Picture" src="./images/A_Picture_Dada.webp">
         <div class="W_Manifest_Text">
           <h1 class="A_Manifest_Text Name">Манифест дадаизма</h1>
           <h1 class="A_Manifest_Text Year">1918</h1>
@@ -70,7 +72,9 @@
       </div>
 
       <div class="O_Manifest_Card Fluxus">
-        <img class="A_Picture" src="./images/A_Picture_Luchisti.webp">
+        <div class="A_Quote">
+          <p>Очистим мир от умершего искусства, имитации, искусственного искусства, абстрактного искусства, иллюзионистского искусства, математического искусства!</p>
+        </div>
         <div class="W_Manifest_Text">
           <h1 class="A_Manifest_Text Name">Лучисты и Будущники</h1>
           <h1 class="A_Manifest_Text Year">1913</h1>
@@ -78,10 +82,10 @@
       </div>
 
       <div class="O_Manifest_Card Fluxus">
-        <img class="A_Picture" src="./images/A_Picture_Luchisti.webp">
+        <img class="A_Picture" src="./images/A_Picture_Realist.webp">
         <div class="W_Manifest_Text">
-          <h1 class="A_Manifest_Text Name">Лучисты и Будущники</h1>
-          <h1 class="A_Manifest_Text Year">1913</h1>
+          <h1 class="A_Manifest_Text Name">Реалистический манифест</h1>
+          <h1 class="A_Manifest_Text Year">1920</h1>
         </div>
       </div>
     </div>
@@ -93,15 +97,15 @@
 
         window.addEventListener('scroll', function () {
           if (window.scrollY >= top) {
-            C_menu_bar.style.position = 'fixed'
+            C_menu_bar.style.position = ''
             C_menu_bar.style.top = '0'
             C_menu_bar.style.zIndex = '10'
-            C_menu_bar.style.padding = '1vw 0vw 1vw 2.99vw'
+            C_menu_bar.style.padding = '1vw 3vw'
           } else {
             C_menu_bar.style.position = ''
             C_menu_bar.style.top = ''
             C_menu_bar.style.zIndex = ''
-            C_menu_bar.style.padding = '1vw 0vw 1vw 2.99vw'
+            C_menu_bar.style.padding = '1vw 3vw'
           }
         })
       })
