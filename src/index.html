@@ -8,7 +8,7 @@
   <body>
     <div class="A_Messager_bar">
       <p>
-        <a class="A_Link" href="https://vk.com/all_times_archive">ВКонтакте</a> / <a class="A_Link" href="">Телеграм</a>
+        <a class="A_Link" href="https://vk.com/all_times_archive" target="_blank">ВКонтакте</a> / <a class="A_Link" href="https://t.me/all_times_tg" target="_blank">Телеграм</a>
       </p>
     </div>
 
@@ -30,7 +30,7 @@
     </div>
 
     <div class="C_menu_bar">
-      <a class="A_Nav Active">All times</a>
+      <a class="A_Nav Active" href="./index.html">All times</a>
       <a class="A_Nav">Манифесты</a>
       <a class="A_Nav">Статьи</a>
       <a class="A_Nav">Рефлексия</a>
@@ -40,55 +40,94 @@
         <label for="searchQuery"> </label>
 
         <form class="A_Search_Container">
-          <input type="search" id="search" placeholder="Что ищем?" />
+          <input type="search" id="search" placeholder="Что ищем?">
         </form>
       </div>
     </div>
 
-    <!-- <div class="search-bar">
-      <form>
-        <label for="searchQuery">
-          <i class="fas fa-search"></i>
-        </label>
-        <input type="search" id="searchQuery" name="searchQuery" placeholder="Что ищем?"/>
-      </form>
-    </div> -->
-
     <div class="W_Manifests_Container">
-      <div class="O_Manifest_Card Fluxus">
-        <img class="A_Picture" src="./images/A_Picture_Fluxus.webp" />
-        <div class="W_Manifest_Text">
+      <div class="O_Manifest_Card" id="Fluxus">
+        <img class="A_Picture" src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Picture_Fluxus.webp">
+        <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">Первый манифест Флюксуса</h1>
           <h1 class="A_Manifest_Text Year">1963</h1>
         </div>
       </div>
 
       <div class="O_Manifest_Card Dadaism">
-        <img class="A_Picture" src="./images/A_Picture_Dada.webp">
-        <div class="W_Manifest_Text">
+        <img class="A_Picture" src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Picture_Dada.webp">
+        <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">Манифест дадаизма</h1>
           <h1 class="A_Manifest_Text Year">1918</h1>
         </div>
       </div>
 
-      <div class="O_Manifest_Card Fluxus">
+      <div class="O_Manifest_Card Luchisti">
         <div class="A_Quote">
-          <p>Очистим мир от умершего искусства, имитации, искусственного искусства, абстрактного искусства, иллюзионистского искусства, математического искусства!</p>
+          <p>
+            Очистим мир от умершего искусства, имитации, искусственного
+            искусства, абстрактного искусства, иллюзионистского искусства,
+            математического искусства!
+          </p>
         </div>
-        <div class="W_Manifest_Text">
+        <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">Лучисты и Будущники</h1>
           <h1 class="A_Manifest_Text Year">1913</h1>
         </div>
       </div>
 
-      <div class="O_Manifest_Card Fluxus">
-        <img class="A_Picture" src="./images/A_Picture_Realist.webp">
-        <div class="W_Manifest_Text">
+      <div class="O_Manifest_Card Realisti">
+        <img class="A_Picture" src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Picture_Realist.webp">
+        <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">Реалистический манифест</h1>
           <h1 class="A_Manifest_Text Year">1920</h1>
         </div>
       </div>
     </div>
+
+
+    <div class="O_Footer random_color">
+      <div class="M_Info_in_Footer">
+          <form class="A_Mail">
+            <p class="down">Подписаться на рассылку:</p>
+            <input type="email" id="email" placeholder="Email">
+          </form>
+          <div>
+            <p class="down">Обратная связь:</p>
+            <a class="A_Link" href="mailto:archive@alltimes.org" target="_blank">Archive@alltimes.org</a><br>
+            <a class="A_Link" href="https://vk.com/all_times_archive" target="_blank">ВКонтакте</a><br> 
+            <a class="A_Link" href="https://t.me/all_times_tg" target="_blank">Телеграм</a>
+          </div>
+          <div>
+            <p class="down">Дизайн:</p> 
+            <p>София Ширенкова</p> 
+            <p>Анастасия Бедина</p>
+          </div>
+          <div>
+            <p class="down">Курирование:</p>
+            <p>Анна Комкова</p>
+            <p>Ксения Швецова</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="M_Rights_and_Logo random_color">
+      <div class="A_Rights">
+        <p>(с) All Times, 2025. Все права на манифесты, созданные 
+        современными авторами, защищены авторским правом. Манифесты, 
+        ставшие общественным достоянием, доступны 
+        для свободного использования. Если 
+        вы являетесь автором материала и хотите внести изменения 
+        или запросить удаление, пожалуйста, <a class="A_Link" href="mailto:archive@alltimes.org" target="_blank">свяжитесь с нами</a>.
+        </p>
+      </div>
+
+      <div class="A_Logo_in_Footer">
+        <img id="logo_in_footer" src="https://raw.githubusercontent.com/HSEADC/all_times/aead13b282b741f6c47344131e013c03e143e77f/src/images/A_Logo.svg">
+      </div>
+    </div>
+
+    </div>  
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -108,6 +147,10 @@
             C_menu_bar.style.padding = '1vw 3vw'
           }
         })
+      })
+
+      document.getElementById('Fluxus').addEventListener('click', function () {
+        location.href = 'manifests/fluxus.html' // Переход на страницу fluxus.html
       })
     </script>
   </body>

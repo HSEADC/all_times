@@ -7,3 +7,10 @@
 @import 'stylesheets/manifests.scss';
 @import 'stylesheets/styleGuide.scss';
 @import 'stylesheets/reflection.scss';
+
+@import 'stylesheets/components/atoms.scss';
+@import 'stylesheets/components/moleculs.scss';
+@import 'stylesheets/components/wrappers.scss';
+@import 'stylesheets/components/collections.scss';
+@import 'stylesheets/components/organisms.scss';
+@import 'stylesheets/components/superorganisms.scss';

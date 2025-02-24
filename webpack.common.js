@@ -106,6 +106,12 @@ module.exports = {
       filename: './styleGuide.html'
     }),
 
+    // Страницы манифестов
+    new HtmlWebpackPlugin({
+      template: './src/manifests/fluxus.html',
+      filename: './manifests/fluxus.html'
+    }),
+
     // Страницы манифестов по дизайну
     // new HtmlWebpackPlugin({
     //   template: './src/design_manifests/ManifesKebudayaan.html',
