@@ -13,11 +13,12 @@
     height: 22vw;
     border-bottom: 0.16vw solid rgba(150, 150, 150, 1);
     padding: 1.5vw 3vw;
-  
     background-color: rgba(79, 40, 96, 0);
 }
 
 .O_Footer{
     display: flex;
     padding: 1.5vw 3vw;
+    border-top: 0.16vw solid rgba(150, 150, 150, 1);
+    margin-top: -0.16vw;
 }
