@@ -111,19 +111,19 @@
       </div>
     </div>
 
-    <div class="M_Rights_and_Logo random_color">
+    <div class="M_Rights_and_Logo">
       <div class="A_Rights">
-        <p>(с) All Times, 2025. Все права на манифесты, созданные 
+        <p class="random_color">(с) All Times, 2025. Все права на манифесты, созданные 
         современными авторами, защищены авторским правом. Манифесты, 
         ставшие общественным достоянием, доступны 
         для свободного использования. Если 
         вы являетесь автором материала и хотите внести изменения 
-        или запросить удаление, пожалуйста, <a class="A_Link" href="mailto:archive@alltimes.org" target="_blank">свяжитесь с нами</a>.
+        или запросить удаление, пожалуйста, <a class="A_Link random_color" href="mailto:archive@alltimes.org" target="_blank">свяжитесь с нами</a>.
         </p>
       </div>
 
       <div class="A_Logo_in_Footer">
-        <img id="logo_in_footer" src="https://raw.githubusercontent.com/HSEADC/all_times/aead13b282b741f6c47344131e013c03e143e77f/src/images/A_Logo.svg">
+        <img id="logo_in_footer" class="random_color" src="https://raw.githubusercontent.com/HSEADC/all_times/aead13b282b741f6c47344131e013c03e143e77f/src/images/A_Logo.svg">
       </div>
     </div>
 
@@ -152,6 +152,16 @@
       document.getElementById('Fluxus').addEventListener('click', function () {
         location.href = 'manifests/fluxus.html' // Переход на страницу fluxus.html
       })
+
+      //меняем цвет рандом
+      function changeTextColor() {
+      const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)']; // массив цветов
+      const randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
+      const textElement = document.querySelector('.random_color'); // находим элемент
+      textElement.style.color = randomColor; // меняем цвет текста
+      }
+      window.onload = changeTextColor;
+      
     </script>
   </body>
 </html>
