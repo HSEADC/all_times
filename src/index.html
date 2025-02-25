@@ -6,7 +6,7 @@
     <title>Main page</title>
   </head>
   <body>
-    <div class="A_Messager_bar">
+    <div class="A_Messager_Bar">
       <p>
         <a class="A_Link" href="https://vk.com/all_times_archive" target="_blank">ВКонтакте</a> / <a class="A_Link" href="https://t.me/all_times_tg" target="_blank">Телеграм</a>
       </p>
@@ -25,11 +25,11 @@
       <a class="A_Time left_side">1990е</a>
       <a class="A_Time left_side">2000е</a>
       <a class="A_Time left_side">2010е</a>
-      <div class="A_Hand hour"></div>
-      <div class="A_Hand minute"></div>
+      <div class="A_Hand Hour"></div>
+      <div class="A_Hand Minute"></div>
     </div>
-    <p>Clean</p>
-    <div class="C_menu_bar">
+
+    <div class="C_Menu_Bar">
       <a class="A_Nav Active" href="./index.html">All times</a>
       <a class="A_Nav">Манифесты</a>
       <a class="A_Nav">Статьи</a>
@@ -86,25 +86,25 @@
     </div>
 
 
-    <div class="O_Footer random_color">
+    <div class="O_Footer Random_Color">
       <div class="M_Info_in_Footer">
           <form class="A_Mail">
-            <p class="down">Подписаться на рассылку:</p>
+            <p class="Down">Подписаться на рассылку:</p>
             <input type="email" id="email" placeholder="Email">
           </form>
           <div>
-            <p class="down">Обратная связь:</p>
+            <p class="Down">Обратная связь:</p>
             <a class="A_Link" href="mailto:archive@alltimes.org" target="_blank">Archive@alltimes.org</a><br>
             <a class="A_Link" href="https://vk.com/all_times_archive" target="_blank">ВКонтакте</a><br> 
             <a class="A_Link" href="https://t.me/all_times_tg" target="_blank">Телеграм</a>
           </div>
           <div>
-            <p class="down">Дизайн:</p> 
+            <p class="Down">Дизайн:</p> 
             <p>София Ширенкова</p> 
             <p>Анастасия Бедина</p>
           </div>
           <div>
-            <p class="down">Курирование:</p>
+            <p class="Down">Курирование:</p>
             <p>Анна Комкова</p>
             <p>Ксения Швецова</p>
           </div>
@@ -112,37 +112,37 @@
 
       <div class="M_Rights_and_Logo">
         <div class="A_Rights">
-          <p class="random_color">(с) All Times, 2025. Все права на манифесты, созданные 
+          <p class="Random_Color">(с) All Times, 2025. Все права на манифесты, созданные 
           современными авторами, защищены авторским правом. Манифесты, 
           ставшие общественным достоянием, доступны 
           для свободного использования. Если 
           вы являетесь автором материала и хотите внести изменения 
-          или запросить удаление, пожалуйста, <a class="A_Link random_color" href="mailto:archive@alltimes.org" target="_blank">свяжитесь с нами</a>.
+          или запросить удаление, пожалуйста, <a class="A_Link Random_Color" href="mailto:archive@alltimes.org" target="_blank">свяжитесь с нами</a>.
           </p>
       </div>
 
         <div class="A_Logo_in_Footer">
-          <img id="logo_in_footer" class="random_color" src="https://raw.githubusercontent.com/HSEADC/all_times/aead13b282b741f6c47344131e013c03e143e77f/src/images/A_Logo.svg">
+          <img id="Logo_in_Footer" class="Random_Color" src="https://raw.githubusercontent.com/HSEADC/all_times/aead13b282b741f6c47344131e013c03e143e77f/src/images/A_Logo.svg">
         </div>
       </div>
     </div>  
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        var C_menu_bar = document.querySelector('.C_menu_bar')
-        var top = C_menu_bar.offsetTop
+        var C_Menu_Bar = document.querySelector('.C_Menu_Bar')
+        var top = C_Menu_Bar.offsetTop
 
         window.addEventListener('scroll', function () {
           if (window.scrollY >= top) {
-            C_menu_bar.style.position = ''
-            C_menu_bar.style.top = '0'
-            C_menu_bar.style.zIndex = '10'
-            C_menu_bar.style.padding = '1vw 3vw'
+            C_Menu_Bar.style.position = ''
+            C_Menu_Bar.style.top = '0'
+            C_Menu_Bar.style.zIndex = '10'
+            C_Menu_Bar.style.padding = '1vw 3vw'
           } else {
-            C_menu_bar.style.position = ''
-            C_menu_bar.style.top = ''
-            C_menu_bar.style.zIndex = ''
-            C_menu_bar.style.padding = '1vw 3vw'
+            C_Menu_Bar.style.position = ''
+            C_Menu_Bar.style.top = ''
+            C_Menu_Bar.style.zIndex = ''
+            C_Menu_Bar.style.padding = '1vw 3vw'
           }
         })
       })
@@ -153,10 +153,10 @@
 
       //меняем цвет рандом
       function changeTextColor() {
-      const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)']; // массив цветов
-      const randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
-      const textElement = document.querySelector('.random_color'); // находим элемент
-      textElement.style.color = randomColor; // меняем цвет текста
+        const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)']; // массив цветов
+        const randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
+        const textElement = document.querySelector('.Random_Color'); // находим элемент
+        textElement.style.color = randomColor; // меняем цвет текста
       }
       window.onload = changeTextColor;
       
