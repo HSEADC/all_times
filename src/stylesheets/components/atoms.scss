@@ -33,6 +33,7 @@
     font-family: Helvetica;
     font-size: 3.6vw;
     cursor: pointer;
+    z-index: 0;
   
     &.right_side {
       text-align: right;
@@ -193,11 +194,47 @@ input[type="email"]::placeholder {
 }
 
   
+.A_Info_Icon{
+  position: absolute;
+  cursor: copy;
+  z-index: 10;
+}
+
+.A_Info_Block{
+  width: 100%;
+  height: 7.5vw;
+  bottom: 0%;
+  display: none;
+  position: absolute;
+  background-color: aqua;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+
+  font-family: Helvetica;
+  font-size: 3vw;
+  text-align: center;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
 
 
 
+.A_Info_Block_Mani{
+  width: 100%;
+  height: 7.5vw;
+  bottom: 0%;
+  display: none;
+  position: absolute;
+  background-color: aqua;
+  z-index: 10;
+  color: rgb(0, 0, 0);
 
-
+  font-family: Helvetica;
+  font-size: 3vw;
+  text-align: center;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
 
 
 

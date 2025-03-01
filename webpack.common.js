@@ -6,9 +6,15 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
 
+// const paths = [
+//   '/index.html',
+//   '/fluxus.html'
+// ]
+
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    mainfests: './src/javascripts/manifests.js'
   },
   output: {
     filename: '[name].js',
@@ -77,7 +83,8 @@ module.exports = {
     // Главная страница
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      chunks: ['index']
     }),
 
     // Страницы разделов
@@ -109,7 +116,8 @@ module.exports = {
     // Страницы манифестов
     new HtmlWebpackPlugin({
       template: './src/manifests/fluxus.html',
-      filename: './manifests/fluxus.html'
+      filename: './manifests/fluxus.html',
+      chunks: ['manifests', 'index']
     }),
 
     // Страницы манифестов по дизайну
