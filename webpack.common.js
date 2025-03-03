@@ -1,30 +1,30 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
 
-// const paths = [
-//   '/index.html',
-//   '/fluxus.html'
-// ]
-
 module.exports = {
   entry: {
     index: './src/index.js',
-    mainfests: './src/javascripts/manifests.js'
+    manifests: './src/js/manifests.js',
+    reflection: './src/js/reflection.js',
+    select: './src/js/select.js',
+    styleGuide: './src/js/styleGuide.js',
+    aboutUs: './src/js/aboutUs.js',
+    fluxus: './src/js/fluxus.js'
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'docs'),
     clean: true
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/i,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -35,10 +35,25 @@ module.exports = {
         }
       },
       {
-        test: /\.(sa|sc|c)ss$/i,
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        }
+      },
+      {
+        test: /\.scss$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'sass-loader',
           {
             loader: 'postcss-loader',
             options: {
@@ -46,8 +61,7 @@ module.exports = {
                 plugins: [['postcss-preset-env']]
               }
             }
-          },
-          'sass-loader'
+          }
         ]
       },
       {
@@ -59,92 +73,87 @@ module.exports = {
         type: 'asset/source'
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
+        test: /\.(jpg|png|gif|jpeg|webp|svg)/,
         type: 'asset/resource',
         generator: {
           filename: 'images/[hash][ext][query]'
         }
       },
       {
-        test: /\.(ttf|otf|woff|woff2)$/i,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
+        test: /\.(ttf|otf|woff2|woff|eot)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name].[ext]'
         }
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css'
     }),
 
-    // Главная страница
+    // Index
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
       chunks: ['index']
     }),
 
-    // Страницы разделов
     new HtmlWebpackPlugin({
       template: './src/manifests.html',
-      filename: './manifests.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/aboutUs.html',
-      filename: './aboutUs.html'
-    }),
-
-    new HtmlWebpackPlugin({
-      template: './src/select.html',
-      filename: './select.html'
+      filename: './manifests.html',
+      chunks: ['manifests']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/reflection.html',
-      filename: './reflection.html'
+      filename: './reflection.html',
+      chunks: ['reflection']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/select.html',
+      filename: './select.html',
+      chunks: ['select']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/styleGuide.html',
-      filename: './styleGuide.html'
+      filename: './styleGuide.html',
+      chunks: ['styleGuide']
     }),
 
-    // Страницы манифестов
+    new HtmlWebpackPlugin({
+      template: './src/aboutUs.html',
+      filename: './aboutUs.html',
+      chunks: ['aboutUs']
+    }),
+
     new HtmlWebpackPlugin({
       template: './src/manifests/fluxus.html',
       filename: './manifests/fluxus.html',
-      chunks: ['manifests', 'index']
+      chunks: ['index', 'manifests']
     }),
 
-    // Страницы манифестов по дизайну
-    // new HtmlWebpackPlugin({
-    //   template: './src/design_manifests/ManifesKebudayaan.html',
-    //   filename: './design_manifests/ManifesKebudayaan.html'
-    // }),
 
-
-    // Internal pages
+    
+    // Article
     // new HtmlWebpackPlugin({
-    //   hash: true,
-    //   scriptLoading: 'blocking',
-    //   template: './src/pages/page.html',
-    //   filename: './pages/page.html',
-    //   chunks: ['page']
+    //   template: './src/articles/superorganisms/S_Popup.html',
+    //   filename: './superorganisms/S_Popup.html'
     // }),
 
     // Partials
-    new HtmlWebpackPartialsPlugin([
-      {
-        path: path.join(__dirname, './src/partials/analytics.html'),
-        location: 'analytics',
-        template_filename: '*',
-        priority: 'replace'
-      }
-    ])
+    // new HtmlWebpackPartialsPlugin([
+    //   {
+    //     path: path.join(__dirname, './src/partials/analytics.html'),
+    //     location: 'analytics',
+    //     template_filename: '*',
+    //     priority: 'replace'
+    //   }
+    // ])
   ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()]
