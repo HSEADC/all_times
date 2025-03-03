@@ -2,11 +2,12 @@
 @import 'stylesheets/vars.scss';
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/basics.scss';
+
 @import 'stylesheets/index.scss';
-@import 'stylesheets/aboutUs.scss';
+/* @import 'stylesheets/aboutUs.scss';
 @import 'stylesheets/manifests.scss';
 @import 'stylesheets/styleGuide.scss';
-@import 'stylesheets/reflection.scss';
+@import 'stylesheets/reflection.scss'; */
 
 @import 'stylesheets/components/atoms.scss';
 @import 'stylesheets/components/moleculs.scss';
