@@ -17,7 +17,8 @@ module.exports = {
     styleGuide: './src/js/styleGuide.js',
     aboutUs: './src/js/aboutUs.js',
     fluxus: './src/js/fluxus.js',
-    filterTags: './src/js/filterTags.js'
+    filterTags: './src/js/filterTags.js',
+    slider: './src/js/slider.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -143,7 +144,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/manifests/crujok.html',
       filename: './manifests/crujok.html',
-      chunks: ['index', 'manifests', 'filterTags']
+      chunks: ['index', 'manifests', 'filterTags', 'slider']
     }),
 
 
