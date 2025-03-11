@@ -1,4 +1,7 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+
+
 //ТУТ СЛАЙДЕР
 document.addEventListener("DOMContentLoaded", function () {
   //Slider function
