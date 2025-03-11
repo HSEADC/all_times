@@ -3,6 +3,8 @@
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/basics.scss';
 
+@import 'stylesheets/select.scss';
+
 @import 'stylesheets/index.scss';
 /* @import 'stylesheets/aboutUs.scss';
 @import 'stylesheets/manifests.scss';
@@ -15,3 +17,5 @@
 @import 'stylesheets/components/collections.scss';
 @import 'stylesheets/components/organisms.scss';
 @import 'stylesheets/components/superorganisms.scss';
+
+@import 'stylesheets/clock.scss';

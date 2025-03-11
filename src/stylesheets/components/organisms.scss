@@ -22,3 +22,14 @@
     border-top: 0.16vw solid rgba(150, 150, 150, 1);
     margin-top: -0.16vw;
 }
+
+.O_Slider {
+    justify-self: center;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    padding: 2vw 5vw 2vw 5vw;
+    align-items: center;
+}
