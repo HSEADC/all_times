@@ -1,0 +1,29 @@
+.S_Articles{
+    padding: 2rem;
+}
+.A_ArticleHeader{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.M_FilterTags{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.A_FilterTag{
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+
+    &.active{
+        background-color: blue;
+        color: white;
+    }
+
+    &:hover{
+        background-color: rgb(160, 160, 255);
+        transition: background 0.8s ease;
+    }
+}

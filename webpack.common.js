@@ -9,12 +9,15 @@ const path = require('path')
 module.exports = {
   entry: {
     index: './src/index.js',
+    main: './src/js/main.js',
+    clock: './src/js/clock.js',
     manifests: './src/js/manifests.js',
     reflection: './src/js/reflection.js',
     select: './src/js/select.js',
     styleGuide: './src/js/styleGuide.js',
     aboutUs: './src/js/aboutUs.js',
-    fluxus: './src/js/fluxus.js'
+    fluxus: './src/js/fluxus.js',
+    filterTags: './src/js/filterTags.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -98,13 +101,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['index']
+      chunks: ['index', 'main', 'clock']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/manifests.html',
       filename: './manifests.html',
-      chunks: ['manifests']
+      chunks: ['index', 'main', 'clock']
     }),
 
     new HtmlWebpackPlugin({
@@ -116,7 +119,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/select.html',
       filename: './select.html',
-      chunks: ['select']
+      chunks: ['select', 'filterTags']
     }),
 
     new HtmlWebpackPlugin({
@@ -135,6 +138,12 @@ module.exports = {
       template: './src/manifests/fluxus.html',
       filename: './manifests/fluxus.html',
       chunks: ['index', 'manifests']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/crujok.html',
+      filename: './manifests/crujok.html',
+      chunks: ['index', 'manifests', 'filterTags']
     }),
 
 

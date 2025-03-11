@@ -3,6 +3,7 @@ import './index.css'
 document.addEventListener('DOMContentLoaded', function () {
     var C_Menu_Bar = document.querySelector('.C_Menu_Bar')
     var top = C_Menu_Bar.offsetTop
+    //offset().Top
 
     window.addEventListener('scroll', function () {
       if (window.scrollY >= top) {
@@ -24,28 +25,29 @@ document.addEventListener('DOMContentLoaded', function () {
         const textElement = document.querySelector('.Random_Color'); // находим элемент
         const svgEl = document.querySelector('#Random_Color_Fill');
         const svgElStroke = document.querySelector('#Random_Color_Stroke');
-        const logoEl = document.querySelector('.Random_Color_Logo');
         const infBlckMain = document.querySelector('.Random_Color_Inf_Block');
 
+        const logoEl = document.querySelectorAll('#Random_Color_Logo');
+        const yearColorRand = document.querySelectorAll('#yearColorRand');
 
         const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)']; // массив цветов
         const randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
         
         textElement.style.color = randomColor; // меняем цвет текста
         svgEl.style.fill = randomColor; 
-        svgElStroke.style.stroke = randomColor; 
-        logoEl.style.fill = randomColor; 
+        svgElStroke.style.stroke = randomColor;  
         infBlckMain.style.background = randomColor;
+
+        yearColorRand.forEach(element => {
+          element.style.color = randomColor;
+        })
+
+        logoEl.forEach(element => {
+          element.style.fill = randomColor;
+        })
       }
 
       window.onload = changeTextColor;
-
-
-
-
-  document.getElementById('Fluxus').addEventListener('click', function() {
-    location.href = 'manifests/fluxus.html';
-  });
 
 //Рандомное позиционирование иконки
 document.addEventListener('DOMContentLoaded', function () {
@@ -57,17 +59,4 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-//ховер для инфо блока
-document.addEventListener('DOMContentLoaded', function () {
-  const Info_Icon = document.querySelector('.A_Info_Icon');
-  const infBlck = document.querySelector('.A_Info_Block');
 
-  Info_Icon.addEventListener('mouseenter', () => {
-    infBlck.style.display = 'block';  // Показываем блок
-  });
-
-  Info_Icon.addEventListener('mouseleave', () => {
-    infBlck.style.display = 'none';  // Скрываем блок
-  });
-
-})

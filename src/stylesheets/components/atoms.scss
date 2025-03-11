@@ -1,4 +1,3 @@
-
 .A_Hand {
     &.Hour {
       width: 8vw;
@@ -7,7 +6,7 @@
   
       position: absolute;
       transform-origin: center left;
-      top: calc(45%);
+      top: calc(50%);
       left: 50%;
       transform: rotate(270deg);
     }
@@ -23,12 +22,16 @@
       transform: rotate(270deg);
     }
   }
+
+  .Main_Display_Time{
+    display: block;
+  }
   .A_Time {
     width: 23vw;
     position: absolute;
     top: 43%;
     left: 50%;
-    display: block;
+    
     text-decoration: none;
     font-family: Helvetica;
     font-size: 3.6vw;
@@ -244,3 +247,32 @@ input[type="email"]::placeholder {
 
 
 
+
+
+.A_Images_in_Slider {
+  width: 100%;
+  display: block;
+}
+
+.A_Images_in_Slider img{
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.A_Images_in_Slider img.activ_img {
+  display: block;
+}
+
+.A_Arrow_Backwards, .A_Arrow_Forwards {
+  /* font-size: 3vw; */
+  width: 2vw;
+  cursor: pointer;
+  user-select: none
+}
+
+.A_Count_for_Slider{
+  font-family: Helvetica;
+  font-size: 3.6vw; 
+  padding: 1vw 3vw;
+}
