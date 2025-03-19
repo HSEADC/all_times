@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //меняем цвет рандом
     function changeTextColor() {
-        const textElement = document.querySelector('.Random_Color'); // находим элемент
+        const textElement = document.querySelectorAll('.Random_Color'); // находим элемент
         const svgEl = document.querySelector('#Random_Color_Fill');
         const svgElStroke = document.querySelector('#Random_Color_Stroke');
         const infBlckMain = document.querySelector('.Random_Color_Inf_Block');
@@ -33,7 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)']; // массив цветов
         const randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
         
-        textElement.style.color = randomColor; // меняем цвет текста
+        textElement.forEach(element => {
+          element.style.color = randomColor; // меняем цвет текста
+        })
+       
         svgEl.style.fill = randomColor; 
         svgElStroke.style.stroke = randomColor;  
         infBlckMain.style.background = randomColor;
@@ -45,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
         logoEl.forEach(element => {
           element.style.fill = randomColor;
         })
+
+
       }
 
       window.onload = changeTextColor;

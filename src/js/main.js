@@ -6,7 +6,7 @@ document.querySelector('.Fluxus').addEventListener('click', function() {
 });
 
 document.querySelector('.Crujok').addEventListener('click', function() {
-  location.href = 'manifests/Crujok.html';
+  location.href = 'manifests/crujok.html';
 });
 
 //ховер для инфо блока
