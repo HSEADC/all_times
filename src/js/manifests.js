@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const max = 95;
   
   Info_Icon.style.left = `${Math.floor(Math.random()*(max + 1))}%`
-  Info_Icon.style.top = `${Math.floor(Math.random()+(max + 1))}%`
+  Info_Icon.style.bottom = `${Math.floor(Math.random()+(max + 1))}%`
 })
 
 

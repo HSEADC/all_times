@@ -22,6 +22,7 @@ function initFilter() {
             }
 
             let b = document.querySelectorAll('.active')
+            
             //.contains -- проверка есть ли такой класс или нет
             if (tag == a && !tag.classList.contains('active')){
                 b.forEach((tag) => {

@@ -208,7 +208,7 @@ input[type="email"]::placeholder {
   height: 7.5vw;
   bottom: 0%;
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: aqua;
   z-index: 10;
   color: rgb(0, 0, 0);
@@ -224,10 +224,10 @@ input[type="email"]::placeholder {
 
 .A_Info_Block_Mani{
   width: 100%;
-  height: 7.5vw;
-  bottom: 0%;
+  height: 9%;
+  bottom: 0;
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: aqua;
   z-index: 10;
   color: rgb(0, 0, 0);
@@ -236,7 +236,11 @@ input[type="email"]::placeholder {
   font-size: 3vw;
   text-align: center;
   padding-top: 1vw;
-  padding-bottom: 1vw;
+  padding-bottom: 0vw;
+  align-self: flex-end;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
 }
 
 
@@ -274,5 +278,57 @@ input[type="email"]::placeholder {
 .A_Count_for_Slider{
   font-family: Helvetica;
   font-size: 3.6vw; 
-  padding: 1vw 3vw;
+}
+
+
+.A_Name_of_Manifest{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.A_Big_Txt_Manifest{
+
+}
+
+.A_Lil_Txt_Manifest{
+  padding-left: 5vw;
+}
+
+.A_Text_Area_in_Notes{
+  border: solid black 2px;
+  height: 18vw;
+  font-size: 1.4vw;
+  font-family: Helvetica;
+  padding: 1vw;
+}
+
+.A_Save_Note_Button{
+  border: none;
+  background-color: white;
+  font-size: 1.4vw;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0vw;
+  cursor: pointer;
+}
+
+.A_link_txt{
+  display: flex;
+  flex-direction: column;
+  gap: 0vw;
+  padding-bottom: 1vw;
+}
+
+.A_Pic_AbtUS_width{
+  width: 100%;
+}
+
+.A_Time_Icon{
+  position: absolute;
+  cursor: copy;
+  z-index: 10;
 }

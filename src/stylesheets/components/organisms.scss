@@ -25,11 +25,35 @@
 
 .O_Slider {
     justify-self: center;
-    width: 80%;
+    width: 73.5%;
     height: 80%;
     display: flex;
     justify-content: space-between;
     gap: 5vw;
-    padding: 2vw 5vw 2vw 5vw;
+    padding: 2vw 5vw 0vw 5vw;
     align-items: center;
+}
+
+.O_Notes_and_Links{
+    width: 38%;
+    border-left: 0.16vw solid rgba(150, 150, 150, 1);
+    padding-left: 2vw;
+    padding-bottom: 1vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.O_Abt_Us_block{
+    width: 25%;
+    gap: 1vw;
+}
+
+.O_Gif_and_Time{
+    display: none;
+    justify-content: center;
+    background-color: white;
+    background-image: none;
+    z-index: 10;
 }

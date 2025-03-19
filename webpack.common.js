@@ -18,7 +18,10 @@ module.exports = {
     aboutUs: './src/js/aboutUs.js',
     fluxus: './src/js/fluxus.js',
     filterTags: './src/js/filterTags.js',
-    slider: './src/js/slider.js'
+    slider: './src/js/slider.js',
+    filter: './src/js/filter.js',
+    saveNote: './src/js/saveNote.js',
+    currentT: './src/js/currentTime.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -102,7 +105,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['index', 'main', 'clock']
+      chunks: ['index', 'main', 'clock', 'filter']
     }),
 
     new HtmlWebpackPlugin({
@@ -120,7 +123,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/select.html',
       filename: './select.html',
-      chunks: ['select', 'filterTags']
+      chunks: ['select', 'filterTags', 'clock']
     }),
 
     new HtmlWebpackPlugin({
@@ -132,13 +135,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/aboutUs.html',
       filename: './aboutUs.html',
-      chunks: ['aboutUs']
+      chunks: ['aboutUs', 'currentT']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/manifests/fluxus.html',
       filename: './manifests/fluxus.html',
-      chunks: ['index', 'manifests']
+      chunks: ['index', 'manifests', 'saveNote']
     }),
 
     new HtmlWebpackPlugin({
