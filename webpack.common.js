@@ -116,6 +116,12 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
+      template: './src/articles.html',
+      filename: './articles.html',
+      chunks: ['index']
+    }),
+
+    new HtmlWebpackPlugin({
       template: './src/reflection.html',
       filename: './reflection.html',
       chunks: ['reflection', 'index']

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var gif_and_time = document.querySelector('.O_Gif_and_Time');
   var menu_hide = document.querySelector('.C_Menu_Bar');
   var icon_leave = document.querySelector('.A_Time_Icon_Close');
-  var gif_paths = ['A_Background_Time_1.gif', 'A_Background_Time_2.gif'];
+  var gif_paths = ['A_Background_Time_1.gif', 'A_Background_Time_2.gif', 'A_Background_Time_3.gif'];
   time_icon.addEventListener("mouseenter", function () {
     var gif_num = Math.floor(Math.random() * gif_paths.length);
     gif_and_time.style.display = 'flex';
