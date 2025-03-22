@@ -21,7 +21,8 @@ module.exports = {
     slider: './src/js/slider.js',
     filter: './src/js/filter.js',
     saveNote: './src/js/saveNote.js',
-    currentT: './src/js/currentTime.js'
+    currentT: './src/js/currentTime.js',
+    search: './src/js/search.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -105,19 +106,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['index', 'main', 'clock', 'filter']
+      chunks: ['index', 'main', 'clock', 'filter', 'search']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/manifests.html',
       filename: './manifests.html',
-      chunks: ['index', 'main', 'clock']
+      chunks: ['index', 'clock', 'search']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/reflection.html',
       filename: './reflection.html',
-      chunks: ['reflection']
+      chunks: ['reflection', 'index']
     }),
 
     new HtmlWebpackPlugin({
@@ -145,9 +146,33 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
+      template: './src/manifests/dadaism.html',
+      filename: './manifests/dadaism.html',
+      chunks: ['index', 'manifests', 'saveNote']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/oppoyaz.html',
+      filename: './manifests/oppoyaz.html',
+      chunks: ['index', 'manifests', 'saveNote']
+    }),
+
+    new HtmlWebpackPlugin({
       template: './src/manifests/crujok.html',
       filename: './manifests/crujok.html',
       chunks: ['index', 'manifests', 'filterTags', 'slider']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/dogma.html',
+      filename: './manifests/dogma.html',
+      chunks: ['index', 'manifests', 'saveNote']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/luchi.html',
+      filename: './manifests/luchi.html',
+      chunks: ['index', 'manifests', 'saveNote']
     }),
 
 

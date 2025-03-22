@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     card.style.display = 'none';
                 }
             });
+            //ПЕРЕМЕЩЕНИЕ К ПЕРВОЙ НАЙДЕННОЙ КАРТОЧКЕ
             ourdiv.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest"});
             
         });
