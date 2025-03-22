@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function changeTextColor() {
         const textElement = document.querySelectorAll('.Random_Color'); // находим элемент
         const svgEl = document.querySelectorAll('#Random_Color_Fill');
-        const svgElStroke = document.querySelector('#Random_Color_Stroke');
+        const svgElStroke = document.querySelectorAll('#Random_Color_Stroke');
         const infBlckMain = document.querySelectorAll('.Random_Color_Inf_Block');
 
         const logoEl = document.querySelectorAll('#Random_Color_Logo');
@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
           element.style.color = randomColor; // меняем цвет текста
         })
        
-        
-        svgElStroke.style.stroke = randomColor;  
-
-        
+        svgElStroke.forEach(el => {
+          el.style.stroke = randomColor;  
+        })
+ 
         yearColorRand.forEach(element => {
           element.style.color = randomColor;
         })
@@ -66,11 +66,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Рандомное позиционирование иконки
 document.addEventListener('DOMContentLoaded', function () {
-  const Info_Icon = document.querySelector('.Random_Position');
+  const Info_Icon = document.querySelectorAll('.Random_Position');
   const max = 95;
+
+  Info_Icon.forEach(el => {
+    el.style.left = `${Math.floor(Math.random()*(max + 1))}%`
+    el.style.top = `${Math.floor(Math.random()*(max + 1))}%`  
+  })
   
-  Info_Icon.style.left = `${Math.floor(Math.random()*(max + 1))}%`
-  Info_Icon.style.top = `${Math.floor(Math.random()*(max + 1))}%`
 })
 
 
