@@ -22,7 +22,8 @@ module.exports = {
     filter: './src/js/filter.js',
     saveNote: './src/js/saveNote.js',
     currentT: './src/js/currentTime.js',
-    search: './src/js/search.js'
+    search: './src/js/search.js',
+    articles: './src/js/articles.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -118,7 +119,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/articles.html',
       filename: './articles.html',
-      chunks: ['index']
+      chunks: ['index', 'articles']
     }),
 
     new HtmlWebpackPlugin({

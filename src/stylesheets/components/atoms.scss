@@ -352,3 +352,47 @@ input[type="email"]::placeholder {
 .A_Pic_Article{
   width: 100%;
 }
+
+.A_Text_of_Article{
+  width: 50%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  gap: 1vw;
+}
+
+.A_Button_Article{
+  cursor: pointer;
+  rotate: 0deg;
+  transition: 300ms ease all;
+}
+
+.A_Pic_for_Article{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.First_P{
+  z-index: 10;
+  position: absolute;
+}
+
+.Second_P{
+  z-index: 3;
+  position: relative;
+}
+
+.Random_Position_Article_Icon{
+  position: absolute;
+  cursor: copy;
+  z-index: 10;
+}
+
+.A_Dada_Gifka{
+  display: none;
+  position:fixed;
+  align-self: center;
+}
+
