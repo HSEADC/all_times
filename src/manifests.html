@@ -272,7 +272,6 @@
 
     <div class="C_Menu_Bar">
       <a class="A_Nav Active" href="./index.html">All times</a>
-      <a class="A_Nav">Манифесты</a>
       <a class="A_Nav">Статьи</a>
       <a class="A_Nav">Рефлексия</a>
       <a class="A_Nav">О нас</a>
@@ -280,8 +279,8 @@
       <div class="A_Nav A_Search">
         <label for="searchQuery"> </label>
 
-        <form class="A_Search_Container">
-          <input type="search" id="search" placeholder="Что ищем?">
+        <form class="A_Search_Container" onsubmit="return false">
+          <input type="search" id="search"  placeholder="Что ищем?">
         </form>
       </div>
     </div>

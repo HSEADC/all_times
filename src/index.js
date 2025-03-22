@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
     //меняем цвет рандом
     function changeTextColor() {
         const textElement = document.querySelectorAll('.Random_Color'); // находим элемент
-        const svgEl = document.querySelector('#Random_Color_Fill');
+        const svgEl = document.querySelectorAll('#Random_Color_Fill');
         const svgElStroke = document.querySelector('#Random_Color_Stroke');
-        const infBlckMain = document.querySelector('.Random_Color_Inf_Block');
+        const infBlckMain = document.querySelectorAll('.Random_Color_Inf_Block');
 
         const logoEl = document.querySelectorAll('#Random_Color_Logo');
         const yearColorRand = document.querySelectorAll('#yearColorRand');
@@ -37,17 +37,27 @@ document.addEventListener('DOMContentLoaded', function () {
           element.style.color = randomColor; // меняем цвет текста
         })
        
-        svgEl.style.fill = randomColor; 
+        
         svgElStroke.style.stroke = randomColor;  
-        infBlckMain.style.background = randomColor;
 
+        
         yearColorRand.forEach(element => {
           element.style.color = randomColor;
         })
 
+        svgEl.forEach(element => {
+          element.style.fill = randomColor;         
+        })
+
+
         logoEl.forEach(element => {
           element.style.fill = randomColor;
         })
+
+        infBlckMain.forEach(element => {
+          element.style.background = randomColor;
+        })
+
 
 
       }

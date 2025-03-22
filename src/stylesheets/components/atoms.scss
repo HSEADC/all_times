@@ -87,6 +87,10 @@
     }
 }
 
+.A_Time:hover{
+  color: rgb(105, 105, 105);
+}
+
 .A_Messager_Bar {
   width: 100%;
   height: 4vw;
@@ -139,18 +143,19 @@ input::placeholder {
 }
 
 input[type="search"]::placeholder {
-    color: rgba(150, 150, 150, 1); 
+  color: rgba(150, 150, 150, 1); 
 }
 
 input[type="email"]::placeholder {
-    color: currentColor; 
-    font-weight: bold;
+  color: currentColor; 
+  font-weight: bold;
 }
 
 .A_Picture {
-    width: 30.8vw;
-    height: 100%;
+  width: 30.8vw;
+  height: 100%;
 }
+
   
 .A_Quote{
     font-family: Helvetica;
@@ -192,6 +197,10 @@ input[type="email"]::placeholder {
   color: rgba(150, 150, 150, 1);
 }
 
+.A_Nav:hover{
+  color: rgb(105, 105, 105);
+}
+
 .Active{
   color:black;
 }
@@ -205,7 +214,7 @@ input[type="email"]::placeholder {
 
 .A_Info_Block{
   width: 100%;
-  height: 7.5vw;
+  height: inherit;
   bottom: 0%;
   display: none;
   position: fixed;
@@ -224,7 +233,7 @@ input[type="email"]::placeholder {
 
 .A_Info_Block_Mani{
   width: 100%;
-  height: 9%;
+  height: inherit;
   bottom: 0;
   display: none;
   position: fixed;
@@ -236,7 +245,7 @@ input[type="email"]::placeholder {
   font-size: 3vw;
   text-align: center;
   padding-top: 1vw;
-  padding-bottom: 0vw;
+  padding-bottom: 1vw;
   align-self: flex-end;
 
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -331,4 +340,9 @@ input[type="email"]::placeholder {
   position: absolute;
   cursor: copy;
   z-index: 10;
+}
+
+.A_Time_Icon_Close{
+  position: absolute;
+  cursor: copy;
 }
