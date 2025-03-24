@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //меняем цвет рандом
 function changeColor() {
     const backColor = document.querySelectorAll('.Random_Color_Back');
+    const randBack = document.querySelectorAll('.A_Color')
     const svgElStroke = document.querySelectorAll('#Random_Color_Stroke');
     const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)']; // массив цветов
     const randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
@@ -111,6 +112,25 @@ function changeColor() {
     svgElStroke.forEach(el => {
         el.style.stroke = randomColor;  
     });
+
+    // randBack.forEach(el => {
+    //     el.style.backgroundColor = randomColor; 
+    // })
+
+
+
+      
+    randBack.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
+          el.style.backgroundColor = randomColor;
+        });
+        
+        el.addEventListener('mouseleave', () => {
+          el.style.backgroundColor = ''; // Возвращаем прозрачный цвет
+        });
+      });
 }
 
 window.onload = changeColor;
+

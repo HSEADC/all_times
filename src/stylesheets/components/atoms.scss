@@ -398,13 +398,34 @@ input[type="email"]::placeholder {
 .First_P{
   z-index: 10;
   position: absolute;
-  transition: all 1s ease-in-out;
 }
 
 .Second_P{
   z-index: 3;
   position: relative;
 }
+
+
+
+.A_Color {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background-color: transparent; /* Лучше использовать transparent вместо none */
+  mix-blend-mode:screen;
+  pointer-events: auto; /* Чтобы hover работал */
+}
+
+.A_Color:hover {
+  /* background-color теперь устанавливается через JS */
+  mix-blend-mode: screen;
+  transition: all 1s ease-in-out;
+}
+
+
+
 
 
 .Random_Position_Article_Icon{
