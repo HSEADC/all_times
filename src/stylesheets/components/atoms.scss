@@ -376,13 +376,24 @@ input[type="email"]::placeholder {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .A_Pic_for_Article{
   width: 100%;
   display: flex;
   position: relative;
-  background-color: none;
-  background-image: url(/src/images/A_Dada_Back.webp);
 }
+
 
 .First_P{
   z-index: 10;
@@ -395,10 +406,11 @@ input[type="email"]::placeholder {
   position: relative;
 }
 
+
 .Random_Position_Article_Icon{
   position: absolute;
   cursor: copy;
-  z-index: 10;
+  z-index: 100;
 }
 
 .A_Dada_Gifka{
