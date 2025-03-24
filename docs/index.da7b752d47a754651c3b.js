@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var C_Menu_Bar = document.querySelector('.C_Menu_Bar');
   var top = C_Menu_Bar.offsetTop;
   //offset().Top
-
+  console.log(1234);
   window.addEventListener('scroll', function () {
     if (window.scrollY >= top) {
       C_Menu_Bar.style.position = '';
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function changeTextColor() {
   var textElement = document.querySelectorAll('.Random_Color'); // находим элемент
   var svgEl = document.querySelectorAll('#Random_Color_Fill');
-  var svgElStroke = document.querySelector('#Random_Color_Stroke');
+  var svgElStroke = document.querySelectorAll('#Random_Color_Stroke');
   var infBlckMain = document.querySelectorAll('.Random_Color_Inf_Block');
   var logoEl = document.querySelectorAll('#Random_Color_Logo');
   var yearColorRand = document.querySelectorAll('#yearColorRand');
@@ -35,7 +35,9 @@ function changeTextColor() {
   textElement.forEach(function (element) {
     element.style.color = randomColor; // меняем цвет текста
   });
-  svgElStroke.style.stroke = randomColor;
+  svgElStroke.forEach(function (el) {
+    el.style.stroke = randomColor;
+  });
   yearColorRand.forEach(function (element) {
     element.style.color = randomColor;
   });
@@ -53,10 +55,12 @@ window.onload = changeTextColor;
 
 //Рандомное позиционирование иконки
 document.addEventListener('DOMContentLoaded', function () {
-  var Info_Icon = document.querySelector('.Random_Position');
+  var Info_Icon = document.querySelectorAll('.Random_Position');
   var max = 95;
-  Info_Icon.style.left = "".concat(Math.floor(Math.random() * (max + 1)), "%");
-  Info_Icon.style.top = "".concat(Math.floor(Math.random() * (max + 1)), "%");
+  Info_Icon.forEach(function (el) {
+    el.style.left = "".concat(Math.floor(Math.random() * (max + 1)), "%");
+    el.style.top = "".concat(Math.floor(Math.random() * (max + 1)), "%");
+  });
 });
 /******/ })()
 ;

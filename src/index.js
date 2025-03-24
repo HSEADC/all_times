@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var C_Menu_Bar = document.querySelector('.C_Menu_Bar')
     var top = C_Menu_Bar.offsetTop
     //offset().Top
+    console.log(1234)
 
     window.addEventListener('scroll', function () {
       if (window.scrollY >= top) {
