@@ -360,6 +360,7 @@ input[type="email"]::placeholder {
   justify-content: center;
   justify-self: center;
   gap: 1vw;
+  padding-bottom: 2vw;
 }
 
 .A_Button_Article{
@@ -368,15 +369,25 @@ input[type="email"]::placeholder {
   transition: 300ms ease all;
 }
 
+.A_Button_Article {
+  transition: transform 0.3s ease;
+}
+.A_Text_of_Article {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .A_Pic_for_Article{
   width: 100%;
   display: flex;
   position: relative;
+  background-color: none;
+  background-image: url(/src/images/A_Dada_Back.webp);
 }
 
 .First_P{
   z-index: 10;
   position: absolute;
+  transition: all 1s ease-in-out;
 }
 
 .Second_P{
@@ -392,7 +403,8 @@ input[type="email"]::placeholder {
 
 .A_Dada_Gifka{
   display: none;
-  position:fixed;
+  position: absolute;
   align-self: center;
+  z-index: 100;
 }
 
