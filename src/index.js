@@ -61,6 +61,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      const cards = document.querySelectorAll('.O_Manifest_Card');
+        //const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)'];
+    
+        cards.forEach(card => {
+          card.addEventListener('mouseenter', () => {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // эдлементы только внутри текущей статьи
+                const randBack = card.querySelectorAll('.A_Color_Manifest');
+                const svgElStroke = card.querySelectorAll('#Random_Color_Stroke');
+                const randText = card.querySelectorAll('.A_Color_Text');
+                const randFill = card.querySelectorAll('.A_RandColorFill');
+                console.log('kgliig')
+                
+                // применяем рандом
+                randBack.forEach(el => el.style.backgroundColor = randomColor);
+                svgElStroke.forEach(el => el.style.stroke = randomColor);
+                randText.forEach(el => el.style.color = randomColor);
+                randFill.forEach(el => el.style.fill = randomColor);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const randBack = card.querySelectorAll('.A_Color_Manifest');
+                const svgElStroke = card.querySelectorAll('#Random_Color_Stroke');
+                const randText = card.querySelectorAll('.A_Color_Text');
+                const randFill = card.querySelectorAll('.A_RandColorFill');
+                
+                randBack.forEach(el => el.style.backgroundColor = '');
+                svgElStroke.forEach(el => el.style.stroke = '');
+                randText.forEach(el => el.style.color = '');
+                randFill.forEach(el => el.style.fill = '');
+            });
+        });
+
       }
 
       window.onload = changeTextColor;

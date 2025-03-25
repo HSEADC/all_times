@@ -156,6 +156,8 @@ input[type="email"]::placeholder {
   height: 100%;
 }
 
+
+
   
 .A_Quote{
     font-family: Helvetica;
@@ -304,7 +306,7 @@ input[type="email"]::placeholder {
 }
 
 .A_Text_Area_in_Notes{
-  border: solid black 2px;
+  border: solid black 1.5px;
   height: 18vw;
   font-size: 1.4vw;
   font-family: Helvetica;
@@ -418,7 +420,7 @@ input[type="email"]::placeholder {
   z-index: 10;
   position: absolute;
   transition: all 1s ease-in-out;
-  background-color: transparent; /* Лучше использовать transparent вместо none */
+  background-color: transparent; 
   mix-blend-mode: screen;
   pointer-events: auto; /* Чтобы hover работал */
 }
@@ -462,26 +464,6 @@ input[type="email"]::placeholder {
   position: absolute;
   align-self: center;
   z-index: 100;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#A_A_Download[download]::after {
-    content: url(/src/images/Clock_to_download.pdf); 
 }
 
 
@@ -583,6 +565,9 @@ input[type="email"]::placeholder {
     padding-bottom: 0;
   }
 
+  .A_Text_Area_in_Notes {
+    border: solid black 1px;
+  }
 
 }
 
@@ -752,4 +737,53 @@ input[type="email"]::placeholder {
 
  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
