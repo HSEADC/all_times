@@ -374,6 +374,9 @@ input[type="email"]::placeholder {
 }
 .A_Text_of_Article {
   transition: opacity 0.3s ease, transform 0.3s ease;
+  p {
+    padding-bottom: 2vw;
+  }
 }
 
 
@@ -414,18 +417,36 @@ input[type="email"]::placeholder {
   position: absolute;
   transition: all 1s ease-in-out;
   background-color: transparent; /* Лучше использовать transparent вместо none */
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
   pointer-events: auto; /* Чтобы hover работал */
 }
 
 .A_Color:hover {
-  /* background-color теперь устанавливается через JS */
   mix-blend-mode: screen;
   transition: all 1s ease-in-out;
 }
 
+.A_Color_Text{
+  transition: all 1s ease-in-out;
+  background-color: transparent; /* Лучше использовать transparent вместо none */
+  mix-blend-mode: screen;
+  pointer-events: auto; /* Чтобы hover работал */
+}
 
+.A_Color_Text:hover{
+  mix-blend-mode: screen;
+  transition: all 1s ease-in-out;
+}
 
+.A_RandColorFill{
+  transition: all 1s ease-in-out;
+  background-color: transparent;
+  pointer-events: auto;
+}
+
+.A_RandColorFill:hover{
+  transition: all 1s ease-in-out;
+}
 
 
 .Random_Position_Article_Icon{
@@ -441,3 +462,55 @@ input[type="email"]::placeholder {
   z-index: 100;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.M_Name_and_Cross_Article {
+  /*  transition: top 0.3s ease;
+  background: white; или другой фон, если нужно */
+}
+
+.O_Article {
+  /*  position: relative; /* важно для абсолютного позиционирования */
+}

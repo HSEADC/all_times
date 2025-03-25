@@ -25,6 +25,14 @@ document.querySelector('.Luchi').addEventListener('click', function() {
   location.href = 'manifests/luchi.html';
 });
 
+document.querySelector('.Surreal').addEventListener('click', function() {
+  location.href = 'manifests/surreal.html';
+});
+
+document.querySelector('.GB').addEventListener('click', function() {
+  location.href = 'manifests/GB.html';
+});
+
 //ховер для инфо блока
 document.addEventListener('DOMContentLoaded', function () {
     const Info_Icon = document.querySelector('.A_Info_Icon');

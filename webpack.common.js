@@ -182,6 +182,18 @@ module.exports = {
       chunks: ['index', 'manifests', 'saveNote']
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/manifests/surreal.html',
+      filename: './manifests/surreal.html',
+      chunks: ['index', 'manifests', 'saveNote']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/GB.html',
+      filename: './manifests/GB.html',
+      chunks: ['index', 'manifests', 'slider']
+    }),
+
 
     
     // Article
