@@ -50,6 +50,53 @@ function changeTextColor() {
   infBlckMain.forEach(function (element) {
     element.style.background = randomColor;
   });
+  var cards = document.querySelectorAll('.O_Manifest_Card');
+  //const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)'];
+
+  cards.forEach(function (card) {
+    card.addEventListener('mouseenter', function () {
+      var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+      // эдлементы только внутри текущей статьи
+      var randBack = card.querySelectorAll('.A_Color_Manifest');
+      var svgElStroke = card.querySelectorAll('#Random_Color_Stroke');
+      var randText = card.querySelectorAll('.A_Color_Text');
+      var randFill = card.querySelectorAll('.A_RandColorFill');
+      console.log('kgliig');
+
+      // применяем рандом
+      randBack.forEach(function (el) {
+        return el.style.backgroundColor = randomColor;
+      });
+      svgElStroke.forEach(function (el) {
+        return el.style.stroke = randomColor;
+      });
+      randText.forEach(function (el) {
+        return el.style.color = randomColor;
+      });
+      randFill.forEach(function (el) {
+        return el.style.fill = randomColor;
+      });
+    });
+    card.addEventListener('mouseleave', function () {
+      var randBack = card.querySelectorAll('.A_Color_Manifest');
+      var svgElStroke = card.querySelectorAll('#Random_Color_Stroke');
+      var randText = card.querySelectorAll('.A_Color_Text');
+      var randFill = card.querySelectorAll('.A_RandColorFill');
+      randBack.forEach(function (el) {
+        return el.style.backgroundColor = '';
+      });
+      svgElStroke.forEach(function (el) {
+        return el.style.stroke = '';
+      });
+      randText.forEach(function (el) {
+        return el.style.color = '';
+      });
+      randFill.forEach(function (el) {
+        return el.style.fill = '';
+      });
+    });
+  });
 }
 window.onload = changeTextColor;
 
