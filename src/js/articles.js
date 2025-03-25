@@ -96,41 +96,152 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-  
-//меняем цвет рандом
+
+
+
+//РАНДОМ ЦВЕТА
 function changeColor() {
-    const backColor = document.querySelectorAll('.Random_Color_Back');
-    const randBack = document.querySelectorAll('.A_Color')
-    const svgElStroke = document.querySelectorAll('#Random_Color_Stroke');
-    const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)']; // массив цветов
-    const randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
+    const articles = document.querySelectorAll('.O_Article');
+    const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)'];
 
-    backColor.forEach(element => {
-      element.style.backgroundColor = randomColor; // меняем цвет текста
-    });
-
-    svgElStroke.forEach(el => {
-        el.style.stroke = randomColor;  
-    });
-
-    // randBack.forEach(el => {
-    //     el.style.backgroundColor = randomColor; 
-    // })
-
-
-
-      
-    randBack.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-          const randomColor = colors[Math.floor(Math.random() * colors.length)];
-          el.style.backgroundColor = randomColor;
+    articles.forEach(article => {
+        article.addEventListener('mouseenter', () => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            // эдлементы только внутри текущей статьи
+            const randBack = article.querySelectorAll('.A_Color');
+            const svgElStroke = article.querySelectorAll('#Random_Color_Stroke');
+            const randText = article.querySelectorAll('.A_Color_Text');
+            const randFill = article.querySelectorAll('.A_RandColorFill');
+            
+            // применяем рандом
+            randBack.forEach(el => el.style.backgroundColor = randomColor);
+            svgElStroke.forEach(el => el.style.stroke = randomColor);
+            randText.forEach(el => el.style.color = randomColor);
+            randFill.forEach(el => el.style.fill = randomColor);
         });
         
-        el.addEventListener('mouseleave', () => {
-          el.style.backgroundColor = ''; // Возвращаем прозрачный цвет
+        article.addEventListener('mouseleave', () => {
+            const randBack = article.querySelectorAll('.A_Color');
+            const svgElStroke = article.querySelectorAll('#Random_Color_Stroke');
+            const randText = article.querySelectorAll('.A_Color_Text');
+            const randFill = article.querySelectorAll('.A_RandColorFill');
+            
+            randBack.forEach(el => el.style.backgroundColor = '');
+            svgElStroke.forEach(el => el.style.stroke = '');
+            randText.forEach(el => el.style.color = '');
+            randFill.forEach(el => el.style.fill = '');
         });
-      });
+    });
 }
 
 window.onload = changeColor;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const articles = document.querySelectorAll('.O_Article');
+//     const menu = document.querySelector('.C_Menu_Bar');
+    
+//     if (!articles.length || !menu) {
+//         console.error('Не найдены необходимые элементы');
+//         return;
+//     }
+
+//     // Получаем позицию и высоту меню
+//     const menuRect = menu.getBoundingClientRect();
+//     const menuBottom = menuRect.bottom + window.scrollY;
+//     const menuHeight = menuRect.height;
+
+//     articles.forEach(article => {
+//         const nameToTop = article.querySelector('.M_Name_and_Cross_Article');
+//         const textArticle = article.querySelector('.A_Text_of_Article');
+        
+//         if (!nameToTop || !textArticle) return;
+
+//         // Получаем позиции элементов
+//         const articleRect = article.getBoundingClientRect();
+//         const articleTop = articleRect.top + window.scrollY;
+//         const articleBottom = articleRect.bottom + window.scrollY;
+//         const nameToTopHeight = nameToTop.offsetHeight;
+
+//         // Сохраняем исходное положение
+//         const originalTop = nameToTop.offsetTop;
+//         let isFixed = false;
+
+//         window.addEventListener('scroll', function() {
+//             const scrollY = window.scrollY;
+//             const nameToTopRect = nameToTop.getBoundingClientRect();
+
+//             // Точка, где заголовок должен зафиксироваться
+//             const stickPoint = articleTop - menuHeight;
+//             // Точка, где заголовок должен открепиться
+//             const releasePoint = articleBottom - nameToTopHeight - menuHeight;
+
+//             // Если скролл дошел до точки фиксации, но не дошел до точки освобождения
+//             if (scrollY >= stickPoint && scrollY <= releasePoint) {
+//                 if (!isFixed) {
+//                     nameToTop.style.position = 'fixed';
+//                     nameToTop.style.top = `${menuBottom}px`;
+//                     nameToTop.style.width = `${articleRect.width}px`;
+//                     nameToTop.style.zIndex = '10';
+//                     isFixed = true;
+//                 }
+//             } 
+//             // Если скролл выше точки фиксации
+//             else if (scrollY < stickPoint) {
+//                 nameToTop.style.position = 'static';
+//                 nameToTop.style.top = '';
+//                 nameToTop.style.width = '';
+//                 nameToTop.style.zIndex = '';
+//                 isFixed = false;
+//             }
+//             // Если скролл ниже точки освобождения
+//             else {
+//                 nameToTop.style.position = 'absolute';
+//                 nameToTop.style.top = `${articleBottom - nameToTopHeight - scrollY}px`;
+//                 nameToTop.style.width = `${articleRect.width}px`;
+//                 nameToTop.style.zIndex = '10';
+//                 isFixed = false;
+//             }
+//         });
+//     });
+// });
