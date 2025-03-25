@@ -53,3 +53,83 @@ a{
 #center_txt{
     text-align: center;
 }
+
+#Logo_in_Footer{
+    width: 10vw;
+}
+  
+
+@media all and (max-width: 800px){
+    p{
+        font-size: 1.7vw;  
+    }
+    
+    a{
+        font-size: 1.7vw;  
+    }
+  
+    #email {
+        font-size: 1.7vw; 
+    }
+  
+    input[type=search]{
+        font-family: Helvetica;
+        font-size: 1.7vw; 
+    }
+  
+}
+  
+  
+  @media all and (max-width: 680px){
+    p{
+        font-size: 2vw;  
+    }
+    
+    a{
+        font-size: 2vw;  
+    }
+  
+    #email {
+        font-size: 2vw; 
+    }
+
+    input[type=search]{
+        font-family: Helvetica;
+        font-size: 2vw; 
+    }
+
+    h2{
+        font-size: 3vw;
+    }
+}
+  
+  
+  
+  @media all and (max-width: 480px){
+    p{
+        font-size: 3vw;  
+    }
+    
+    a{
+        font-size: 3vw;  
+    }
+  
+    #email {
+        font-size: 3vw; 
+    }
+
+    input[type=search]{
+        font-family: Helvetica;
+        font-size: 3vw; 
+    }
+
+    h2{
+        font-size: 4vw;
+    }
+
+    h1{
+        font-size: 5vw;
+    }
+
+
+}

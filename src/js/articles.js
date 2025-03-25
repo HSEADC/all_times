@@ -133,24 +133,20 @@ function changeColor() {
             randFill.forEach(el => el.style.fill = '');
         });
     });
+
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    const textElement = document.querySelectorAll('.Random_Color');
+    const logoEl = document.querySelectorAll('#Random_Color_Logo');
+    textElement.forEach(element => {
+        element.style.color = randomColor; // меняем цвет текста
+    })
+     
+    logoEl.forEach(element => {
+      element.style.fill = randomColor;         
+    })
 }
 
 window.onload = changeColor;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
