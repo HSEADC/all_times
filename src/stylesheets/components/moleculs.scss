@@ -52,6 +52,7 @@
 .M_Pic_and_Txt_Reflection{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 2vw;
     padding-top: 2vw;
 }
@@ -62,4 +63,34 @@
     justify-content: space-between;
     padding-top: 1vw;
     padding-bottom: 1vw;
+}
+
+
+@media all and (max-width: 480px){
+    .M_Info_in_Footer {
+        flex-wrap: wrap;
+        gap: 5vw 1vw;
+        padding-bottom: 3vw;
+    }
+
+    .M_Rights_and_Logo{
+        gap: 1vw;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+
+    .M_Name_and_Cross_Article{
+        height: 7vw;
+        padding-bottom: 3vw;
+    }
+
+    .M_Text_Block_Left{
+        width: 90%;
+    }
+
+    .M_Pic_and_Txt_Reflection{
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
 }

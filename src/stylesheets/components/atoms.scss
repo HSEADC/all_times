@@ -381,7 +381,9 @@ input[type="email"]::placeholder {
 
 
 
-
+.A_Logo_in_AbtUs{
+  display: none;
+}
 
 
 
@@ -514,3 +516,222 @@ input[type="email"]::placeholder {
 .O_Article {
   /*  position: relative; /* важно для абсолютного позиционирования */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 800px){
+
+  .A_Save_Note_Button{
+    font-size: 1.7vw; 
+  }
+
+  .A_Hand {
+    &.Hour {
+      top: calc(46%);
+  }}
+
+}
+
+
+@media all and (max-width: 680px){
+  .A_Picture{
+      width: 35.8vw;
+  }
+
+  .A_Quote{
+      width: 35.8vw;
+  }
+
+  .A_Hand {
+    &.Hour {
+      top: calc(45%);
+  }}
+
+  .A_Save_Note_Button{
+    font-size: 2vw; 
+  }
+
+  .A_Text_Area_in_Notes {
+    border: solid black 1px;
+  }
+
+  .A_link_txt{
+    padding-bottom: 2vw;
+  }
+
+  input::placeholder {
+    text-align: left;
+    font-size: 2vw;  
+  }
+
+
+
+
+  
+  #A_P_AbtUs_Resize{
+    font-size: 2.2vw;
+  }
+
+  #A_h3_Display{
+    display: none;
+  }
+
+  .A_Logo_in_AbtUs{
+    display: flex;
+    align-self: center;
+  }
+
+  #A_Logo_Svg_Resize_AbtUs{
+    width: 100vw;
+    align-self: center;
+  }
+}
+
+
+
+@media all and (max-width: 480px){
+  .A_Picture{
+      width: 35.8vw;
+  }
+
+  .A_Quote{
+      width: 35.8vw;
+  }
+
+  .A_Hand {
+    &.Hour {
+      top: calc(45%);
+    }}
+
+  .A_Mail{
+    width: 100%;
+  }
+  
+  .A_Rights{
+    width: 100%;
+  }
+
+  .A_Logo_in_Footer{
+    width: 100%;
+  }
+
+  #A_Logo_Svg_Resize{
+    width: 20vw;
+  }
+
+  #A_Icon_Resize{
+    width: 5vw;
+  }
+
+  .A_Save_Note_Button{
+    font-size: 2.5vw; 
+  }
+
+  .A_Text_Area_in_Notes {
+    border: solid black 1px;
+  }
+
+  .A_link_txt{
+    padding-bottom: 2.5vw;
+  }
+
+  .A_Button_Article {
+    width: 5vw;
+    margin-top: -2vw;
+  }
+
+  .A_Color_Text{
+    font-size: 6vw;
+  }
+
+
+  input::placeholder {
+    text-align: left;
+    font-size: 2.5vw;  
+  }
+
+  .A_Search form input[type='search'] {
+    height: 3vw;
+  }
+
+  .A_Text_of_Article{
+    width: 70%;
+  }
+
+  .A_Img_Resize{
+    width: 7%;
+  }
+
+  #A_P_AbtUs_Resize{
+    font-size: 3vw;
+  }
+
+  #A_h3_Display{
+    display: none;
+  }
+
+  .A_Logo_in_AbtUs{
+    display: flex;
+    align-self: center;
+  }
+
+  #A_Logo_Svg_Resize_AbtUs{
+    width: 100vw;
+    align-self: center;
+  }
+
+}
+

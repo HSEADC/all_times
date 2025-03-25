@@ -71,3 +71,37 @@
     display: flex;
     flex-direction: column;
 }
+
+
+
+
+
+
+
+
+@media all and (max-width: 680px){
+ 
+  
+    .O_Manifest_Card{
+      height: 35%;
+    }
+ 
+    
+    .O_Abt_Us_block{
+        width: 100%;
+        padding-bottom: 2vw;
+    }
+  
+  }
+
+  
+@media all and (max-width: 480px){
+    .O_Manifest_Card{
+      height: 40%;
+    }
+
+    .O_Abt_Us_block{
+        width: 100%;
+        padding-bottom: 2vw;
+    }
+}

@@ -33,6 +33,10 @@ document.querySelector('.GB').addEventListener('click', function() {
   location.href = 'manifests/GB.html';
 });
 
+document.querySelector('.LightFormMoveSound').addEventListener('click', function() {
+  location.href = 'manifests/LightFormMoveSound.html';
+});
+
 //ховер для инфо блока
 document.addEventListener('DOMContentLoaded', function () {
     const Info_Icon = document.querySelector('.A_Info_Icon');

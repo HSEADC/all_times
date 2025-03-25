@@ -193,6 +193,12 @@ module.exports = {
       filename: './manifests/GB.html',
       chunks: ['index', 'manifests', 'slider']
     }),
+    
+    new HtmlWebpackPlugin({
+      template: './src/manifests/LightFormMoveSound.html',
+      filename: './manifests/LightFormMoveSound.html',
+      chunks: ['index', 'manifests', 'saveNote']
+    }),
 
 
     

@@ -10,3 +10,21 @@
     display: flex;
     flex-direction: column;
 }
+
+@media all and (max-width: 680px){
+
+    .S_All_About_Us{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+}
+
+@media all and (max-width: 480px){
+
+    .S_All_About_Us{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+}
