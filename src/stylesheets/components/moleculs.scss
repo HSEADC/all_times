@@ -52,7 +52,8 @@
 .M_Pic_and_Txt_Reflection{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: left;
     gap: 2vw;
     padding-top: 2vw;
 }
@@ -91,6 +92,6 @@
     .M_Pic_and_Txt_Reflection{
         width: 100%;
         flex-wrap: wrap;
-
+        justify-content: left;
     }
 }

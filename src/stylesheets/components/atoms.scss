@@ -506,22 +506,14 @@ input[type="email"]::placeholder {
 
 
 
-
-
-.M_Name_and_Cross_Article {
-  /*  transition: top 0.3s ease;
-  background: white; или другой фон, если нужно */
+#A_Video_Reflect{
+  width: 48%;
+  border: white 2px;
 }
 
-.O_Article {
-  /*  position: relative; /* важно для абсолютного позиционирования */
+#A_P_Reflect{
+  width: 70%;
 }
-
-
-
-
-
-
 
 
 
@@ -583,6 +575,10 @@ input[type="email"]::placeholder {
       top: calc(46%);
   }}
 
+  #A_Video_Reflect{
+    width: 100%;
+  }
+
 }
 
 
@@ -637,6 +633,10 @@ input[type="email"]::placeholder {
   #A_Logo_Svg_Resize_AbtUs{
     width: 100vw;
     align-self: center;
+  }
+
+  #A_Video_Reflect{
+    width: 100%;
   }
 }
 
@@ -736,6 +736,8 @@ input[type="email"]::placeholder {
   #A_Video_Reflect{
     width: 100%;
   }
+
+
 
 }
 
