@@ -133,6 +133,15 @@ function changeColor() {
       });
     });
   });
+  var randomColor = colors[Math.floor(Math.random() * colors.length)];
+  var textElement = document.querySelectorAll('.Random_Color');
+  var logoEl = document.querySelectorAll('#Random_Color_Logo');
+  textElement.forEach(function (element) {
+    element.style.color = randomColor; // меняем цвет текста
+  });
+  logoEl.forEach(function (element) {
+    element.style.fill = randomColor;
+  });
 }
 window.onload = changeColor;
 
