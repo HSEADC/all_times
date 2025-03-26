@@ -289,6 +289,7 @@ input[type="email"]::placeholder {
 .A_Count_for_Slider{
   font-family: Helvetica;
   font-size: 3.6vw; 
+  padding-bottom: 2vw;
 }
 
 
@@ -466,6 +467,14 @@ input[type="email"]::placeholder {
   z-index: 100;
 }
 
+.A_Gifka{
+  display: none;
+  position: absolute;
+  align-self: center;
+  z-index: 100;
+}
+
+
 
 
 
@@ -569,6 +578,11 @@ input[type="email"]::placeholder {
     border: solid black 1px;
   }
 
+  .A_Button_Article {
+    width: 4vw;
+    margin-top: -1vw;
+  }
+
 }
 
 
@@ -630,6 +644,10 @@ input[type="email"]::placeholder {
     padding-bottom: 2vw;
   }
 
+  .A_Button_Article {
+    width: 3.8vw;
+    margin-top: -1.5vw;
+  }
 }
 
 
