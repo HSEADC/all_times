@@ -1,3 +1,5 @@
+import '../index.css'
+
 //ЧАСЫ ПРОБУЮ
 //document.querySelector('.Twenties').addEventListener('click', function () {
 //addEventListener("mousemove", (event) => {});
