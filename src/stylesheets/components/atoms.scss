@@ -476,8 +476,15 @@ input[type="email"]::placeholder {
 
 
 
+.A_Lil_box_for_arrow_and_txt{
+  display: flex;
+  flex-direction: row;
+}
 
-
+.A_Lil_Arrow_Txt{
+  margin-top: 1vw;
+  margin-left: -1vw;
+}
 
 
 
