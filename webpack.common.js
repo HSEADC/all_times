@@ -135,12 +135,6 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/styleGuide.html',
-      filename: './styleGuide.html',
-      chunks: ['styleGuide']
-    }),
-
-    new HtmlWebpackPlugin({
       template: './src/aboutUs.html',
       filename: './aboutUs.html',
       chunks: ['aboutUs', 'currentT']
@@ -167,7 +161,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/manifests/crujok.html',
       filename: './manifests/crujok.html',
-      chunks: ['index', 'manifests', 'filterTags', 'slider']
+      chunks: ['index', 'manifests', 'slider']
     }),
 
     new HtmlWebpackPlugin({
