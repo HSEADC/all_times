@@ -35,13 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
   next.addEventListener('click', function () {
     cnt++;
     cnt %= pic_cnt;
-    text.innerHTML = "".concat(cnt + 1);
+    text.innerHTML = (cnt + 1 > 9 ? '' : '0').concat("".concat(cnt + 1));
   });
   previous.addEventListener('click', function () {
     cnt--;
     cnt += pic_cnt;
     cnt %= pic_cnt;
-    text.innerHTML = "".concat(cnt + 1);
+    text.innerHTML = (cnt + 1 > 9 ? '' : '0').concat("".concat(cnt + 1));
   });
 });
 /******/ })()
