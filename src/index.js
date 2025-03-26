@@ -121,11 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
 //Рандомное позиционирование иконки
 document.addEventListener('DOMContentLoaded', function () {
   const Info_Icon = document.querySelectorAll('.Random_Position');
-  const max = 95;
-
   Info_Icon.forEach(el => {
-    el.style.left = `${Math.floor(Math.random()*(max + 1))}%`
-    el.style.top = `${Math.floor(Math.random()*(max + 1))}%`  
+    el.style.left = `${Math.floor(Math.random()*95)}%`
+    el.style.top = `${Math.floor(Math.random()*50)}%`  
   })
   
 })
