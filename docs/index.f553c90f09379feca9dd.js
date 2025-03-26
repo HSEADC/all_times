@@ -103,10 +103,9 @@ window.onload = changeTextColor;
 //Рандомное позиционирование иконки
 document.addEventListener('DOMContentLoaded', function () {
   var Info_Icon = document.querySelectorAll('.Random_Position');
-  var max = 95;
   Info_Icon.forEach(function (el) {
-    el.style.left = "".concat(Math.floor(Math.random() * (max + 1)), "%");
-    el.style.top = "".concat(Math.floor(Math.random() * (max + 1)), "%");
+    el.style.left = "".concat(Math.floor(Math.random() * 95), "%");
+    el.style.top = "".concat(Math.floor(Math.random() * 50), "%");
   });
 });
 /******/ })()
