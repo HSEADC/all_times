@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let gif_and_time = document.querySelector('.O_Gif_and_Time');
     let menu_hide = document.querySelector('.C_Menu_Bar') 
     let icon_leave = document.querySelector('.A_Time_Icon_Close');
-    const gif_paths = ['A_Background_Time_1.gif', 'A_Background_Time_2.gif', 'A_Background_Time_3.gif', 'A_Background_Time_5.gif'];
+    const gif_paths = ['A_Background_Time_1.gif', 'A_Background_Time_2.gif', 'A_Background_Time_3.gif'];
 
     time_icon.addEventListener("mouseenter", () => {
         let gif_num = Math.floor(Math.random() * gif_paths.length);
