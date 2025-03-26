@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var articleBlock = button.closest('.O_Article');
     // Находим соответствующий блок текста статьи внутри этого блока
     var articleText = articleBlock.querySelector('.A_Text_of_Article');
+    var nameToTop = articleBlock.querySelector('.M_Name_and_Cross_Article');
     button.addEventListener("click", function (event) {
       if (articleText.style.display === 'none' || !articleText.style.display) {
         articleText.style.display = 'flex'; // Показываем статью
@@ -56,6 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         articleText.style.display = 'none'; // Скрываем статью
         button.style.transform = "rotate(0deg)";
+        nameToTop.style.position = 'static';
+        nameToTop.style.top = '';
+        nameToTop.style.width = '';
+        nameToTop.style.zIndex = '';
       }
     });
   });
@@ -144,74 +149,74 @@ function changeColor() {
   });
 }
 window.onload = changeColor;
+document.addEventListener('DOMContentLoaded', function () {
+  var articles = document.querySelectorAll('.O_Article');
+  var menu = document.querySelector('.C_Menu_Bar');
+  if (!articles.length || !menu) {
+    console.error('Не найдены необходимые элементы');
+    return;
+  }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const articles = document.querySelectorAll('.O_Article');
-//     const menu = document.querySelector('.C_Menu_Bar');
+  // Получаем позицию и высоту меню
+  var menuRect = menu.getBoundingClientRect();
+  var menuBottom = menuRect.bottom + window.scrollY;
+  var menuHeight = menuRect.height;
+  articles.forEach(function (article) {
+    var nameToTop = article.querySelector('.M_Name_and_Cross_Article');
+    var textArticle = article.querySelector('.A_Text_of_Article');
+    var picArticle = article.querySelector('.A_Pic_for_Article');
+    if (textArticle.currentStyle ? textArticle.currentStyle.display : getComputedStyle(textArticle, null).display == 'none') {}
+    if (!nameToTop || !textArticle) return;
+    window.addEventListener('scroll', function () {
+      if (getComputedStyle(textArticle, null).display == 'none') {
+        return;
+      }
+      // Получаем позиции элементов
+      var articleRect = article.getBoundingClientRect();
+      var articleTop = articleRect.top + window.scrollY;
+      var articleBottom = articleRect.bottom + window.scrollY;
+      var nameToTopHeight = nameToTop.offsetHeight;
 
-//     if (!articles.length || !menu) {
-//         console.error('Не найдены необходимые элементы');
-//         return;
-//     }
+      // Сохраняем исходное положение
+      var originalTop = nameToTop.offsetTop;
+      var isFixed = false;
+      var scrollY = window.scrollY;
+      var nameToTopRect = nameToTop.getBoundingClientRect();
 
-//     // Получаем позицию и высоту меню
-//     const menuRect = menu.getBoundingClientRect();
-//     const menuBottom = menuRect.bottom + window.scrollY;
-//     const menuHeight = menuRect.height;
+      // Точка, где заголовок должен зафиксироваться
+      var stickPoint = picArticle.getBoundingClientRect().bottom + window.scrollY - menuHeight;
+      // Точка, где заголовок должен открепиться
+      //const releasePoint = articleBottom - nameToTopHeight - menuHeight;
+      var releasePoint = articleBottom - nameToTopHeight - menuHeight;
 
-//     articles.forEach(article => {
-//         const nameToTop = article.querySelector('.M_Name_and_Cross_Article');
-//         const textArticle = article.querySelector('.A_Text_of_Article');
-
-//         if (!nameToTop || !textArticle) return;
-
-//         // Получаем позиции элементов
-//         const articleRect = article.getBoundingClientRect();
-//         const articleTop = articleRect.top + window.scrollY;
-//         const articleBottom = articleRect.bottom + window.scrollY;
-//         const nameToTopHeight = nameToTop.offsetHeight;
-
-//         // Сохраняем исходное положение
-//         const originalTop = nameToTop.offsetTop;
-//         let isFixed = false;
-
-//         window.addEventListener('scroll', function() {
-//             const scrollY = window.scrollY;
-//             const nameToTopRect = nameToTop.getBoundingClientRect();
-
-//             // Точка, где заголовок должен зафиксироваться
-//             const stickPoint = articleTop - menuHeight;
-//             // Точка, где заголовок должен открепиться
-//             const releasePoint = articleBottom - nameToTopHeight - menuHeight;
-
-//             // Если скролл дошел до точки фиксации, но не дошел до точки освобождения
-//             if (scrollY >= stickPoint && scrollY <= releasePoint) {
-//                 if (!isFixed) {
-//                     nameToTop.style.position = 'fixed';
-//                     nameToTop.style.top = `${menuBottom}px`;
-//                     nameToTop.style.width = `${articleRect.width}px`;
-//                     nameToTop.style.zIndex = '10';
-//                     isFixed = true;
-//                 }
-//             } 
-//             // Если скролл выше точки фиксации
-//             else if (scrollY < stickPoint) {
-//                 nameToTop.style.position = 'static';
-//                 nameToTop.style.top = '';
-//                 nameToTop.style.width = '';
-//                 nameToTop.style.zIndex = '';
-//                 isFixed = false;
-//             }
-//             // Если скролл ниже точки освобождения
-//             else {
-//                 nameToTop.style.position = 'absolute';
-//                 nameToTop.style.top = `${articleBottom - nameToTopHeight - scrollY}px`;
-//                 nameToTop.style.width = `${articleRect.width}px`;
-//                 nameToTop.style.zIndex = '10';
-//                 isFixed = false;
-//             }
-//         });
-//     });
-// });
+      // Если скролл дошел до точки фиксации, но не дошел до точки освобождения
+      if (scrollY >= stickPoint && scrollY <= releasePoint) {
+        if (!isFixed) {
+          nameToTop.style.position = 'fixed';
+          nameToTop.style.top = "".concat(menuBottom, "px");
+          nameToTop.style.width = "".concat(articleRect.width, "px");
+          nameToTop.style.zIndex = '10';
+          isFixed = true;
+        }
+      }
+      // Если скролл выше точки фиксации
+      else if (scrollY < stickPoint) {
+        nameToTop.style.position = 'static';
+        nameToTop.style.top = '';
+        nameToTop.style.width = '';
+        nameToTop.style.zIndex = '';
+        isFixed = false;
+      }
+      // Если скролл ниже точки освобождения
+      else {
+        nameToTop.style.position = 'fixed';
+        nameToTop.style.top = "".concat(articleBottom - nameToTopHeight - scrollY, "px");
+        nameToTop.style.width = "".concat(articleRect.width, "px");
+        nameToTop.style.zIndex = '10';
+        isFixed = false;
+      }
+    });
+  });
+});
 /******/ })()
 ;
