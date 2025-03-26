@@ -41,12 +41,12 @@ document.addEventListener("DOMContentLoaded", function() {
     next.addEventListener('click', () => {
         cnt++;
         cnt %= pic_cnt
-        text.innerHTML = `${cnt + 1}`;
+        text.innerHTML = (cnt + 1 > 9 ? '' : '0').concat(`${cnt + 1}`);
     })
     previous.addEventListener('click', () => {
         cnt--;
         cnt += pic_cnt
         cnt %= pic_cnt
-        text.innerHTML = `${cnt + 1}`;
+        text.innerHTML = (cnt + 1 > 9 ? '' : '0').concat(`${cnt + 1}`);
     })
 })
