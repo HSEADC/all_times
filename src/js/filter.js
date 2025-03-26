@@ -1,3 +1,5 @@
+import '../index.css'
+
 class Period {
     constructor (period_str) {
         if (period_str[4] == 'е') {
