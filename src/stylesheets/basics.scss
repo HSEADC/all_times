@@ -138,3 +138,59 @@ a{
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.O_Search {
+    display: flex;
+    margin: 50px auto;
+    align-items: center;
+    gap: 10px;
+    max-width: 30%;
+}
+  
+.A_SearchInput {
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 250px;
+    height: 48px;
+    background-color: transparent;
+    padding: 1px 8px;
+  
+    &:focus {
+      border-color: inherit;
+      box-shadow: none;
+      outline: none;
+    }
+}
+  
+.A_SearchButton {
+    padding: 16px 20px;
+    background-color: black;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+  
+    &.disable {
+      background-color: lightgray;
+      color: grey;
+      cursor: default;
+    }
+}
