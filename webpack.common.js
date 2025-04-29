@@ -23,7 +23,10 @@ module.exports = {
     saveNote: './src/js/saveNote.js',
     currentT: './src/js/currentTime.js',
     search: './src/js/search.js',
-    articles: './src/js/articles.js'
+    articles: './src/js/articles.js',
+    searchData: './src/js/search-data.js',
+    searchVanilla: './src/js/search-vanilla.js',
+    react_basics: './src/js/react-basics.jsx',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -138,6 +141,18 @@ module.exports = {
       template: './src/aboutUs.html',
       filename: './aboutUs.html',
       chunks: ['aboutUs', 'currentT']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/search.html',
+      filename: './search.html',
+      chunks: ['searchData', 'searchVanilla']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/react-basics.html',
+      filename: './react-basics.html',
+      chunks: ['react_basics']
     }),
 
     new HtmlWebpackPlugin({
