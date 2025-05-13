@@ -101,8 +101,14 @@ function SearchContent(requestText) {
 
         let { titles, years, describtions, id } = contentItem
 
+        titles = titles.replaceAll(nbspRegEx, ' ')
+        titles = titles.replaceAll(punctuationRegEx, '')
+    
+        describtions = describtions.replaceAll(nbspRegEx, ' ')
+        describtions = describtions.replaceAll(punctuationRegEx, '')
+
         if (requestText.length >= 3) {
-            if (titles.includes(requestText) || years.includes(requestText) || describtions.includes(requestText)){
+            if (titles.toLowerCase().includes(requestText.toLowerCase()) || years.toString().includes(requestText) || describtions.toLowerCase().includes(requestText.toLowerCase())){
                 contentItemIds.push(id)
             } 
             else{
@@ -120,6 +126,7 @@ function SearchContent(requestText) {
 }
 
 function renderNothingFounded() {
+    // container.innerHTML = 'Ничего не найдено :('
     document.querySelector('.S_Content').innerText = 'Ничего не найдено'
 }
 
@@ -130,6 +137,8 @@ function renderCardsByIds(container, ids) {
     ids.forEach((id) => {
         content.forEach((item) => {
             if (item.id === id) {
+                //one more var
+                // createCard(item)
                 container.appendChild(createCard(item))
             }
         })
@@ -140,7 +149,6 @@ function renderCardsByIds(container, ids) {
 function createCard(contentItemData) {
     //content == data
     const container = document.querySelector('.S_Content')
-
 
     const contentItem = document.createElement('a')
     contentItem.classList.add('O_ContentItem')
@@ -166,19 +174,28 @@ function createCard(contentItemData) {
     contentItemTags.classList.add('C_ContentItemTags')
 
     contentItemData.tags.forEach((tag) => {
-        const contentItemTag = document.createElement('div')
+        const contentItemTag = document.createElement('p')
         contentItemTag.classList.add('A_ContentItemTag')
         contentItemTag.innerText = tag
         contentItemTags.appendChild(contentItemTag)
     })
 
+
+    //пробую создать див для тайтла и тегов -- не получилось :(
+    // const contentItemTitleAndTags = document.createElement('div')
+    // contentItemTitleAndTags.classList.add('C_TitleAndTags_Container')
+    // contentItemTitleAndTags.append(contentItemTags)
+    // contentItemTitleAndTags.append(contentItemTags)
+    // console.log(contentItemTitleAndTags)
+
     contentItem.appendChild(contentItemImg)
-    contentItem.appendChild(contentItemTags)
     contentItem.appendChild(contentItemTitle)
+    contentItem.appendChild(contentItemTags)
     contentItem.appendChild(contentItemDescribtion)
 
     // container.appendChild(contentItem)
     return contentItem
+    
 
     // content.forEach((contentItemData) => {
     //     const contentItem = document.createElement('a')
