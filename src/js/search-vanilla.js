@@ -127,11 +127,13 @@ function SearchContent(requestText) {
 
 function renderNothingFounded() {
     // container.innerHTML = 'Ничего не найдено :('
+    document.querySelector('.S_Content').innerText = ''
     document.querySelector('.S_Content').innerText = 'Ничего не найдено'
 }
 
 function renderCardsByIds(container, ids) {
     //как проверить что карточки не повторяются
+     document.querySelector('.S_Content').innerText = ''
     ids = [...new Set(ids)] 
 
     ids.forEach((id) => {
@@ -182,15 +184,14 @@ function createCard(contentItemData) {
 
 
     //пробую создать див для тайтла и тегов -- не получилось :(
-    // const contentItemTitleAndTags = document.createElement('div')
-    // contentItemTitleAndTags.classList.add('C_TitleAndTags_Container')
-    // contentItemTitleAndTags.append(contentItemTags)
-    // contentItemTitleAndTags.append(contentItemTags)
+    const contentItemTitleAndTags = document.createElement('div')
+    contentItemTitleAndTags.classList.add('M_TitleAndTags_Container')
+    contentItemTitleAndTags.appendChild(contentItemTitle)
+    contentItemTitleAndTags.appendChild(contentItemTags)
     // console.log(contentItemTitleAndTags)
 
     contentItem.appendChild(contentItemImg)
-    contentItem.appendChild(contentItemTitle)
-    contentItem.appendChild(contentItemTags)
+    contentItem.appendChild(contentItemTitleAndTags)
     contentItem.appendChild(contentItemDescribtion)
 
     // container.appendChild(contentItem)
