@@ -506,6 +506,8 @@ input[type="email"]::placeholder {
 
 
 
+
+
 #A_Video_Reflect{
   width: 76%;
   border: white 2px;
@@ -873,12 +875,42 @@ input[type="email"]::placeholder {
 
 
 
+.O_ContentItem{
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 2vw;
+
+  
+  height: 22vw;
+  border-bottom: 0.16vw solid rgba(150, 150, 150, 1);
+  padding: 1.5vw 3vw;
+  background-color: rgba(79, 40, 96, 0);
+  cursor: pointer;
+}
 
 
+.A_ContentItemTitle{
+  font-family: Helvetica;
+  font-size: 3.6vw;
+}
 
+.A_ContentItemImg{
+  width: 30.8vw;
+  height: 100%;
+}
 
+.C_ContentItemTags{
+  width: 50%;
+}
 
+.A_ContentItemTag{
+  font-family: Helvetica;
+  font-size: 1.4vw;
+}
 
-
-
+.A_ContentItemDescribtion{
+  font-family: Helvetica;
+  font-size: 1.4vw;
+}
 
