@@ -133,7 +133,7 @@ function renderNothingFounded() {
 
 function renderCardsByIds(container, ids) {
     //как проверить что карточки не повторяются
-     document.querySelector('.S_Content').innerText = ''
+    document.querySelector('.S_Content').innerText = ''
     ids = [...new Set(ids)] 
 
     ids.forEach((id) => {
