@@ -203,3 +203,66 @@ a{
       cursor: default;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.A_Input{
+    font-family: Helvetica;
+    font-size: 1.4vw;
+    border: none;
+    border-bottom: 0.15vw solid rgba(150, 150, 150, 1);
+    
+    width: 100vw;
+    height: 4vw;
+    background-color: transparent;
+    padding: 1px 8px;
+  
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+}
+
+.M_SearchForm{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+    width: 92%;
+    padding: 1.5vw 3vw;
+    font-family: Helvetica;
+    font-size: 1.4vw;
+}
+
+.A_Button{
+    width: 20%;
+    height: 4.2vw;
+    padding: 1px 8px;
+
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    align-content: center;
+  
+    &.disable {
+      background-color: lightgray;
+      color: grey;
+      cursor: default;
+    }
+}

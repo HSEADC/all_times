@@ -27,6 +27,7 @@ module.exports = {
     searchData: './src/js/search-data.js',
     searchVanilla: './src/js/search-vanilla.js',
     react_basics: './src/js/react-basics.jsx',
+    searchReact: './src/js/search.jsx',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -143,10 +144,18 @@ module.exports = {
       chunks: ['aboutUs', 'currentT']
     }),
 
+    // ванильный сёрч
+    // new HtmlWebpackPlugin({
+    //   template: './src/search.html',
+    //   filename: './search.html',
+    //   chunks: ['searchData', 'searchVanilla']
+    // }),
+
+    // реакт сёрч
     new HtmlWebpackPlugin({
       template: './src/search.html',
       filename: './search.html',
-      chunks: ['searchData', 'searchVanilla']
+      chunks: ['searchData', 'searchReact']
     }),
 
     new HtmlWebpackPlugin({
@@ -208,6 +217,7 @@ module.exports = {
       filename: './manifests/LightFormMoveSound.html',
       chunks: ['index', 'manifests', 'saveNote']
     }),
+
 
 
     
