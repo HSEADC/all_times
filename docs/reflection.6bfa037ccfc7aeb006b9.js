@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector(".A_Info_Icon"),n=document.querySelector(".A_Info_Block");e.addEventListener("mouseenter",(function(){n.style.display="block"})),e.addEventListener("mouseleave",(function(){n.style.display="none"}))}));
