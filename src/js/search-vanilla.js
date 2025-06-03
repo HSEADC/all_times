@@ -99,16 +99,16 @@ function SearchContent(requestText) {
         const nbspRegEx = /[\u202F\u00A0]/gm
         const punctuationRegEx = /[.,\/#!$%\^&\*;:{}=\-_`()]/gm
 
-        let { titles, years, descriptions, id } = contentItem
+        let { titles, years, describtions, id } = contentItem
 
         titles = titles.replaceAll(nbspRegEx, ' ')
         titles = titles.replaceAll(punctuationRegEx, '')
     
-        descriptions = descriptions.replaceAll(nbspRegEx, ' ')
-        descriptions = descriptions.replaceAll(punctuationRegEx, '')
+        describtions = describtions.replaceAll(nbspRegEx, ' ')
+        describtions = describtions.replaceAll(punctuationRegEx, '')
 
         if (requestText.length >= 3) {
-            if (titles.toLowerCase().includes(requestText.toLowerCase()) || years.toString().includes(requestText) || descriptions.toLowerCase().includes(requestText.toLowerCase())){
+            if (titles.toLowerCase().includes(requestText.toLowerCase()) || years.toString().includes(requestText) || describtions.toLowerCase().includes(requestText.toLowerCase())){
                 contentItemIds.push(id)
             } 
             else{
@@ -165,9 +165,9 @@ function createCard(contentItemData) {
     contentItemTitle.classList.add('A_ContentItemTitle')
     contentItemTitle.innerText = contentItemData.titles
 
-    const contentItemDescription = document.createElement('p')
-    contentItemDescription.classList.add('A_ContentItemDescription')
-    contentItemDescription.innerText = contentItemData.descriptions
+    const contentItemDescribtion = document.createElement('p')
+    contentItemDescribtion.classList.add('A_ContentItemDescribtion')
+    contentItemDescribtion.innerText = contentItemData.describtions
 
     console.log(contentItemData)
     //Из лога видно, что contentItemData.tags — это строка (например, "2024", "1963"), а не массив.
@@ -192,7 +192,7 @@ function createCard(contentItemData) {
 
     contentItem.appendChild(contentItemImg)
     contentItem.appendChild(contentItemTitleAndTags)
-    contentItem.appendChild(contentItemDescription)
+    contentItem.appendChild(contentItemDescribtion)
 
     // container.appendChild(contentItem)
     return contentItem

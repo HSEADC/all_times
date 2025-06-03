@@ -150,23 +150,10 @@ const S_SearchContent = ({searchInputValue: initialInput}) => {
     //     // getManifests.then(setPostTeasers);
     //     setPostTeasers(getManifests);
     // }, []);
-
-    //тут последний используемый гетМанифесты
     useEffect(() => {
         const data = getManifests(); 
         setPostTeasers(Array.isArray(data) ? data : []); 
     }, []);
-
-
-    //выводит пустой массив :(
-    useEffect(() => {
-        console.log("Post Teasers:", postTeasers);
-    }, [postTeasers]);
-
-    //тут новое -- не работает
-    // useEffect(() => {
-    //     getManifests.then(data => setPostTeasers(data));
-    // }, []);
 
     useEffect(() => {
         setIsSearchButtonDisabled(searchInputValue.trim().length < 3);
@@ -198,7 +185,6 @@ const S_SearchContent = ({searchInputValue: initialInput}) => {
                 />
             ));
     };
-    console.log(postTeasers)
 
     return (
         <div className="S_SearchContent">

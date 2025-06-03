@@ -16,11 +16,9 @@
     "@babel/preset-react": "^7.24.7",
     "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
-    "classnames": "^2.5.1",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.0",
-    "ejs": "^3.1.10",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
     "html-loader": "^5.1.0",
@@ -30,10 +28,8 @@
     "postcss": "^8.4.47",
     "postcss-loader": "^8.1.1",
     "postcss-preset-env": "^10.0.3",
-    "raw-loader": "^4.0.2",
     "sass": "^1.78.0",
     "sass-loader": "^16.0.1",
-    "sitemap-webpack-plugin": "^1.1.1",
     "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0",
@@ -41,6 +37,7 @@
   },
   "dependencies": {
     "airtable": "^0.12.2",
+    "classnames": "^2.5.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }

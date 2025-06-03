@@ -15,7 +15,7 @@ export default function M_SearchForm({
                 value={searchInputValue} 
                 handleInput={handleInput}
                 handleSubmit={handleSubmit}
-                placeholder='Что ищем?'
+                placeholder='Найти манифест'
             />
 
             {searchInputValue != '' && (

@@ -2,29 +2,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
-const SitemapPlugin = require('sitemap-webpack-plugin').default
 
 const webpack = require('webpack')
 const path = require('path')
-
-const paths = [
-  '/all_times/', //indx.html
-  '/all_times/aboutUs.html',
-  '/all_times/articls.html',
-  '/all_times/reflection.html',
-  '/all_times/sarch.html',
-  '/all_times/select.html',
-  '/all_times/ract-basics.html',
-  '/all_times/manifests/crujok.html',
-  '/all_times/manifests/dadaism.html',
-  '/all_times/manifests/dogma.html',
-  '/all_times/manifests/fluxus.html',
-  '/all_times/manifests/GB.html',
-  '/all_times/manifests/LightFormMoveSound.html',
-  '/all_times/manifests/luchi.html',
-  '/all_times/manifests/oppoyaz.html',
-  '/all_times/manifests/surral.html',
-]
 
 module.exports = {
   entry: {
@@ -48,7 +28,6 @@ module.exports = {
     searchVanilla: './src/js/search-vanilla.js',
     react_basics: './src/js/react-basics.jsx',
     searchReact: './src/js/search.jsx',
-    menubar: './src/js/menubar.js',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -130,10 +109,9 @@ module.exports = {
 
     // Index
     new HtmlWebpackPlugin({
-      //поменяли штмл на ежс
-      template: '!!raw-loader!./src/index.ejs',
+      template: './src/index.html',
       filename: './index.html',
-      chunks: ['index', 'main', 'clock', 'filter', 'search', 'menubar']
+      chunks: ['index', 'main', 'clock', 'filter', 'search']
     }),
 
     new HtmlWebpackPlugin({
@@ -257,11 +235,9 @@ module.exports = {
         template_filename: '*',
         priority: 'replace'
       }
-    ]),
-    //карта сайта -- брали слеш в конце строки
-    new SitemapPlugin({ base: 'https://hseadc.github.io/all_times', paths })
+    ])
   ],
   optimization: {
-    // minimizer: [new CssMinimizerPlugin()]
+    minimizer: [new CssMinimizerPlugin()]
   }
 }
