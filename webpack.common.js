@@ -174,7 +174,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/search.html',
       filename: './search.html',
-      chunks: ['searchData', 'searchReact']
+      chunks: ['searchData', 'searchVanilla']
     }),
 
     new HtmlWebpackPlugin({
