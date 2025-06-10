@@ -1,4 +1,3 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
@@ -28,6 +27,7 @@ module.exports = {
     searchVanilla: './src/js/search-vanilla.js',
     react_basics: './src/js/react-basics.jsx',
     searchReact: './src/js/search.jsx',
+    menubar: './src/js/menubar.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -59,12 +59,12 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'sass-loader',
           {
@@ -73,6 +73,25 @@ module.exports = {
               postcssOptions: {
                 plugins: [['postcss-preset-env']]
               }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(css | scss)/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false
+            }
+          },
+          'extract-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              esModule: false
             }
           }
         ]
@@ -102,16 +121,16 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css'
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: '[name].[contenthash].css',
+    //   chunkFilename: '[id].[contenthash].css'
+    // }),
 
     // Index
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/index.ejs',
       filename: './index.html',
-      chunks: ['index', 'main', 'clock', 'filter', 'search']
+      chunks: ['index', 'main', 'clock', 'filter']
     }),
 
     new HtmlWebpackPlugin({
@@ -211,16 +230,13 @@ module.exports = {
       filename: './manifests/GB.html',
       chunks: ['index', 'manifests', 'slider']
     }),
-    
+
     new HtmlWebpackPlugin({
       template: './src/manifests/LightFormMoveSound.html',
       filename: './manifests/LightFormMoveSound.html',
       chunks: ['index', 'manifests', 'saveNote']
     }),
 
-
-
-    
     // Article
     // new HtmlWebpackPlugin({
     //   template: './src/articles/superorganisms/S_Popup.html',
