@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from 'classnames';
+import classNames from "classnames";
 
 const A_MainMenu = ({text, current, url, type}) => {
     const classes = classNames({

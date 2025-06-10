@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {getManifests} from '../js/search-data.js' 
+import { getManifests } from '../js/search-data.js'; 
 import A_MainMenu from "./A_MainMenu.jsx";
 import O_SearchBar from "./O_SearchBar.jsx";
 
@@ -36,7 +36,7 @@ export default function S_MenuBar({
             url={homeURL}
             type='mainMenuLogo'
             />
-            
+
             <div className="C_MainMenu">
                 {menuElements}
             </div>

@@ -80,7 +80,11 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader, 
+          'css-loader', 
+          'sass-loader'
+        ]
       },
       {
         test: /\.css$/i,
@@ -262,6 +266,6 @@ module.exports = {
     new SitemapPlugin({ base: 'https://hseadc.github.io/all_times', paths })
   ],
   optimization: {
-    // minimizer: [new CssMinimizerPlugin()]
+    //minimizer: [new CssMinimizerPlugin()]
   }
 }

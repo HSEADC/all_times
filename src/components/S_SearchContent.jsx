@@ -134,7 +134,7 @@
 
 
 import React, {useEffect, useState} from "react";
-import {getManifests} from '../js/search-data.js' 
+import { getManifests } from '../js/search-data.js'; 
 import O_SearchBar from "./O_SearchBar.jsx";
 import M_PostTeaser from "./M_PostTeaser.jsx";
 
