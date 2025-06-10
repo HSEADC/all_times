@@ -1,30 +1,9 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
-const SitemapPlugin = require('sitemap-webpack-plugin').default
 
 const webpack = require('webpack')
 const path = require('path')
-
-const paths = [
-  '/all_times/', //indx.html
-  '/all_times/aboutUs.html',
-  '/all_times/articls.html',
-  '/all_times/reflection.html',
-  '/all_times/sarch.html',
-  '/all_times/select.html',
-  '/all_times/ract-basics.html',
-  '/all_times/manifests/crujok.html',
-  '/all_times/manifests/dadaism.html',
-  '/all_times/manifests/dogma.html',
-  '/all_times/manifests/fluxus.html',
-  '/all_times/manifests/GB.html',
-  '/all_times/manifests/LightFormMoveSound.html',
-  '/all_times/manifests/luchi.html',
-  '/all_times/manifests/oppoyaz.html',
-  '/all_times/manifests/surral.html',
-]
 
 module.exports = {
   entry: {
@@ -48,7 +27,7 @@ module.exports = {
     searchVanilla: './src/js/search-vanilla.js',
     react_basics: './src/js/react-basics.jsx',
     searchReact: './src/js/search.jsx',
-    menubar: './src/js/menubar.js',
+    menubar: './src/js/menubar.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -80,16 +59,12 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [
-          MiniCssExtractPlugin.loader, 
-          'css-loader', 
-          'sass-loader'
-        ]
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'sass-loader',
           {
@@ -98,6 +73,25 @@ module.exports = {
               postcssOptions: {
                 plugins: [['postcss-preset-env']]
               }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(css | scss)/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false
+            }
+          },
+          'extract-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              esModule: false
             }
           }
         ]
@@ -127,17 +121,16 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css'
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: '[name].[contenthash].css',
+    //   chunkFilename: '[id].[contenthash].css'
+    // }),
 
     // Index
     new HtmlWebpackPlugin({
-      //поменяли штмл на ежс
-      template: '!!raw-loader!./src/index.ejs',
+      template: './src/index.ejs',
       filename: './index.html',
-      chunks: ['index', 'main', 'clock', 'filter', 'search', 'menubar']
+      chunks: ['index', 'main', 'clock', 'filter']
     }),
 
     new HtmlWebpackPlugin({
@@ -237,16 +230,13 @@ module.exports = {
       filename: './manifests/GB.html',
       chunks: ['index', 'manifests', 'slider']
     }),
-    
+
     new HtmlWebpackPlugin({
       template: './src/manifests/LightFormMoveSound.html',
       filename: './manifests/LightFormMoveSound.html',
       chunks: ['index', 'manifests', 'saveNote']
     }),
 
-
-
-    
     // Article
     // new HtmlWebpackPlugin({
     //   template: './src/articles/superorganisms/S_Popup.html',
@@ -261,11 +251,9 @@ module.exports = {
         template_filename: '*',
         priority: 'replace'
       }
-    ]),
-    //карта сайта -- брали слеш в конце строки
-    new SitemapPlugin({ base: 'https://hseadc.github.io/all_times', paths })
+    ])
   ],
   optimization: {
-    //minimizer: [new CssMinimizerPlugin()]
+    minimizer: [new CssMinimizerPlugin()]
   }
 }

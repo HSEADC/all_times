@@ -26,12 +26,12 @@ function getManifests() {
                 content.push({
                     id: record.id,
                     //найди мне ячейку кот написана точно так же как в таблице
-                    title: record.fields['Titles'],      
-                    description: record.fields['Descriptions'], 
-                    year: record.fields['Years'],          
+                    titles: record.fields['Titles'],
+                    years: record.fields['Years'],
+                    describtions: record.fields['Describtions'],
                     tags: record.fields['Tags'],
-                    image: record.fields['Images'],
-                    quote: record.fields['Quotes'],
+                    imgs: record.fields['Images'],
+                    quotes: record.fields['Quotes'],
                     url: record.fields['URL'],
                 })
             })
