@@ -23,8 +23,8 @@
     <analytics></analytics>
   </head>
   <body>
-    <nav class="S_MenuBar"><%= menubar %></nav>
-    <!-- <div class="A_Messager_Bar">
+    
+    <div class="A_Messager_Bar">
       <p>
         <a
           class="A_Link"
@@ -37,7 +37,7 @@
           >тг</a
         >
       </p>
-    </div> -->
+    </div>
 
     <div class="A_Info_Block Random_Color_Inf_Block">
       Часы работают как фильтрация. При нажатии на десятилетие открывается архив
@@ -357,6 +357,21 @@
     </div>
 
     <div class="C_Menu_Bar">
+      <!-- меню на ваниле -->
+      <nav class="S_MenuBar"><%= menubar %></nav>
+
+      <!-- отдельный сёрч для главной страницы -->
+      <div class="A_Nav A_Search">
+        <label for="searchQuery"> </label>
+
+        <form class="A_Search_Container" onsubmit="return false">
+          <input type="search" id="search" placeholder="Что ищем?" />
+        </form>
+      </div>
+    </div>
+
+    <!-- старое меню на всякий случай -->
+    <!-- <div class="C_Menu_Bar">
       <a class="A_Nav Active" href="./index.html">All times</a>
       <a class="A_Nav" href="./articles.html">Статьи</a>
       <a class="A_Nav" href="./reflection.html">Рефлексия</a>
@@ -369,14 +384,20 @@
           <input type="search" id="search" placeholder="Что ищем?" />
         </form>
       </div>
-    </div>
+    </div> -->
 
     <div class="W_Manifests_Container">
+
       <div class="O_Manifest_Card Fluxus">
-        <img
-          class="A_Picture"
-          src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Picture_Fluxus.webp"
-        />
+
+        <div class="Color_Change">
+          <div class="A_Color"></div>
+          <img
+            class="A_Picture"
+            src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Picture_Fluxus.webp"
+          />
+        </div>
+
         <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">Первый манифест Флюксуса</h1>
           <h1 class="A_Manifest_Text Year">1963</h1>
@@ -385,7 +406,7 @@
 
       <div class="O_Manifest_Card Oppoyaz">
         <div class="A_Quote">
-          <p>
+          <p class="A_Manifest_Text">
             Искусство есть способ пережить деланье вещи, а&nbsp;сделанное
             в&nbsp;искусстве не&nbsp;важно. Целью искусства является дать
             ощущение вещи, как видение, а&nbsp;не&nbsp;как узнавание; приемом
@@ -401,10 +422,13 @@
       </div>
 
       <div class="O_Manifest_Card Dadaism">
-        <img
-          class="A_Picture"
-          src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Picture_Dada.webp"
-        />
+        <div class="Color_Change">
+          <div class="A_Color"></div>
+          <img
+            class="A_Picture"
+            src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Picture_Dada.webp"
+          />
+        </div>
         <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">Манифест Дадаизма</h1>
           <h1 class="A_Manifest_Text Year">1918</h1>
@@ -413,7 +437,7 @@
 
       <div class="O_Manifest_Card Luchi">
         <div class="A_Quote">
-          <p>
+          <p class="A_Manifest_Text">
             Очистим мир от&nbsp;умершего искусства, имитации, искусственного
             искусства, абстрактного искусства, иллюзионистского искусства,
             математического искусства!
@@ -426,10 +450,13 @@
       </div>
 
       <div class="O_Manifest_Card Crujok">
-        <img
-          class="A_Picture"
-          src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Pic_Crujok.webp"
-        />
+        <div class="Color_Change">
+          <div class="A_Color"></div>
+          <img
+            class="A_Picture"
+            src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Pic_Crujok.webp"
+          />
+        </div>
         <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">
             Манифест бара и турклуба «Кружок»
@@ -440,7 +467,7 @@
 
       <div class="O_Manifest_Card Surreal">
         <div class="A_Quote">
-          <p>
+          <p class="A_Manifest_Text">
             Чистый психический автоматизм, имеющий целью выразить, или устно,
             или письменно, или другим способом, реальное функционирование мысли.
             Диктовка мысли вне всякого контроля со&nbsp;стороны разума, вне
@@ -455,10 +482,13 @@
       </div>
 
       <div class="O_Manifest_Card Dogma">
-        <img
-          class="A_Picture"
-          src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Pic_Dogma.webp"
-        />
+        <div class="Color_Change">
+          <div class="A_Color"></div>
+          <img
+            class="A_Picture"
+            src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Pic_Dogma.webp"
+          />
+        </div>
         <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">«Догма 95»</h1>
           <h1 class="A_Manifest_Text Year">1995</h1>
@@ -466,10 +496,13 @@
       </div>
 
       <div class="O_Manifest_Card GB">
-        <img
-          class="A_Picture"
-          src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Pic_GB.webp"
-        />
+        <div class="Color_Change">
+          <div class="A_Color"></div>
+          <img
+            class="A_Picture"
+            src="https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/A_Pic_GB.webp"
+          />
+        </div>
         <div class="M_Manifest_Text">
           <h1 class="A_Manifest_Text Name">
             Манифест пространства фестиваля «Game Beat»
@@ -480,7 +513,7 @@
 
       <div class="O_Manifest_Card LightFormMoveSound">
         <div class="A_Quote">
-          <p>
+          <p class="A_Manifest_Text">
             This art is&nbsp;the interrelation of&nbsp;light, form, movement,
             and sound-combined and projected to&nbsp;stimulate an&nbsp;aesthetic
             idea.&nbsp;lt&nbsp;is&nbsp;unassociated with ideas of&nbsp;religion,

@@ -1,7 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-
-
 //отдельный чанк мэйн тк в манифест.жс он не видит флюксус
 document.querySelector('.Fluxus').addEventListener('click', function () {
   location.href = 'manifests/fluxus.html';
@@ -51,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //   Info_Icon.forEach((icon) => {
 //     icon.addEventListener('mouseenter', () => {
 //       infBlck.forEach((block) => {
-//         block.style.display = 'block'; 
+//         block.style.display = 'block';
 //       })
 //     });
 //   })
@@ -59,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //   Info_Icon.forEach((icon) => {
 //     icon.addEventListener('mouseleave', () => {
 //       infBlck.forEach((block) => {
-//         block.style.display = 'none'; 
+//         block.style.display = 'none';
 //       })
 //     });
 //   })

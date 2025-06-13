@@ -428,7 +428,11 @@ input[type="email"]::placeholder {
 
 .A_Color:hover {
   mix-blend-mode: screen;
-  transition: all 1s ease-in-out;
+  transition: all 1.2s ease-in-out;
+}
+
+.A_Manifest_Text{
+  transition: all 1.2s ease-in-out;
 }
 
 .A_Color_Text{
@@ -487,8 +491,10 @@ input[type="email"]::placeholder {
 }
 
 
-
-
+.Color_Change{
+  display: flex;
+  position: relative;
+}
 
 
 

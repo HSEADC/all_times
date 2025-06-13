@@ -1,24 +1,21 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-
-
 //ЧАСЫ ПРОБУЮ
 //document.querySelector('.Twenties').addEventListener('click', function () {
 //addEventListener("mousemove", (event) => {});
 
 // стрелочка
-document.addEventListener("DOMContentLoaded", function (event) {
-  document.addEventListener("mousemove", function (event) {
+document.addEventListener('DOMContentLoaded', function (event) {
+  document.addEventListener('mousemove', function (event) {
     handleMouseMove(event);
   });
   function handleMouseMove(event) {
-    var hands = document.querySelectorAll(".A_Hand");
-    var oClocks = document.querySelectorAll(".O_Clock");
+    var hands = document.querySelectorAll('.A_Hand');
+    var oClocks = document.querySelectorAll('.O_Clock');
     // получаем все эленты с классом .eye
     oClocks.forEach(function (oClock) {
-      var hand = oClock.querySelector(".A_Hand");
+      var hand = oClock.querySelector('.A_Hand');
       var oClockRect = oClock.getBoundingClientRect();
-      // .getBoundingClientRect() - метод который 
+      // .getBoundingClientRect() - метод который
       // возвращает координаты в контексте окна
       var deltaX = event.clientX - (oClockRect.left + oClockRect.right) / 2;
       var deltaY = event.clientY - (oClockRect.bottom + oClockRect.top) / 2;
@@ -42,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         hand.style.transform = `rotate(${rotation + 90}deg)`;
     });*/
 
-    var O_Clock = document.querySelector(".O_Clock");
-    O_Clock.addEventListener("mousemove", handleMouseMove);
+    var O_Clock = document.querySelector('.O_Clock');
+    O_Clock.addEventListener('mousemove', handleMouseMove);
 
     ///перенесли сюда иконку ховера тк вне функции стрелки она не работает
     var Info_Icon = document.querySelector('.A_Info_Icon');
@@ -55,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       infBlck.style.display = 'none'; // Скрываем блок
     });
   }
-  ;
 });
 
 // ПЕРЕХОД НА 20Е

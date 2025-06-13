@@ -1,24 +1,23 @@
 const homeURL = 'http://localhost:8080/'
 // const homeURL = 'http://annkomkova.github.io/static-site-09-24/'
-// const homeURL = 'http://hseadc.github.io/NOOB/'
 
 const menu = [
+  {
+    text: 'All Times',
+    url: 'index.html'
+  },
   {
     text: 'Статьи',
     url: 'articles.html'
   },
   {
-    text: 'Настолки',
-    url: 'boardgames.html'
+    text: 'Рефлексия',
+    url: 'reflection.html'
   },
   {
-    text: 'Поиск',
-    url: 'search.html'
+    text: 'О нас',
+    url: 'aboutUs.html'
   },
-  {
-    text: 'Селект',
-    url: 'select.html'
-  }
 ]
 
 const props = {
@@ -28,3 +27,5 @@ const props = {
 }
 
 export { props }
+
+///////////////////////////////
