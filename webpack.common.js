@@ -1,30 +1,9 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
-const SitemapPlugin = require('sitemap-webpack-plugin').default
 
 const webpack = require('webpack')
 const path = require('path')
-
-const paths = [
-  '/all_times/', //indx.html
-  '/all_times/aboutUs.html',
-  '/all_times/articls.html',
-  '/all_times/reflection.html',
-  '/all_times/sarch.html',
-  '/all_times/select.html',
-  '/all_times/ract-basics.html',
-  '/all_times/manifests/crujok.html',
-  '/all_times/manifests/dadaism.html',
-  '/all_times/manifests/dogma.html',
-  '/all_times/manifests/fluxus.html',
-  '/all_times/manifests/GB.html',
-  '/all_times/manifests/LightFormMoveSound.html',
-  '/all_times/manifests/luchi.html',
-  '/all_times/manifests/oppoyaz.html',
-  '/all_times/manifests/surral.html',
-]
 
 module.exports = {
   entry: {
@@ -49,6 +28,9 @@ module.exports = {
     react_basics: './src/js/react-basics.jsx',
     searchReact: './src/js/search.jsx',
     menubar: './src/js/menubar.js',
+    add_company: './src/js/add_company.js',
+    open_search: './src/js/open_search.js',
+    style_guide: './src/js/style_guide.js',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -80,12 +62,12 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'sass-loader',
           {
@@ -94,6 +76,25 @@ module.exports = {
               postcssOptions: {
                 plugins: [['postcss-preset-env']]
               }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(css | scss)/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false
+            }
+          },
+          'extract-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              esModule: false
             }
           }
         ]
@@ -123,17 +124,16 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css'
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: '[name].[contenthash].css',
+    //   chunkFilename: '[id].[contenthash].css'
+    // }),
 
     // Index
     new HtmlWebpackPlugin({
-      //поменяли штмл на ежс
-      template: '!!raw-loader!./src/index.ejs',
+      template: './src/index.ejs',
       filename: './index.html',
-      chunks: ['index', 'main', 'clock', 'filter', 'search', 'menubar']
+      chunks: ['index', 'main', 'clock', 'filter']
     }),
 
     new HtmlWebpackPlugin({
@@ -143,15 +143,15 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/articles.html',
+      template: './src/articles.ejs',
       filename: './articles.html',
-      chunks: ['articles']
+      chunks: ['articles', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/reflection.html',
+      template: './src/reflection.ejs',
       filename: './reflection.html',
-      chunks: ['reflection', 'index']
+      chunks: ['reflection', 'index', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
@@ -161,9 +161,9 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/aboutUs.html',
+      template: './src/aboutUs.ejs',
       filename: './aboutUs.html',
-      chunks: ['aboutUs', 'currentT']
+      chunks: ['aboutUs', 'currentT', 'open_search']
     }),
 
     // ванильный сёрч
@@ -177,7 +177,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/search.html',
       filename: './search.html',
-      chunks: ['searchData', 'searchReact']
+      chunks: ['searchData', 'searchVanilla']
     }),
 
     new HtmlWebpackPlugin({
@@ -187,62 +187,83 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/fluxus.html',
+      template: './src/manifests/fluxus.ejs',
       filename: './manifests/fluxus.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/dadaism.html',
+      template: './src/manifests/dadaism.ejs',
       filename: './manifests/dadaism.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/oppoyaz.html',
+      template: './src/manifests/oppoyaz.ejs',
       filename: './manifests/oppoyaz.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/crujok.html',
+      template: './src/manifests/crujok.ejs',
       filename: './manifests/crujok.html',
-      chunks: ['index', 'manifests', 'slider']
+      chunks: ['index', 'manifests', 'slider', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/dogma.html',
+      template: './src/manifests/dogma.ejs',
       filename: './manifests/dogma.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/luchi.html',
+      template: './src/manifests/luchi.ejs',
       filename: './manifests/luchi.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/surreal.html',
+      template: './src/manifests/surreal.ejs',
       filename: './manifests/surreal.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/GB.html',
+      template: './src/manifests/GB.ejs',
       filename: './manifests/GB.html',
-      chunks: ['index', 'manifests', 'slider']
+      chunks: ['index', 'manifests', 'slider', 'open_search']
     }),
-    
+
     new HtmlWebpackPlugin({
-      template: './src/manifests/LightFormMoveSound.html',
+      template: './src/manifests/LightFormMoveSound.ejs',
       filename: './manifests/LightFormMoveSound.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/manifests/lifeOfArtist.ejs',
+      filename: './manifests/lifeOfArtist.html',
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
+    }),
 
+    new HtmlWebpackPlugin({
+      template: './src/manifests/fromCubeToSuprema.ejs',
+      filename: './manifests/fromCubeToSuprema.html',
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
+    }),
 
-    
+    new HtmlWebpackPlugin({
+      template: './src/add_company.html',
+      filename: './add_company.html',
+      chunks: ['add_company']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/style_guide.ejs',
+      filename: './style_guide.html',
+      chunks: ['style_guide']
+    }),
+
     // Article
     // new HtmlWebpackPlugin({
     //   template: './src/articles/superorganisms/S_Popup.html',
@@ -257,11 +278,9 @@ module.exports = {
         template_filename: '*',
         priority: 'replace'
       }
-    ]),
-    //карта сайта -- брали слеш в конце строки
-    new SitemapPlugin({ base: 'https://hseadc.github.io/all_times', paths })
+    ])
   ],
   optimization: {
-    // minimizer: [new CssMinimizerPlugin()]
+    minimizer: [new CssMinimizerPlugin()]
   }
 }

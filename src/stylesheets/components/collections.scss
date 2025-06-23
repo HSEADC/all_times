@@ -12,6 +12,7 @@
     justify-content: left;
     cursor: pointer;
     box-sizing: border-box;
+    z-index: 10;
 }
 
 .C_Name_and_Arrow{
@@ -23,9 +24,18 @@
     padding-bottom: 2vw;
 }
 
+.C_MainMenu{
+    display: flex;
+    gap: 5vw;
+    height: 5%;
+}
+
 @media all and (max-width: 480px){
     .C_Menu_Bar {
         height: 7%;
     }
 
+    .C_MainMenu{
+        height: 7%;
+    }
 }

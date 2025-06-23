@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const logoEl = document.querySelectorAll('#Random_Color_Logo');
         const yearColorRand = document.querySelectorAll('#yearColorRand');
 
-        const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)']; // массив цветов
+        const colors = ['rgba(24, 165, 149, 1)', 'rgba(149, 0, 255, 1)', 'rgba(225, 1, 141, 1)', 'rgba(51, 50, 255, 1)', 'rgba(249, 1, 93, 1)', 'rgba(0, 134, 252, 1)']; // новый массив цветов
         const randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
         
         textElement.forEach(element => {
@@ -60,57 +60,26 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      const cards = document.querySelectorAll('.O_Manifest_Card');
-        //const colors = ['rgba(0, 0, 255, 1)', 'rgba(0, 116, 217, 1)', 'rgba(192, 12, 192, 1)', 'rgba(150, 1, 255, 1)', 'rgba(199, 21, 133, 1)', 'rgba(13, 130, 130, 1)'];
-    
+      const cards = document.querySelectorAll('.O_Manifest_Card');    
         cards.forEach(card => {
           card.addEventListener('mouseenter', () => {
-                const randomColor = colors[Math.floor(Math.random() * colors.length)];
                 
-                // эдлементы только внутри текущей статьи
-                const randBack = card.querySelectorAll('.A_Color_Manifest');
-                const svgElStroke = card.querySelectorAll('#Random_Color_Stroke');
-                const randText = card.querySelectorAll('.A_Color_Text');
-                const randFill = card.querySelectorAll('.A_RandColorFill');
+                // эдлементы только внутри текущей карточки манифеста
+                const randColorPic = card.querySelectorAll('.A_Color') 
+                const randColorText = card.querySelectorAll('.A_Manifest_Text')
                 console.log('kgliig')
                 
                 // применяем рандом
-                randBack.forEach(el => el.style.backgroundColor = randomColor);
-                svgElStroke.forEach(el => el.style.stroke = randomColor);
-                randText.forEach(el => el.style.color = randomColor);
-                randFill.forEach(el => el.style.fill = randomColor);
+                randColorPic.forEach(el => el.style.backgroundColor = randomColor);
+                randColorText.forEach(el => el.style.color = randomColor);
             });
             
             card.addEventListener('mouseleave', () => {
-                const randBack = card.querySelectorAll('.A_Color_Manifest');
-                const svgElStroke = card.querySelectorAll('#Random_Color_Stroke');
-                const randText = card.querySelectorAll('.A_Color_Text');
-                const randFill = card.querySelectorAll('.A_RandColorFill');
+                const randColorPic = card.querySelectorAll('.A_Color') 
+                const randColorText = card.querySelectorAll('.A_Manifest_Text')
                 
-                randBack.forEach(el => el.style.backgroundColor = '');
-                svgElStroke.forEach(el => el.style.stroke = '');
-                randText.forEach(el => el.style.color = '');
-                randFill.forEach(el => el.style.fill = '');
+                randColorPic.forEach(el => el.style.backgroundColor = '');
+                randColorText.forEach(el => el.style.color = '');
             });
         });
 

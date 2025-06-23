@@ -8,7 +8,7 @@ export default function A_Input({value, placeholder, handleInput, handleSubmit})
     
     return (
         <input
-            className="A_Input"
+            className="A_input"
             value={value}
 
             ref = {input}

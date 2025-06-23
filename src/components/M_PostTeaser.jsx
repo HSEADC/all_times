@@ -9,7 +9,7 @@ export default function M_PostTeaser({url, title, description, tags}) {
     })
     
     return (
-        <a className="M_PostTeaser" href={url}>
+        <a className="M_PostTeaser" href="{url}">
             <A_Text text={title} type='h1' />
             <A_Text text={description} type='p' />
             <div className="C_PostTeaserTags">{tagsEl}</div>
