@@ -1,4 +1,5 @@
 const homeURL = 'http://localhost:8080/'
+
 // const homeURL = 'http://annkomkova.github.io/static-site-09-24/'
 
 const menu = [

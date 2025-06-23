@@ -9,10 +9,14 @@ export default function S_MenuBar({
   menu,
   homeURL
 }) {
-  const currentURL = !prerender ? window.location.href : ''
+  // const currentURL = !prerender ? window.location.href : ''
+  const currentURL = prerender ? '' : window.location.href;
+  console.log(currentURL)
+  
 
   const menuElements = menu.map(({ text, url }, i) => {
     const linkURL = homeURL + url // уникальный адрес для каждой страницы, например http://localhost:8080/articles.html
+
     return (
       <A_MainMenu
         key={i}
