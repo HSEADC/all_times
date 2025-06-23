@@ -4019,11 +4019,14 @@ function S_MenuBar(_ref) {
     prerender = _ref.prerender,
     menu = _ref.menu,
     homeURL = _ref.homeURL;
-  var currentURL = !prerender ? window.location.href : '';
+  // const currentURL = !prerender ? window.location.href : ''
+  var currentURL = prerender ? '' : window.location.href;
+  console.log(currentURL);
   var menuElements = menu.map(function (_ref2, i) {
     var text = _ref2.text,
       url = _ref2.url;
     var linkURL = homeURL + url; // уникальный адрес для каждой страницы, например http://localhost:8080/articles.html
+
     return /*#__PURE__*/react.createElement(components_A_MainMenu, {
       key: i,
       current: linkURL === currentURL,
@@ -20485,7 +20488,8 @@ var __webpack_exports__ = {};
 // UNUSED EXPORTS: menubar
 
 ;// ./src/js/menubar-data.js
-var homeURL = 'http://localhost:8080/';
+// const homeURL = 'http://localhost:8080/'
+var homeURL = 'https://hseadc.github.io/all_times/';
 // const homeURL = 'http://annkomkova.github.io/static-site-09-24/'
 
 var menu = [{
