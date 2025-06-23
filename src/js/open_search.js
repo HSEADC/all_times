@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     search.forEach(el => {
         el.addEventListener("click", (event) => {
-            window.location.href = '/search.html';
+            window.location.href = '/all_times/search.html';
         });
     });
 
