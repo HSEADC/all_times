@@ -60,6 +60,22 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  //курсор ховер
+  FilterButtons.forEach(function (FilterButton) {
+    FilterButton.addEventListener('mouseover', function (event) {
+      var period_str = FilterButton.textContent;
+      var period = new Period(period_str);
+      var hasMatches = false;
+      Cards.forEach(function (card) {
+        var year = card.querySelector('.Year').textContent;
+        if (period.includes(year)) {
+          hasMatches = true;
+        }
+      });
+      FilterButton.style.cursor = hasMatches ? 'pointer' : 'not-allowed';
+    });
+  });
 });
 /******/ })()
 ;
