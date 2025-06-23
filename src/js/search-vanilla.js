@@ -147,7 +147,7 @@ function renderCardsByIds(container, ids) {
     }) 
 }
 
-
+//ОБЫЧННАЯ ФУНКЦИЯ СОЗДАНИЯ КАРТОЧЕК ПОИСКА
 function createCard(contentItemData) {
     //content == data
     const container = document.querySelector('.S_Content')
@@ -197,42 +197,61 @@ function createCard(contentItemData) {
     // container.appendChild(contentItem)
     return contentItem
     
-
-    // content.forEach((contentItemData) => {
-    //     const contentItem = document.createElement('a')
-    //     contentItem.classList.add('O_ContentItem')
-    //     contentItem.classList.add(`${contentItemData.class}`)
-    //     //вытащили url из данных
-    //     contentItem.href = contentItemData.url
-
-    //     const contentItemImg = document.createElement('img')
-    //     contentItemImg.classList.add('A_ContentItemImg')
-    //     contentItemImg.src = contentItemData.img
-
-    //     const ContentItemName = document.createElement('h3')
-    //     ContentItemName.classList.add('A_ContentItemName')
-    //     ContentItemName.innerText = contentItemData.name
-
-    //     const ContentItemSign = document.createElement('p')
-    //     ContentItemSign.classList.add('A_ContentItemSign')
-    //     ContentItemSign.innerText = contentItemData.sign
-
-    //     const contentItemStat = document.createElement('div')
-    //     contentItemStat.classList.add('C_ContentItemStat')
-
-    //     //STATS
-    //     contentItemData.stat.forEach((stat) => {
-    //         const contentItemStat = document.createElement('div')
-    //         contentItemStat.classList.add('A_ContentItemStat')
-    //         contentItemStat.innerText = stat
-    //         contentItemStat.appendChild(contentItemStat)
-    //     })
-
-    //     contentItem.appendChild(contentItemImg)
-    //     contentItem.appendChild(contentItemStat)
-    //     contentItem.appendChild(ContentItemName)
-    //     contentItem.appendChild(ContentItemSign)
-
-    //     container.appendChild(contentItem)
-    // }); 
 }
+
+// ///ЗДЕСЬ ФУНКЦИЯ СОЗДАНИЯ БЛОКОВ ЕСЛИ НЕ ОТОБРАЖАТЬ ПУСТЫЕ КАРТИНКИ
+// function createCard(contentItemData) {
+//     const container = document.querySelector('.S_Content')
+
+//     const contentItem = document.createElement('a')
+//     contentItem.classList.add('O_ContentItem')
+//     contentItem.classList.add(`${contentItemData.class}`)
+//     contentItem.href = contentItemData.url
+
+//     // Создаем элемент для изображения только если есть URL картинки
+//     if (contentItemData.imgs) {
+//         const contentItemImg = document.createElement('img')
+//         contentItemImg.classList.add('A_ContentItemImg')
+//         contentItemImg.src = contentItemData.imgs
+//         contentItem.appendChild(contentItemImg)
+//     }
+
+//     const contentItemTitle = document.createElement('h1')
+//     contentItemTitle.classList.add('A_ContentItemTitle')
+//     contentItemTitle.innerText = contentItemData.titles
+
+//     const contentItemDescribtion = document.createElement('p')
+//     contentItemDescribtion.classList.add('A_ContentItemDescribtion')
+//     contentItemDescribtion.innerText = contentItemData.describtions
+
+//     const contentItemTags = document.createElement('div')
+//     contentItemTags.classList.add('C_ContentItemTags')
+
+//     // Обрабатываем теги - проверяем, является ли значение массивом или строкой
+//     const tags = contentItemData.tags
+//     if (tags) {
+//         if (Array.isArray(tags)) {
+//             tags.forEach(tag => {
+//                 const contentItemTag = document.createElement('p')
+//                 contentItemTag.classList.add('A_ContentItemTag')
+//                 contentItemTag.innerText = tag
+//                 contentItemTags.appendChild(contentItemTag)
+//             })
+//         } else if (typeof tags === 'string') {
+//             const contentItemTag = document.createElement('p')
+//             contentItemTag.classList.add('A_ContentItemTag')
+//             contentItemTag.innerText = tags
+//             contentItemTags.appendChild(contentItemTag)
+//         }
+//     }
+
+//     const contentItemTitleAndTags = document.createElement('div')
+//     contentItemTitleAndTags.classList.add('M_TitleAndTags_Container')
+//     contentItemTitleAndTags.appendChild(contentItemTitle)
+//     contentItemTitleAndTags.appendChild(contentItemTags)
+
+//     contentItem.appendChild(contentItemTitleAndTags)
+//     contentItem.appendChild(contentItemDescribtion)
+
+//     return contentItem
+// }

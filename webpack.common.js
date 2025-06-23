@@ -27,7 +27,10 @@ module.exports = {
     searchVanilla: './src/js/search-vanilla.js',
     react_basics: './src/js/react-basics.jsx',
     searchReact: './src/js/search.jsx',
-    menubar: './src/js/menubar.js'
+    menubar: './src/js/menubar.js',
+    add_company: './src/js/add_company.js',
+    open_search: './src/js/open_search.js',
+    style_guide: './src/js/style_guide.js',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -140,15 +143,15 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/articles.html',
+      template: './src/articles.ejs',
       filename: './articles.html',
-      chunks: ['articles']
+      chunks: ['articles', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/reflection.html',
+      template: './src/reflection.ejs',
       filename: './reflection.html',
-      chunks: ['reflection', 'index']
+      chunks: ['reflection', 'index', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
@@ -158,9 +161,9 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/aboutUs.html',
+      template: './src/aboutUs.ejs',
       filename: './aboutUs.html',
-      chunks: ['aboutUs', 'currentT']
+      chunks: ['aboutUs', 'currentT', 'open_search']
     }),
 
     // ванильный сёрч
@@ -184,57 +187,81 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/fluxus.html',
+      template: './src/manifests/fluxus.ejs',
       filename: './manifests/fluxus.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/dadaism.html',
+      template: './src/manifests/dadaism.ejs',
       filename: './manifests/dadaism.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/oppoyaz.html',
+      template: './src/manifests/oppoyaz.ejs',
       filename: './manifests/oppoyaz.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/crujok.html',
+      template: './src/manifests/crujok.ejs',
       filename: './manifests/crujok.html',
-      chunks: ['index', 'manifests', 'slider']
+      chunks: ['index', 'manifests', 'slider', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/dogma.html',
+      template: './src/manifests/dogma.ejs',
       filename: './manifests/dogma.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/luchi.html',
+      template: './src/manifests/luchi.ejs',
       filename: './manifests/luchi.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/surreal.html',
+      template: './src/manifests/surreal.ejs',
       filename: './manifests/surreal.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/GB.html',
+      template: './src/manifests/GB.ejs',
       filename: './manifests/GB.html',
-      chunks: ['index', 'manifests', 'slider']
+      chunks: ['index', 'manifests', 'slider', 'open_search']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/manifests/LightFormMoveSound.html',
+      template: './src/manifests/LightFormMoveSound.ejs',
       filename: './manifests/LightFormMoveSound.html',
-      chunks: ['index', 'manifests', 'saveNote']
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/lifeOfArtist.ejs',
+      filename: './manifests/lifeOfArtist.html',
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/manifests/fromCubeToSuprema.ejs',
+      filename: './manifests/fromCubeToSuprema.html',
+      chunks: ['index', 'manifests', 'saveNote', 'open_search']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/add_company.html',
+      filename: './add_company.html',
+      chunks: ['add_company']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './src/style_guide.ejs',
+      filename: './style_guide.html',
+      chunks: ['style_guide']
     }),
 
     // Article

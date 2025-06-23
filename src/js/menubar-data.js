@@ -23,7 +23,7 @@ const menu = [
 const props = {
   prerender: true,
   homeURL,
-  menu
+  menu,
 }
 
 export { props }

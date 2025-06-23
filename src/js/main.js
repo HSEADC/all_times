@@ -31,6 +31,16 @@ document.querySelector('.GB').addEventListener('click', function () {
   location.href = 'manifests/GB.html'
 })
 
+document.querySelector('.Manifest_of_artists_life').addEventListener('click', function () {
+  location.href = 'manifests/lifeOfArtist.html'
+})
+
+document.querySelector('.FromCubeToSuprema').addEventListener('click', function () {
+  location.href = 'manifests/fromCubeToSuprema.html'
+})
+
+
+
 document
   .querySelector('.LightFormMoveSound')
   .addEventListener('click', function () {

@@ -107,3 +107,68 @@
     }
 
 }
+
+
+.M_Pic_and_Btn_add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.M_Second_block_add{
+    font-size: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+.M_Spinning_Clocks {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    justify-content: space-between;
+    gap: 56vw;
+    margin-left: -23vw;
+    margin-top: -35vw;
+    overflow: hidden;
+}
+
+.M_Last_Block_add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    margin-top: 10vw;
+}
+
+@media all and (max-width: 480px){
+
+    .M_Second_block_add{
+        justify-self: center;
+    }
+
+    .M_Last_Block_add {
+        margin-top: 80vw;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+/* стайлгайд */
+
+.M_SG_fisrt_block{
+    display: flex;
+}
+
+.M_SG_fisrt_block h4{
+    display: inline-block;
+    height: 30vw;
+    background-color:aqua;
+}

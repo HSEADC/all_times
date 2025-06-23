@@ -171,13 +171,6 @@ window.onload = changeColor;
 
 
 
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const articles = document.querySelectorAll('.O_Article');
     const menu = document.querySelector('.C_Menu_Bar');

@@ -221,7 +221,7 @@ input[type="email"]::placeholder {
   display: none;
   position: fixed;
   background-color: aqua;
-  z-index: 10;
+  z-index: 100;
   color: rgb(0, 0, 0);
 
   font-family: Helvetica;
@@ -737,6 +737,7 @@ input[type="email"]::placeholder {
     width: 20vw;
   }
 
+
   #A_Icon_Resize{
     width: 6vw;
   }
@@ -837,7 +838,12 @@ input[type="email"]::placeholder {
     &.Hour {
         width: 12vw;
     }
-}
+  }
+
+  .A_Logo_in_Footer_New{
+    display: none;
+  }
+
 
 }
 
@@ -920,3 +926,243 @@ input[type="email"]::placeholder {
   font-size: 1.4vw;
 }
 
+
+
+/* РЕКЛАМНАЯ КОМПАНИЯ */
+
+.A_Pic_Banner_Add{
+  width: 95.5%;
+  padding: 0 2vw 0 2vw;
+}
+
+.A_Pic_Banner_Add_Mobile{
+  display: none;
+}
+
+.A_Button_black_outline{
+  display: flex;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 35vw;
+  height: 4vw;
+  padding: 1vw 6vw 1vw 6vw;
+  outline: black solid 0.15vw;
+  background-color: white;
+  font-size: 2vw;
+}
+
+.A_Button_black_outline:hover{
+  background-color: rgb(223, 223, 223);
+}
+
+.Btn_under_gif{
+  margin-top: -4vw;
+  margin-bottom: 7vw;
+}
+
+.Btn_under_ul{
+  margin-top: 5vw;
+}
+
+.Btn_to_index{
+  margin-top: 15vw;
+  margin-bottom: 8vw;
+}
+
+.A_Text_Block{
+  display: inline-block;
+  height: 8vw;
+}
+
+.new_pink{
+  background-color: rgba(249, 1, 93, 1);
+}
+.new_green_water{
+  background-color: rgba(24, 165, 149, 1);
+  margin-top: 8vw;
+  margin-bottom: 5vw;
+}
+
+.A_Text_width_to_move{
+  width: 47%;
+  margin-top: 5vw;
+}
+
+p2{
+  font-size: 2vw;
+  font-family: Helvetica;
+}
+
+li {
+  list-style-type: disc;
+  font-size: 2vw;
+  font-family: Helvetica;
+}
+
+.A_ul_add{
+  margin-top: -3vw;
+}
+
+.A_Spinning_Clock {
+    animation: 3s linear infinite rotate;
+    animation-play-state: paused;
+    width: 45vw;
+    overflow: hidden;
+}
+
+.A_Spinning_Clock:hover {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.make_it_hidden{
+  overflow-x: hidden; 
+  position: relative; 
+  background-clip: border-box;
+}
+
+.make_it_hidden::-webkit-scrollbar {
+  display: none;  
+}
+
+.A_Div_For_Btn_add{
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 5vw;
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+}
+
+.A_Logo_add{
+  display: flex;
+  position: absolute;
+  margin-bottom: 55vw;
+  margin-left: -90vw;
+  rotate: 59deg;
+  width: 10vw;
+}
+
+.display_in_mobile{
+  display: none;
+}
+
+
+@media all and (max-width: 800px){
+  p2{
+    font-size: 3vw;
+  }
+
+  li{
+    font-size: 3vw;
+  }
+
+  .A_Button_black_outline{
+    font-size: 3vw;
+    height: 6vw;
+    width: 50vw;
+  }
+}
+
+@media all and (max-width: 480px){
+
+  p2{
+    font-size: 4vw;
+  }
+
+  li{
+    font-size: 4vw;
+  }
+
+  .A_Pic_Banner_Add{
+    display: none;
+  }
+
+  .A_Logo_add{
+    margin-top: -98vw;
+    padding-left: 15vw;
+    width: 26vw;
+  }
+
+  .Btn_under_gif{
+    margin-top: -6vw;
+  }
+
+  .A_Pic_Banner_Add_Mobile{
+    display: flex;
+    width: 85%;
+  }
+
+  .A_Button_black_outline{
+    font-size: 4vw;
+    width: 60vw;
+    height: 8vw;
+  }
+
+  .display_none_in_mobile{
+    display: none;
+  }
+
+  .display_in_mobile{
+    display: flex;
+  }
+
+  .A_Text_Block{
+    height: 20vw;
+    font-size: 6vw;
+    margin-top: 6vw;
+  }
+
+  .A_ul_add{
+    flex-direction: column;
+    padding-left: 40vw;
+  }
+
+  .A_Text_width_to_move{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .A_Div_For_Btn_add{
+    margin-top: 55vw;
+  }
+
+  .A_Spinning_Clock{
+    width: 80vw;
+    margin-left: -17.5vw;
+  }
+
+  .new_green_water{
+    height: 30vw;
+  }
+
+  .A_Last_Txt_add{
+    text-align: center;
+    margin-top: -8vw;
+  }
+}
+
+
+
+
+/* СТАЙЛГАЙД */
+.A_sg_first_pic{
+  position: absolute;
+  margin-left: 50%;
+}
