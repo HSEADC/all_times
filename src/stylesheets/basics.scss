@@ -28,6 +28,36 @@ h4{
     font-size: 10vw;
 }
 
+/* ДЛЯ СТАЙЛГАЙДА*/
+
+h5{
+    font-family: Helvetica Light;
+    font-size: 7vw;
+    padding: 4vw 1vw 4vw 3vw;
+}
+
+p5{
+    font-family: Helvetica Light;
+    font-size: 1.5vw;
+    padding: 3vw 1vw 1vw 14vw;
+}
+
+@media all and (max-width: 800px){
+    p5{
+        font-family: Helvetica Light;
+        font-size: 3vw;
+        padding: 3vw 10vw 1vw 14vw;
+    }
+}
+
+@media all and (max-width: 480px){
+    p5{
+        font-family: Helvetica Light;
+        font-size: 4vw;
+        padding: 3vw 14vw 1vw 14vw;
+    }
+}
+
 a{
     font-family: Helvetica;
     font-size: 1.4vw;  

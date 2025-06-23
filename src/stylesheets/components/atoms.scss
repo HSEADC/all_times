@@ -134,9 +134,8 @@
     font-size: 1.4vw;  
     border: 0;
     outline: none;
-    cursor: text;
+    cursor: pointer;
 }
-  
 input::placeholder {
     text-align: left;
     font-size: 1.4vw;  
@@ -476,6 +475,7 @@ input[type="email"]::placeholder {
   position: absolute;
   align-self: center;
   z-index: 100;
+  width: 25vw;
 }
 
 
@@ -737,7 +737,6 @@ input[type="email"]::placeholder {
     width: 20vw;
   }
 
-
   #A_Icon_Resize{
     width: 6vw;
   }
@@ -756,7 +755,7 @@ input[type="email"]::placeholder {
 
   .A_Button_Article {
     width: 5vw;
-    margin-top: -2vw;
+    height: 5vw;
   }
 
   .A_Color_Text{
@@ -1164,5 +1163,25 @@ li {
 /* СТАЙЛГАЙД */
 .A_sg_first_pic{
   position: absolute;
-  margin-left: 50%;
+  margin-left: 41%;
+  margin-top: 5%;
+  width: 45vw;
+}
+
+@media all and (max-width: 800px){
+  .A_sg_first_pic{
+    position: absolute;
+    margin-left: 32%;
+    margin-top: 5%;
+    width: 60vw;
+  }
+}
+
+@media all and (max-width: 480px){
+  .A_sg_first_pic{
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 5%;
+    width: 75vw;
+  }
 }

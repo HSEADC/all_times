@@ -1,6 +1,28 @@
 import '../index.css'
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    var C_Menu_Bar = document.querySelector('.C_Menu_Bar')
+    var top = C_Menu_Bar.offsetTop
+    //offset().Top
+    console.log(1234)
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY >= top) {
+        C_Menu_Bar.style.position = ''
+        C_Menu_Bar.style.top = '0'
+        C_Menu_Bar.style.zIndex = '10'
+        C_Menu_Bar.style.padding = '1vw 3vw'
+      } else {
+        C_Menu_Bar.style.position = ''
+        C_Menu_Bar.style.top = ''
+        C_Menu_Bar.style.zIndex = ''
+        C_Menu_Bar.style.padding = '1vw 3vw'
+      }
+    })
+  })
+
+
     //меняем цвет рандом
     function changeTextColor() {
         const textElement = document.querySelectorAll('.Random_Color'); // находим элемент
