@@ -1,3 +1,5 @@
+import '../index.css'
+
 document.addEventListener('DOMContentLoaded', () => {
     const search = document.querySelectorAll('.A_Search_Container');
 

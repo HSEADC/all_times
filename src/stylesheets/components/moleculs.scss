@@ -63,7 +63,8 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding-bottom: 2.5vw;
+    align-items: center;
 }
 
 
@@ -94,6 +95,7 @@
     .M_Name_and_Cross_Article{
         height: 7vw;
         padding-bottom: 3vw;
+        align-items: center;
     }
 
     .M_Text_Block_Left{
@@ -165,10 +167,101 @@
 
 .M_SG_fisrt_block{
     display: flex;
+    height: 93vh;
 }
 
 .M_SG_fisrt_block h4{
     display: inline-block;
     height: 30vw;
     background-color:aqua;
+}
+
+.M_SG_second_block{
+    display: flex;
+    flex-direction: column;
+}
+
+.M_SG_second_block img:nth-of-type(1){
+    width: 25vw;
+    align-self:center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.M_SG_second_block img:nth-of-type(2){
+    width: 100%;
+    align-self:center;
+    padding-top: 0.1%;
+    padding-bottom: 5%;
+}
+
+.M_SG_second_block img:nth-of-type(3){
+    width: 55vw;
+    align-self:center;
+    padding-top: 0.1%;
+    padding-bottom: 5%;
+}
+
+.M_SG_second_block img:nth-of-type(4){
+    width: 68vw;
+    align-self:center;
+    padding-top: 1%;
+    padding-bottom: 5%;
+}
+
+.M_SG_second_block img:nth-of-type(5), img:nth-of-type(6){
+    width: 55vw;
+    padding: 1vw 1vw 1vw 14vw;
+}
+
+.M_SG_second_block h1{
+    padding-left: 26vw;
+}
+
+.M_SG_second_block img:nth-of-type(7){
+    width: 55vw;
+    padding-left: 26vw;
+}
+
+.M_SG_second_block img:nth-of-type(8){
+    width: 55vw;
+    padding-left: 26vw;
+    padding-top: 1%;
+    padding-bottom: 5vw;
+}
+
+.M_SG_second_block img:nth-of-type(9), img:nth-of-type(10), img:nth-of-type(12), img:nth-of-type(16){
+    width: 72vw;
+    padding: 1vw 1vw 1vw 14vw;
+}
+
+.M_SG_second_block img:nth-of-type(11){
+    width: 35vw;
+    padding: 1vw 1vw 1vw 14vw;
+}
+
+.M_SG_second_block img:nth-of-type(13){
+    width: 95vw;
+    align-self: center;
+    padding-top: 3vw;
+}
+
+.M_SG_second_block img:nth-of-type(14){
+    width: 92vw;
+    align-self: center;
+    padding-top: 3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.M_SG_second_block img:nth-of-type(15){
+    width: 22vw;
+    align-self: center;
+    padding-top: 2vw;
+}
+
+.M_SG_second_block img:nth-of-type(17){
+    width: 72vw;
+    align-self: center;
+    padding-bottom: 8vw;
 }

@@ -133,7 +133,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.ejs',
       filename: './index.html',
-      chunks: ['index', 'main', 'clock', 'filter']
+      chunks: ['index', 'main', 'clock', 'filter', 'search', 'menubar']
     }),
 
     new HtmlWebpackPlugin({
@@ -145,13 +145,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/articles.ejs',
       filename: './articles.html',
-      chunks: ['articles', 'open_search']
+      chunks: ['articles', 'open_search','menubar']
     }),
 
     new HtmlWebpackPlugin({
       template: './src/reflection.ejs',
       filename: './reflection.html',
-      chunks: ['reflection', 'index', 'open_search']
+      chunks: ['reflection', 'index', 'open_search', 'menubar']
     }),
 
     new HtmlWebpackPlugin({
@@ -163,7 +163,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/aboutUs.ejs',
       filename: './aboutUs.html',
-      chunks: ['aboutUs', 'currentT', 'open_search']
+      chunks: ['aboutUs', 'currentT', 'open_search', 'menubar']
     }),
 
     // ванильный сёрч
@@ -261,7 +261,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/style_guide.ejs',
       filename: './style_guide.html',
-      chunks: ['style_guide']
+      chunks: ['style_guide', 'open_search']
     }),
 
     // Article
