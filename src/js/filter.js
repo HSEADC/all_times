@@ -55,4 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   })
+
+
+
+
+
+  //курсор ховер
+  FilterButtons.forEach((FilterButton) => {
+    FilterButton.addEventListener('mouseover', (event) => {
+      const period_str = FilterButton.textContent; 
+      const period = new Period(period_str);
+      let hasMatches = false;
+      
+      Cards.forEach((card) => {
+        const year = card.querySelector('.Year').textContent;
+        if (period.includes(year)) {
+          hasMatches = true;
+        }
+      });
+      
+      FilterButton.style.cursor = hasMatches ? 'pointer' : 'not-allowed';
+  });
+
+});
 })
