@@ -3762,6 +3762,57 @@ module.exports = Airtable;
 
 /***/ }),
 
+/***/ 1782:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   R: () => (/* binding */ getManifests)
+/* harmony export */ });
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6104);
+/* harmony import */ var airtable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(997);
+/* harmony import */ var airtable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(airtable__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var token = 'pat5hnGRx3HBTRL2p.ba1766c854c088ded98d29939fae6335ca2b2ba5c123f5b75649c0c9f3b98e07';
+airtable__WEBPACK_IMPORTED_MODULE_1___default().configure({
+  endpointUrl: 'https://api.airtable.com',
+  apiKey: token
+});
+var base = airtable__WEBPACK_IMPORTED_MODULE_1___default().base('appodaRNMUmYeBIY5');
+// pat5hnGRx3HBTRL2p
+
+function getManifests() {
+  // пишем ассинхронную функцию
+  // что-то пишем -- нажимаем ентер -- переход в сёрч.штмл -- генерится штмл и заполняется данными из таблицы
+  return new Promise(function (resolve, reject) {
+    // content -- empty arr
+    var content = [];
+    base('manifests').select({
+      maxRecords: 100
+    }).firstPage().then(function (result) {
+      result.forEach(function (record) {
+        content.push({
+          id: record.id,
+          //найди мне ячейку кот написана точно так же как в таблице
+          titles: record.fields['Titles'],
+          years: record.fields['Years'],
+          describtions: record.fields['Describtions'],
+          tags: record.fields['Tags'],
+          imgs: record.fields['Images'],
+          quotes: record.fields['Quotes'],
+          url: record.fields['URL']
+        });
+      });
+      //подгрузка контента
+      resolve(content);
+    });
+  });
+}
+
+
+/***/ }),
+
 /***/ 629:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -4519,19 +4570,16 @@ input[type="email"]::placeholder {
 .O_Slider .A_Images_in_Slider {
   width: 100%;
   display: block;
-  padding: 0;
 }
 
 .O_Slider .A_Images_in_Slider img{
   width: 100%;
   height: auto;
   display: none;
-  padding: 0;
 }
 
 .O_Slider .A_Images_in_Slider img.activ_img {
   display: block;
-  padding: 0;
 }
 
 .A_Arrow_Backwards, .A_Arrow_Forwards {
@@ -5709,35 +5757,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.M_Manifest_Text {
     flex-direction: column;
 }
 
-.M_SG_second_block:nth-of-type(1) img{
+.M_SG_second_block img:nth-of-type(1){
     width: 25vw;
     align-self:center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(2) img{
+.M_SG_second_block img:nth-of-type(2){
     width: 100%;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(3) img{
+.M_SG_second_block img:nth-of-type(3){
     width: 55vw;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(4) img{
+.M_SG_second_block img:nth-of-type(4){
     width: 68vw;
     align-self:center;
     padding-top: 1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(5), .M_SG_second_block:nth-of-type(6) img{
+.M_SG_second_block img:nth-of-type(5), img:nth-of-type(6){
     width: 55vw;
     padding: 1vw 1vw 1vw 14vw;
 }
@@ -6953,6 +7001,7 @@ module.exports = __webpack_require__.p + "fonts/Helvetica..ttf";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
+/******/ 			156: 0,
 /******/ 			531: 0
 /******/ 		};
 /******/ 		
@@ -6981,48 +7030,235 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/* unused harmony export getManifests */
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6104);
-/* harmony import */ var airtable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(997);
-/* harmony import */ var airtable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(airtable__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _search_data_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1782);
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 
 
-var token = 'pat5hnGRx3HBTRL2p.ba1766c854c088ded98d29939fae6335ca2b2ba5c123f5b75649c0c9f3b98e07';
-airtable__WEBPACK_IMPORTED_MODULE_1___default().configure({
-  endpointUrl: 'https://api.airtable.com',
-  apiKey: token
+var content = [];
+document.addEventListener('DOMContentLoaded', function () {
+  (0,_search_data_js__WEBPACK_IMPORTED_MODULE_1__/* .getManifests */ .R)().then(function (data) {
+    //обновление данных
+    // update(data)
+    content = data;
+    initSearch();
+  });
 });
-var base = airtable__WEBPACK_IMPORTED_MODULE_1___default().base('appodaRNMUmYeBIY5');
-// pat5hnGRx3HBTRL2p
+function initSearch() {
+  var O_Search = document.querySelector('.O_Search');
+  var A_SearchInput = O_Search.querySelector('.A_SearchInput');
+  var A_SearchButton = O_Search.querySelector('.A_SearchButton');
+  var requestText = getSearchRequest();
+  if (requestText != undefined) {
+    //сохранение зпроса - не стираем его
+    A_SearchInput.value = requestText;
+    if (content) {
+      SearchContent(requestText); //если есть контент\данные -- запускаем функциию рендера контента
+    }
+  } else {
+    //обуление поиска
+    A_SearchInput.value = '';
+  }
 
-function getManifests() {
-  // пишем ассинхронную функцию
-  // что-то пишем -- нажимаем ентер -- переход в сёрч.штмл -- генерится штмл и заполняется данными из таблицы
-  return new Promise(function (resolve, reject) {
-    // content -- empty arr
-    var content = [];
-    base('manifests').select({
-      maxRecords: 100
-    }).firstPage().then(function (result) {
-      result.forEach(function (record) {
-        content.push({
-          id: record.id,
-          //найди мне ячейку кот написана точно так же как в таблице
-          titles: record.fields['Titles'],
-          years: record.fields['Years'],
-          describtions: record.fields['Describtions'],
-          tags: record.fields['Tags'],
-          imgs: record.fields['Images'],
-          quotes: record.fields['Quotes'],
-          url: record.fields['URL']
-        });
-      });
-      //подгрузка контента
-      resolve(content);
+  //считываем значение
+  A_SearchInput.addEventListener('input', function (e) {
+    requestText = e.target.value;
+
+    //как только воодится текст -- кнопка становится активной
+    if (requestText.length >= 3) {
+      A_SearchButton.classList.remove('disable');
+    } else {
+      A_SearchButton.classList.add('disable');
+    }
+  });
+
+  //enter 
+  A_SearchInput.addEventListener('keydown', function (e) {
+    requestText = e.target.value;
+    if (e.key == 'Enter') {
+      setSearchRequest(requestText);
+      SearchContent(requestText);
+    }
+  });
+  A_SearchButton.addEventListener('click', function (e) {
+    //проверка что класса нет
+    if (!e.target.classList.contains('disable')) {
+      requestText = A_SearchInput.value;
+      setSearchRequest(requestText);
+      SearchContent(requestText);
+    }
+  });
+}
+function getSearchRequest() {
+  var url = new URL(window.location.href);
+  var searchParams = new URLSearchParams(url.search);
+  if (searchParams.has('request')) {
+    return searchParams.get('request');
+  }
+}
+
+//значение поискового запроса -- в строке кода будет типо search?=manifests
+function setSearchRequest(requestText) {
+  var url = window.location.href.split('?')[0];
+  window.location.href = url + '?request=' + requestText;
+}
+
+//сердце поиска - отобрадение карточек
+function SearchContent(requestText) {
+  var container = document.querySelector('.S_Content');
+  container.innerHTML = '';
+  var contentItemIds = [];
+  console.log(content);
+  content.forEach(function (contentItem) {
+    var nbspRegEx = /[\u202F\u00A0]/gm;
+    var punctuationRegEx = /[.,\/#!$%\^&\*;:{}=\-_`()]/gm;
+    var titles = contentItem.titles,
+      years = contentItem.years,
+      describtions = contentItem.describtions,
+      id = contentItem.id;
+    titles = titles.replaceAll(nbspRegEx, ' ');
+    titles = titles.replaceAll(punctuationRegEx, '');
+    describtions = describtions.replaceAll(nbspRegEx, ' ');
+    describtions = describtions.replaceAll(punctuationRegEx, '');
+    if (requestText.length >= 3) {
+      if (titles.toLowerCase().includes(requestText.toLowerCase()) || years.toString().includes(requestText) || describtions.toLowerCase().includes(requestText.toLowerCase())) {
+        contentItemIds.push(id);
+      } else {
+        console.log('ids');
+      }
+    }
+    if (contentItemIds.length > 0) {
+      renderCardsByIds(container, contentItemIds);
+    } else {
+      renderNothingFounded();
+    }
+  });
+}
+function renderNothingFounded() {
+  // container.innerHTML = 'Ничего не найдено :('
+  document.querySelector('.S_Content').innerText = '';
+  document.querySelector('.S_Content').innerText = 'Ничего не найдено';
+}
+function renderCardsByIds(container, ids) {
+  //как проверить что карточки не повторяются
+  document.querySelector('.S_Content').innerText = '';
+  ids = _toConsumableArray(new Set(ids));
+  ids.forEach(function (id) {
+    content.forEach(function (item) {
+      if (item.id === id) {
+        //one more var
+        // createCard(item)
+        container.appendChild(createCard(item));
+      }
     });
   });
 }
 
+//ОБЫЧННАЯ ФУНКЦИЯ СОЗДАНИЯ КАРТОЧЕК ПОИСКА
+function createCard(contentItemData) {
+  //content == data
+  var container = document.querySelector('.S_Content');
+  var contentItem = document.createElement('a');
+  contentItem.classList.add('O_ContentItem');
+  contentItem.classList.add("".concat(contentItemData["class"]));
+  contentItem.href = contentItemData.url;
+  var contentItemImg = document.createElement('img');
+  contentItemImg.classList.add('A_ContentItemImg');
+  contentItemImg.src = contentItemData.imgs;
+  var contentItemTitle = document.createElement('h1');
+  contentItemTitle.classList.add('A_ContentItemTitle');
+  contentItemTitle.innerText = contentItemData.titles;
+  var contentItemDescribtion = document.createElement('p');
+  contentItemDescribtion.classList.add('A_ContentItemDescribtion');
+  contentItemDescribtion.innerText = contentItemData.describtions;
+  console.log(contentItemData);
+  //Из лога видно, что contentItemData.tags — это строка (например, "2024", "1963"), а не массив.
+  //Метод .forEach() работает только с массивами, поэтому возникает ошибка.
+  var contentItemTags = document.createElement('div');
+  contentItemTags.classList.add('C_ContentItemTags');
+  contentItemData.tags.forEach(function (tag) {
+    var contentItemTag = document.createElement('p');
+    contentItemTag.classList.add('A_ContentItemTag');
+    contentItemTag.innerText = tag;
+    contentItemTags.appendChild(contentItemTag);
+  });
+
+  //пробую создать див для тайтла и тегов -- не получилось :(
+  var contentItemTitleAndTags = document.createElement('div');
+  contentItemTitleAndTags.classList.add('M_TitleAndTags_Container');
+  contentItemTitleAndTags.appendChild(contentItemTitle);
+  contentItemTitleAndTags.appendChild(contentItemTags);
+  // console.log(contentItemTitleAndTags)
+
+  contentItem.appendChild(contentItemImg);
+  contentItem.appendChild(contentItemTitleAndTags);
+  contentItem.appendChild(contentItemDescribtion);
+
+  // container.appendChild(contentItem)
+  return contentItem;
+}
+
+// ///ЗДЕСЬ ФУНКЦИЯ СОЗДАНИЯ БЛОКОВ ЕСЛИ НЕ ОТОБРАЖАТЬ ПУСТЫЕ КАРТИНКИ
+// function createCard(contentItemData) {
+//     const container = document.querySelector('.S_Content')
+
+//     const contentItem = document.createElement('a')
+//     contentItem.classList.add('O_ContentItem')
+//     contentItem.classList.add(`${contentItemData.class}`)
+//     contentItem.href = contentItemData.url
+
+//     // Создаем элемент для изображения только если есть URL картинки
+//     if (contentItemData.imgs) {
+//         const contentItemImg = document.createElement('img')
+//         contentItemImg.classList.add('A_ContentItemImg')
+//         contentItemImg.src = contentItemData.imgs
+//         contentItem.appendChild(contentItemImg)
+//     }
+
+//     const contentItemTitle = document.createElement('h1')
+//     contentItemTitle.classList.add('A_ContentItemTitle')
+//     contentItemTitle.innerText = contentItemData.titles
+
+//     const contentItemDescribtion = document.createElement('p')
+//     contentItemDescribtion.classList.add('A_ContentItemDescribtion')
+//     contentItemDescribtion.innerText = contentItemData.describtions
+
+//     const contentItemTags = document.createElement('div')
+//     contentItemTags.classList.add('C_ContentItemTags')
+
+//     // Обрабатываем теги - проверяем, является ли значение массивом или строкой
+//     const tags = contentItemData.tags
+//     if (tags) {
+//         if (Array.isArray(tags)) {
+//             tags.forEach(tag => {
+//                 const contentItemTag = document.createElement('p')
+//                 contentItemTag.classList.add('A_ContentItemTag')
+//                 contentItemTag.innerText = tag
+//                 contentItemTags.appendChild(contentItemTag)
+//             })
+//         } else if (typeof tags === 'string') {
+//             const contentItemTag = document.createElement('p')
+//             contentItemTag.classList.add('A_ContentItemTag')
+//             contentItemTag.innerText = tags
+//             contentItemTags.appendChild(contentItemTag)
+//         }
+//     }
+
+//     const contentItemTitleAndTags = document.createElement('div')
+//     contentItemTitleAndTags.classList.add('M_TitleAndTags_Container')
+//     contentItemTitleAndTags.appendChild(contentItemTitle)
+//     contentItemTitleAndTags.appendChild(contentItemTags)
+
+//     contentItem.appendChild(contentItemTitleAndTags)
+//     contentItem.appendChild(contentItemDescribtion)
+
+//     return contentItem
+// }
 })();
 
 /******/ })()

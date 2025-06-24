@@ -755,19 +755,16 @@ input[type="email"]::placeholder {
 .O_Slider .A_Images_in_Slider {
   width: 100%;
   display: block;
-  padding: 0;
 }
 
 .O_Slider .A_Images_in_Slider img{
   width: 100%;
   height: auto;
   display: none;
-  padding: 0;
 }
 
 .O_Slider .A_Images_in_Slider img.activ_img {
   display: block;
-  padding: 0;
 }
 
 .A_Arrow_Backwards, .A_Arrow_Forwards {
@@ -1943,35 +1940,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.M_Manifest_Text {
     flex-direction: column;
 }
 
-.M_SG_second_block:nth-of-type(1) img{
+.M_SG_second_block img:nth-of-type(1){
     width: 25vw;
     align-self:center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(2) img{
+.M_SG_second_block img:nth-of-type(2){
     width: 100%;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(3) img{
+.M_SG_second_block img:nth-of-type(3){
     width: 55vw;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(4) img{
+.M_SG_second_block img:nth-of-type(4){
     width: 68vw;
     align-self:center;
     padding-top: 1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(5), .M_SG_second_block:nth-of-type(6) img{
+.M_SG_second_block img:nth-of-type(5), img:nth-of-type(6){
     width: 55vw;
     padding: 1vw 1vw 1vw 14vw;
 }
@@ -3122,7 +3119,7 @@ module.exports = __webpack_require__.p + "fonts/Helvetica..ttf";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			623: 0
+/******/ 			522: 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -3195,12 +3192,13 @@ var update = injectStylesIntoStyleTag_default()(cjs_ruleSet_1_rules_3_use_3_src/
 
        /* harmony default export */ const src = (cjs_ruleSet_1_rules_3_use_3_src/* default */.A && cjs_ruleSet_1_rules_3_use_3_src/* default */.A.locals ? cjs_ruleSet_1_rules_3_use_3_src/* default */.A.locals : undefined);
 
-;// ./src/js/manifests.js
+;// ./src/js/aboutUs.js
 
-var __webpack_exports__ = {};
 document.addEventListener('DOMContentLoaded', function () {
   var C_Menu_Bar = document.querySelector('.C_Menu_Bar');
   var top = C_Menu_Bar.offsetTop;
+  //offset().Top
+
   window.addEventListener('scroll', function () {
     if (window.scrollY >= top) {
       C_Menu_Bar.style.position = '';
@@ -3216,24 +3214,46 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+//меняем цвет рандом
+function changeTextColor() {
+  var textElement = document.querySelectorAll('.Random_Color'); // находим элемент
+  //const svgEl = document.querySelector('#Random_Color_Fill');
+  var svgElStroke = document.querySelectorAll('#Random_Color_Stroke');
+  var logoEl = document.querySelectorAll('#Random_Color_Logo');
+  var yearColorRand = document.querySelectorAll('#yearColorRand');
+  var colors = ['rgba(24, 165, 149, 1)', 'rgba(149, 0, 255, 1)', 'rgba(225, 1, 141, 1)', 'rgba(51, 50, 255, 1)', 'rgba(249, 1, 93, 1)', 'rgba(0, 134, 252, 1)']; // новый массив цветов
+  var randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
+
+  textElement.forEach(function (element) {
+    element.style.color = randomColor; // меняем цвет текста
+  });
+
+  //svgEl.style.fill = randomColor; 
+  // svgElStroke.style.stroke = randomColor;  
+
+  svgElStroke.forEach(function (element) {
+    element.style.stroke = randomColor;
+  });
+  yearColorRand.forEach(function (element) {
+    element.style.color = randomColor;
+  });
+  logoEl.forEach(function (element) {
+    element.style.fill = randomColor;
+  });
+}
+window.onload = changeTextColor;
+
 //Рандомное позиционирование иконки
 document.addEventListener('DOMContentLoaded', function () {
-  var Info_Icon = document.querySelector('.Random_Position');
+  var Info_Icon = document.querySelectorAll('.Random_Position');
   var max = 95;
-  Info_Icon.style.left = "".concat(Math.floor(Math.random() * (max + 1)), "%");
-  Info_Icon.style.bottom = "".concat(Math.floor(Math.random() + (max + 1)), "%");
-});
+  Info_Icon.forEach(function (el) {
+    el.style.left = "".concat(Math.floor(Math.random() * (max + 1)), "%");
+    el.style.top = "".concat(Math.floor(Math.random() * (max + 1)), "%");
+  });
 
-//ховер для инфо блока
-document.addEventListener('DOMContentLoaded', function () {
-  var Info_Icon = document.querySelector('.A_Info_Icon');
-  var infBlckM = document.querySelector('.A_Info_Block_Mani');
-  Info_Icon.addEventListener('mouseenter', function () {
-    infBlckM.style.display = 'block'; // Показываем блок
-  });
-  Info_Icon.addEventListener('mouseleave', function () {
-    infBlckM.style.display = 'none'; // Скрываем блок
-  });
+  // Info_Icon.style.left = `${Math.floor(Math.random()*(max + 1))}%`
+  // Info_Icon.style.top = `${Math.floor(Math.random()*(max + 1))}%`
 });
 /******/ })()
 ;
