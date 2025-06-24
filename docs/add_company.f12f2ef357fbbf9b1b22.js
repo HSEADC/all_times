@@ -752,19 +752,22 @@ input[type="email"]::placeholder {
 
 
 
-.A_Images_in_Slider {
+.O_Slider .A_Images_in_Slider {
   width: 100%;
   display: block;
+  padding: 0;
 }
 
-.A_Images_in_Slider img{
+.O_Slider .A_Images_in_Slider img{
   width: 100%;
   height: auto;
   display: none;
+  padding: 0;
 }
 
-.A_Images_in_Slider img.activ_img {
+.O_Slider .A_Images_in_Slider img.activ_img {
   display: block;
+  padding: 0;
 }
 
 .A_Arrow_Backwards, .A_Arrow_Forwards {
@@ -1940,35 +1943,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.M_Manifest_Text {
     flex-direction: column;
 }
 
-.M_SG_second_block img:nth-of-type(1){
+.M_SG_second_block:nth-of-type(1) img{
     width: 25vw;
     align-self:center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block img:nth-of-type(2){
+.M_SG_second_block:nth-of-type(2) img{
     width: 100%;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block img:nth-of-type(3){
+.M_SG_second_block:nth-of-type(3) img{
     width: 55vw;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block img:nth-of-type(4){
+.M_SG_second_block:nth-of-type(4) img{
     width: 68vw;
     align-self:center;
     padding-top: 1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block img:nth-of-type(5), img:nth-of-type(6){
+.M_SG_second_block:nth-of-type(5), .M_SG_second_block:nth-of-type(6) img{
     width: 55vw;
     padding: 1vw 1vw 1vw 14vw;
 }
@@ -3119,7 +3122,7 @@ module.exports = __webpack_require__.p + "fonts/Helvetica..ttf";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			167: 0
+/******/ 			360: 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -3192,7 +3195,21 @@ var update = injectStylesIntoStyleTag_default()(cjs_ruleSet_1_rules_3_use_3_src/
 
        /* harmony default export */ const src = (cjs_ruleSet_1_rules_3_use_3_src/* default */.A && cjs_ruleSet_1_rules_3_use_3_src/* default */.A.locals ? cjs_ruleSet_1_rules_3_use_3_src/* default */.A.locals : undefined);
 
-;// ./src/js/select.js
+;// ./src/js/add_company.js
 
+document.addEventListener('DOMContentLoaded', function () {
+  var btn_to_index = document.querySelectorAll('.Btn_to_index');
+  var btn_to_mail = document.querySelectorAll('.Send_project_btn');
+  btn_to_index.forEach(function (btn) {
+    btn.addEventListener("click", function (event) {
+      window.location.href = 'index.html';
+    });
+  });
+  btn_to_mail.forEach(function (btn) {
+    btn.addEventListener("click", function (event) {
+      window.location.href = 'mailto:alltimes.archive@gmail.com';
+    });
+  });
+});
 /******/ })()
 ;

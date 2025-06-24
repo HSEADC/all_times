@@ -752,19 +752,22 @@ input[type="email"]::placeholder {
 
 
 
-.A_Images_in_Slider {
+.O_Slider .A_Images_in_Slider {
   width: 100%;
   display: block;
+  padding: 0;
 }
 
-.A_Images_in_Slider img{
+.O_Slider .A_Images_in_Slider img{
   width: 100%;
   height: auto;
   display: none;
+  padding: 0;
 }
 
-.A_Images_in_Slider img.activ_img {
+.O_Slider .A_Images_in_Slider img.activ_img {
   display: block;
+  padding: 0;
 }
 
 .A_Arrow_Backwards, .A_Arrow_Forwards {
@@ -1940,35 +1943,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.M_Manifest_Text {
     flex-direction: column;
 }
 
-.M_SG_second_block img:nth-of-type(1){
+.M_SG_second_block:nth-of-type(1) img{
     width: 25vw;
     align-self:center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block img:nth-of-type(2){
+.M_SG_second_block:nth-of-type(2) img{
     width: 100%;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block img:nth-of-type(3){
+.M_SG_second_block:nth-of-type(3) img{
     width: 55vw;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block img:nth-of-type(4){
+.M_SG_second_block:nth-of-type(4) img{
     width: 68vw;
     align-self:center;
     padding-top: 1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block img:nth-of-type(5), img:nth-of-type(6){
+.M_SG_second_block:nth-of-type(5), .M_SG_second_block:nth-of-type(6) img{
     width: 55vw;
     padding: 1vw 1vw 1vw 14vw;
 }
@@ -3119,7 +3122,7 @@ module.exports = __webpack_require__.p + "fonts/Helvetica..ttf";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			6: 0
+/******/ 			57: 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -3192,34 +3195,93 @@ var update = injectStylesIntoStyleTag_default()(cjs_ruleSet_1_rules_3_use_3_src/
 
        /* harmony default export */ const src = (cjs_ruleSet_1_rules_3_use_3_src/* default */.A && cjs_ruleSet_1_rules_3_use_3_src/* default */.A.locals ? cjs_ruleSet_1_rules_3_use_3_src/* default */.A.locals : undefined);
 
-;// ./src/js/currentTime.js
+;// ./src/index.js
 
-document.addEventListener("DOMContentLoaded", function () {
-  var div = document.querySelector('.A_dateandtime');
-  setInterval(function () {
-    var date = new Date();
-    div.innerHTML = date.toLocaleString();
-  }, 1000);
-
-  //рандом перебор картинок
-  var time_icon = document.querySelector('.A_Time_Icon');
-  var gif_and_time = document.querySelector('.O_Gif_and_Time');
-  var menu_hide = document.querySelector('.C_Menu_Bar');
-  var icon_leave = document.querySelector('.A_Time_Icon_Close');
-  var gif_paths = ['A_Background_Time_1.gif', 'A_Background_Time_2.gif', 'A_Background_Time_3.gif'];
-  time_icon.addEventListener("mouseenter", function () {
-    var gif_num = Math.floor(Math.random() * gif_paths.length);
-    gif_and_time.style.display = 'flex';
-    // gif_and_time.style.backgroundColor = 'brown';
-    gif_and_time.style.backgroundImage = "url('https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/".concat(gif_paths[gif_num]).concat("')");
-    menu_hide.style.display = 'none';
+document.addEventListener('DOMContentLoaded', function () {
+  var C_Menu_Bar = document.querySelector('.C_Menu_Bar');
+  var top = C_Menu_Bar.offsetTop;
+  //offset().Top
+  console.log(1234);
+  window.addEventListener('scroll', function () {
+    if (window.scrollY >= top) {
+      C_Menu_Bar.style.position = '';
+      C_Menu_Bar.style.top = '0';
+      C_Menu_Bar.style.zIndex = '10';
+      C_Menu_Bar.style.padding = '1vw 3vw';
+    } else {
+      C_Menu_Bar.style.position = '';
+      C_Menu_Bar.style.top = '';
+      C_Menu_Bar.style.zIndex = '';
+      C_Menu_Bar.style.padding = '1vw 3vw';
+    }
   });
-  // time_icon.addEventListener("mouseleave", () => {
-  //     gif_and_time.style.display = 'none';
-  // });
-  icon_leave.addEventListener("mouseenter", function () {
-    gif_and_time.style.display = 'none';
-    menu_hide.style.display = 'flex';
+});
+
+//меняем цвет рандом
+function changeTextColor() {
+  var textElement = document.querySelectorAll('.Random_Color'); // находим элемент
+  var svgEl = document.querySelectorAll('#Random_Color_Fill');
+  var svgElStroke = document.querySelectorAll('#Random_Color_Stroke');
+  var infBlckMain = document.querySelectorAll('.Random_Color_Inf_Block');
+  var logoEl = document.querySelectorAll('#Random_Color_Logo');
+  var yearColorRand = document.querySelectorAll('#yearColorRand');
+  var colors = ['rgba(24, 165, 149, 1)', 'rgba(149, 0, 255, 1)', 'rgba(225, 1, 141, 1)', 'rgba(51, 50, 255, 1)', 'rgba(249, 1, 93, 1)', 'rgba(0, 134, 252, 1)']; // новый массив цветов
+  var randomColor = colors[Math.floor(Math.random() * colors.length)]; // случайный цвет
+
+  textElement.forEach(function (element) {
+    element.style.color = randomColor; // меняем цвет текста
+  });
+  svgElStroke.forEach(function (el) {
+    el.style.stroke = randomColor;
+  });
+  yearColorRand.forEach(function (element) {
+    element.style.color = randomColor;
+  });
+  svgEl.forEach(function (element) {
+    element.style.fill = randomColor;
+  });
+  logoEl.forEach(function (element) {
+    element.style.fill = randomColor;
+  });
+  infBlckMain.forEach(function (element) {
+    element.style.background = randomColor;
+  });
+  var cards = document.querySelectorAll('.O_Manifest_Card');
+  cards.forEach(function (card) {
+    card.addEventListener('mouseenter', function () {
+      // эдлементы только внутри текущей карточки манифеста
+      var randColorPic = card.querySelectorAll('.A_Color');
+      var randColorText = card.querySelectorAll('.A_Manifest_Text');
+      console.log('kgliig');
+
+      // применяем рандом
+      randColorPic.forEach(function (el) {
+        return el.style.backgroundColor = randomColor;
+      });
+      randColorText.forEach(function (el) {
+        return el.style.color = randomColor;
+      });
+    });
+    card.addEventListener('mouseleave', function () {
+      var randColorPic = card.querySelectorAll('.A_Color');
+      var randColorText = card.querySelectorAll('.A_Manifest_Text');
+      randColorPic.forEach(function (el) {
+        return el.style.backgroundColor = '';
+      });
+      randColorText.forEach(function (el) {
+        return el.style.color = '';
+      });
+    });
+  });
+}
+window.onload = changeTextColor;
+
+//Рандомное позиционирование иконки
+document.addEventListener('DOMContentLoaded', function () {
+  var Info_Icon = document.querySelectorAll('.Random_Position');
+  Info_Icon.forEach(function (el) {
+    el.style.left = "".concat(Math.floor(Math.random() * 95), "%");
+    el.style.top = "".concat(Math.floor(Math.random() * 50), "%");
   });
 });
 /******/ })()

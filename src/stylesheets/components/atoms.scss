@@ -263,19 +263,22 @@ input[type="email"]::placeholder {
 
 
 
-.A_Images_in_Slider {
+.O_Slider .A_Images_in_Slider {
   width: 100%;
   display: block;
+  padding: 0;
 }
 
-.A_Images_in_Slider img{
+.O_Slider .A_Images_in_Slider img{
   width: 100%;
   height: auto;
   display: none;
+  padding: 0;
 }
 
-.A_Images_in_Slider img.activ_img {
+.O_Slider .A_Images_in_Slider img.activ_img {
   display: block;
+  padding: 0;
 }
 
 .A_Arrow_Backwards, .A_Arrow_Forwards {
