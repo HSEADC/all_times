@@ -4806,19 +4806,16 @@ input[type="email"]::placeholder {
 .O_Slider .A_Images_in_Slider {
   width: 100%;
   display: block;
-  padding: 0;
 }
 
 .O_Slider .A_Images_in_Slider img{
   width: 100%;
   height: auto;
   display: none;
-  padding: 0;
 }
 
 .O_Slider .A_Images_in_Slider img.activ_img {
   display: block;
-  padding: 0;
 }
 
 .A_Arrow_Backwards, .A_Arrow_Forwards {
@@ -5996,35 +5993,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.M_Manifest_Text {
     flex-direction: column;
 }
 
-.M_SG_second_block:nth-of-type(1) img{
+.M_SG_second_block img:nth-of-type(1){
     width: 25vw;
     align-self:center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(2) img{
+.M_SG_second_block img:nth-of-type(2){
     width: 100%;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(3) img{
+.M_SG_second_block img:nth-of-type(3){
     width: 55vw;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(4) img{
+.M_SG_second_block img:nth-of-type(4){
     width: 68vw;
     align-self:center;
     padding-top: 1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(5), .M_SG_second_block:nth-of-type(6) img{
+.M_SG_second_block img:nth-of-type(5), img:nth-of-type(6){
     width: 55vw;
     padding: 1vw 1vw 1vw 14vw;
 }

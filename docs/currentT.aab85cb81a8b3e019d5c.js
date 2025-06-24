@@ -755,19 +755,16 @@ input[type="email"]::placeholder {
 .O_Slider .A_Images_in_Slider {
   width: 100%;
   display: block;
-  padding: 0;
 }
 
 .O_Slider .A_Images_in_Slider img{
   width: 100%;
   height: auto;
   display: none;
-  padding: 0;
 }
 
 .O_Slider .A_Images_in_Slider img.activ_img {
   display: block;
-  padding: 0;
 }
 
 .A_Arrow_Backwards, .A_Arrow_Forwards {
@@ -1943,35 +1940,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.M_Manifest_Text {
     flex-direction: column;
 }
 
-.M_SG_second_block:nth-of-type(1) img{
+.M_SG_second_block img:nth-of-type(1){
     width: 25vw;
     align-self:center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(2) img{
+.M_SG_second_block img:nth-of-type(2){
     width: 100%;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(3) img{
+.M_SG_second_block img:nth-of-type(3){
     width: 55vw;
     align-self:center;
     padding-top: 0.1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(4) img{
+.M_SG_second_block img:nth-of-type(4){
     width: 68vw;
     align-self:center;
     padding-top: 1%;
     padding-bottom: 5%;
 }
 
-.M_SG_second_block:nth-of-type(5), .M_SG_second_block:nth-of-type(6) img{
+.M_SG_second_block img:nth-of-type(5), img:nth-of-type(6){
     width: 55vw;
     padding: 1vw 1vw 1vw 14vw;
 }
@@ -3122,7 +3119,7 @@ module.exports = __webpack_require__.p + "fonts/Helvetica..ttf";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			436: 0
+/******/ 			6: 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -3195,49 +3192,34 @@ var update = injectStylesIntoStyleTag_default()(cjs_ruleSet_1_rules_3_use_3_src/
 
        /* harmony default export */ const src = (cjs_ruleSet_1_rules_3_use_3_src/* default */.A && cjs_ruleSet_1_rules_3_use_3_src/* default */.A.locals ? cjs_ruleSet_1_rules_3_use_3_src/* default */.A.locals : undefined);
 
-;// ./src/js/slider.js
+;// ./src/js/currentTime.js
 
-
-//ТУТ СЛАЙДЕР
 document.addEventListener("DOMContentLoaded", function () {
-  //Slider function
-  var A_Images_in_Slider = document.querySelectorAll('.A_Images_in_Slider img');
-  var currentIndexpage = 0;
-  function updateContentpage() {
-    A_Images_in_Slider.forEach(function (img, index) {
-      img.classList.toggle('activ_img', index === currentIndexpage);
-    });
-  }
-  var nextButtonp = document.querySelector('.A_Arrow_Forwards');
-  var prevButtonp = document.querySelector('.A_Arrow_Backwards');
-  if (nextButtonp && prevButtonp) {
-    nextButtonp.addEventListener('click', function () {
-      console.log(123);
-      currentIndexpage = (currentIndexpage + 1) % A_Images_in_Slider.length;
-      updateContentpage();
-    });
-    prevButtonp.addEventListener('click', function () {
-      currentIndexpage = (currentIndexpage - 1 + A_Images_in_Slider.length) % A_Images_in_Slider.length;
-      updateContentpage();
-    });
-    updateContentpage();
-  }
-  var text = document.querySelector('.clickTxt');
-  var next = document.querySelector('.A_Arrow_Forwards');
-  var previous = document.querySelector('.A_Arrow_Backwards');
-  var amount = document.querySelector('#Image_len');
-  var cnt = 0;
-  var pic_cnt = Number(amount.innerHTML);
-  next.addEventListener('click', function () {
-    cnt++;
-    cnt %= pic_cnt;
-    text.innerHTML = (cnt + 1 > 9 ? '' : '0').concat("".concat(cnt + 1));
+  var div = document.querySelector('.A_dateandtime');
+  setInterval(function () {
+    var date = new Date();
+    div.innerHTML = date.toLocaleString();
+  }, 1000);
+
+  //рандом перебор картинок
+  var time_icon = document.querySelector('.A_Time_Icon');
+  var gif_and_time = document.querySelector('.O_Gif_and_Time');
+  var menu_hide = document.querySelector('.C_Menu_Bar');
+  var icon_leave = document.querySelector('.A_Time_Icon_Close');
+  var gif_paths = ['A_Background_Time_1.gif', 'A_Background_Time_2.gif', 'A_Background_Time_3.gif'];
+  time_icon.addEventListener("mouseenter", function () {
+    var gif_num = Math.floor(Math.random() * gif_paths.length);
+    gif_and_time.style.display = 'flex';
+    // gif_and_time.style.backgroundColor = 'brown';
+    gif_and_time.style.backgroundImage = "url('https://raw.githubusercontent.com/HSEADC/all_times/refs/heads/main/src/images/".concat(gif_paths[gif_num]).concat("')");
+    menu_hide.style.display = 'none';
   });
-  previous.addEventListener('click', function () {
-    cnt--;
-    cnt += pic_cnt;
-    cnt %= pic_cnt;
-    text.innerHTML = (cnt + 1 > 9 ? '' : '0').concat("".concat(cnt + 1));
+  // time_icon.addEventListener("mouseleave", () => {
+  //     gif_and_time.style.display = 'none';
+  // });
+  icon_leave.addEventListener("mouseenter", function () {
+    gif_and_time.style.display = 'none';
+    menu_hide.style.display = 'flex';
   });
 });
 /******/ })()
