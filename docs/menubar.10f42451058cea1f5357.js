@@ -20520,6 +20520,7 @@ var ReactDOMServer = __webpack_require__(5848);
 var S_MenuBar = (__webpack_require__(1372)/* ["default"] */ .A);
 var menubar = ReactDOMServer.renderToString(menubar_React.createElement(S_MenuBar, props));
 
+console.log('im working');
 
 ////////////////////////////////
 })();

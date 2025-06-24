@@ -10,6 +10,7 @@ const menubar = ReactDOMServer.renderToString(
 )
 
 export { menubar }
+console.log('im working')
 
 
 ////////////////////////////////
